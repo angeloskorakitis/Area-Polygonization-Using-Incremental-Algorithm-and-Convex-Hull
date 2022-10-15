@@ -2102,100 +2102,24 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
   /opt/homebrew/include/boost/type_traits/integral_promotion.hpp \
   /opt/homebrew/include/boost/type_traits/promote.hpp \
   /opt/homebrew/include/CGAL/Triangulation_structural_filtering_traits.h \
-  /opt/homebrew/include/CGAL/Delaunay_triangulation_3.h \
-  /opt/homebrew/include/CGAL/license/Triangulation_3.h \
-  /opt/homebrew/include/CGAL/Delaunay_triangulation_cell_base_3.h \
-  /opt/homebrew/include/CGAL/triangulation_assertions.h \
-  /opt/homebrew/include/CGAL/Triangulation_cell_base_3.h \
-  /opt/homebrew/include/CGAL/Triangulation_ds_cell_base_3.h \
-  /opt/homebrew/include/CGAL/license/TDS_3.h \
-  /opt/homebrew/include/CGAL/TDS_3/internal/Dummy_tds_3.h \
-  /opt/homebrew/include/CGAL/Triangulation_3.h \
-  /opt/homebrew/include/CGAL/Unique_hash_map.h \
-  /opt/homebrew/include/CGAL/Handle_hash_function.h \
-  /opt/homebrew/include/CGAL/Hash_map/internal/chained_map.h \
-  /opt/homebrew/include/CGAL/Triangulation_utils_3.h \
-  /opt/homebrew/include/CGAL/Triangulation_data_structure_3.h \
-  /opt/homebrew/include/boost/unordered_set.hpp \
-  /opt/homebrew/include/boost/unordered/unordered_set.hpp \
-  /opt/homebrew/include/boost/move/move.hpp \
-  /opt/homebrew/include/boost/move/iterator.hpp \
-  /opt/homebrew/include/boost/move/detail/iterator_traits.hpp \
-  /opt/homebrew/include/boost/move/algorithm.hpp \
-  /opt/homebrew/include/boost/move/algo/move.hpp \
-  /opt/homebrew/include/boost/move/detail/iterator_to_raw_pointer.hpp \
-  /opt/homebrew/include/boost/move/detail/to_raw_pointer.hpp \
-  /opt/homebrew/include/boost/move/detail/pointer_element.hpp \
-  /opt/homebrew/include/boost/unordered/detail/set.hpp \
-  /opt/homebrew/include/boost/unordered/detail/implementation.hpp \
-  /opt/homebrew/include/boost/core/allocator_traits.hpp \
-  /opt/homebrew/include/boost/core/allocator_access.hpp \
-  /opt/homebrew/include/boost/core/pointer_traits.hpp \
-  /opt/homebrew/include/boost/unordered/detail/fca.hpp \
-  /opt/homebrew/include/boost/unordered/detail/prime_fmod.hpp \
-  /opt/homebrew/include/boost/preprocessor/seq/for_each.hpp \
-  /opt/homebrew/include/boost/core/empty_value.hpp \
-  /opt/homebrew/include/boost/unordered/detail/fwd.hpp \
-  /opt/homebrew/include/boost/mp11/list.hpp \
-  /opt/homebrew/include/boost/mp11/integral.hpp \
-  /opt/homebrew/include/boost/mp11/version.hpp \
-  /opt/homebrew/include/boost/mp11/detail/mp_list.hpp \
-  /opt/homebrew/include/boost/mp11/detail/mp_is_list.hpp \
-  /opt/homebrew/include/boost/mp11/detail/mp_append.hpp \
-  /opt/homebrew/include/boost/mp11/utility.hpp \
-  /opt/homebrew/include/boost/mp11/detail/mp_fold.hpp \
-  /opt/homebrew/include/boost/mp11/detail/config.hpp \
-  /opt/homebrew/include/boost/mp11/detail/mp_front.hpp \
-  /opt/homebrew/include/boost/mp11/detail/mp_rename.hpp \
-  /opt/homebrew/include/boost/mp11/algorithm.hpp \
-  /opt/homebrew/include/boost/mp11/set.hpp \
-  /opt/homebrew/include/boost/mp11/function.hpp \
-  /opt/homebrew/include/boost/mp11/detail/mp_count.hpp \
-  /opt/homebrew/include/boost/mp11/detail/mp_plus.hpp \
-  /opt/homebrew/include/boost/mp11/detail/mp_min_element.hpp \
-  /opt/homebrew/include/boost/mp11/detail/mp_void.hpp \
-  /opt/homebrew/include/boost/mp11/detail/mp_copy_if.hpp \
-  /opt/homebrew/include/boost/mp11/detail/mp_remove_if.hpp \
-  /opt/homebrew/include/boost/mp11/detail/mp_map_find.hpp \
-  /opt/homebrew/include/boost/mp11/detail/mp_with_index.hpp \
-  /opt/homebrew/include/boost/mp11/integer_sequence.hpp \
-  /opt/homebrew/include/boost/unordered/unordered_set_fwd.hpp \
-  /opt/homebrew/include/CGAL/iterator.h \
-  /opt/homebrew/include/CGAL/circulator.h \
-  /opt/homebrew/include/CGAL/circulator_bases.h \
-  /opt/homebrew/include/CGAL/Iterator_range.h \
+  /opt/homebrew/include/CGAL/convex_hull_2.h \
+  /opt/homebrew/include/CGAL/license/Convex_hull_2.h \
+  /opt/homebrew/include/CGAL/convex_hull_traits_2.h \
+  /opt/homebrew/include/CGAL/distance_predicates_2.h \
+  /opt/homebrew/include/CGAL/ch_akl_toussaint.h \
+  /opt/homebrew/include/CGAL/Convex_hull_2/ch_akl_toussaint_impl.h \
+  /opt/homebrew/include/CGAL/convexity_check_2.h \
+  /opt/homebrew/include/CGAL/Convex_hull_2/convexity_check_2_impl.h \
+  /opt/homebrew/include/CGAL/Convex_hull_2/ch_assertions.h \
+  /opt/homebrew/include/CGAL/ch_selected_extreme_points_2.h \
+  /opt/homebrew/include/CGAL/Convex_hull_2/ch_selected_extreme_points_2_impl.h \
+  /opt/homebrew/include/CGAL/ch_graham_andrew.h \
+  /opt/homebrew/include/CGAL/Convex_hull_2/ch_graham_andrew_impl.h \
+  /opt/homebrew/include/CGAL/IO/Tee_for_output_iterator.h \
   /opt/homebrew/include/CGAL/tuple.h \
-  /opt/homebrew/include/boost/foreach.hpp \
-  /opt/homebrew/include/boost/foreach_fwd.hpp \
-  /opt/homebrew/include/CGAL/STL_Extension/internal/Has_member_visited.h \
-  /opt/homebrew/include/CGAL/Concurrent_compact_container.h \
-  /opt/homebrew/include/CGAL/Compact_container.h \
-  /opt/homebrew/include/CGAL/CC_safe_handle.h \
-  /opt/homebrew/include/CGAL/Time_stamper.h \
-  /opt/homebrew/include/CGAL/Has_timestamp.h \
-  /opt/homebrew/include/CGAL/Has_member.h \
-  /opt/homebrew/include/CGAL/Small_unordered_map.h \
-  /opt/homebrew/include/CGAL/Triangulation_ds_vertex_base_3.h \
-  /opt/homebrew/include/CGAL/Triangulation_simplex_3.h \
-  /opt/homebrew/include/CGAL/TDS_3/internal/Triangulation_ds_iterators_3.h \
-  /opt/homebrew/include/CGAL/TDS_3/internal/Triangulation_ds_circulators_3.h \
-  /opt/homebrew/include/CGAL/Triangulation_vertex_base_3.h \
-  /opt/homebrew/include/CGAL/spatial_sort.h \
-  /opt/homebrew/include/CGAL/hilbert_sort.h \
-  /opt/homebrew/include/CGAL/Hilbert_policy_tags.h \
-  /opt/homebrew/include/CGAL/Hilbert_sort_2.h \
-  /opt/homebrew/include/CGAL/Hilbert_sort_median_2.h \
-  /opt/homebrew/include/CGAL/Hilbert_sort_base.h \
-  /opt/homebrew/include/CGAL/Hilbert_sort_middle_2.h \
-  /opt/homebrew/include/CGAL/Hilbert_sort_middle_base.h \
-  /opt/homebrew/include/CGAL/Hilbert_sort_3.h \
-  /opt/homebrew/include/CGAL/Hilbert_sort_median_3.h \
-  /opt/homebrew/include/CGAL/Hilbert_sort_middle_3.h \
-  /opt/homebrew/include/CGAL/Hilbert_sort_d.h \
-  /opt/homebrew/include/CGAL/Hilbert_sort_median_d.h \
-  /opt/homebrew/include/CGAL/Hilbert_sort_middle_d.h \
-  /opt/homebrew/include/CGAL/Multiscale_sort.h \
-  /opt/homebrew/include/CGAL/Spatial_sort_traits_adapter_3.h \
+  /opt/homebrew/include/CGAL/ch_bykat.h \
+  /opt/homebrew/include/CGAL/Convex_hull_2/ch_bykat_impl.h \
+  /opt/homebrew/include/CGAL/Convex_hull_traits_adapter_2.h \
   /opt/homebrew/include/CGAL/property_map.h \
   /opt/homebrew/include/CGAL/value_type_traits.h \
   /opt/homebrew/include/boost/property_map/property_map.hpp \
@@ -2227,676 +2151,20 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
   /opt/homebrew/include/CGAL/boost/iterator/counting_iterator.hpp \
   /opt/homebrew/include/boost/iterator/counting_iterator.hpp \
   /opt/homebrew/include/boost/detail/numeric_traits.hpp \
-  /opt/homebrew/include/CGAL/Triangulation_segment_traverser_3.h \
-  /opt/homebrew/include/CGAL/Triangulation_3/internal/Triangulation_segment_traverser_3_impl.h \
-  /opt/homebrew/include/CGAL/Iterator_project.h \
-  /opt/homebrew/include/CGAL/Spatial_lock_grid_3.h \
-  /opt/homebrew/include/boost/property_map/function_property_map.hpp \
-  /opt/homebrew/include/boost/unordered_map.hpp \
-  /opt/homebrew/include/boost/unordered/unordered_map.hpp \
-  /opt/homebrew/include/boost/unordered/detail/map.hpp \
-  /opt/homebrew/include/boost/unordered/unordered_map_fwd.hpp \
-  /opt/homebrew/include/boost/container/small_vector.hpp \
-  /opt/homebrew/include/boost/container/detail/config_begin.hpp \
-  /opt/homebrew/include/boost/container/detail/workaround.hpp \
-  /opt/homebrew/include/boost/container/vector.hpp \
-  /opt/homebrew/include/boost/container/allocator_traits.hpp \
-  /opt/homebrew/include/boost/container/detail/mpl.hpp \
-  /opt/homebrew/include/boost/intrusive/detail/mpl.hpp \
-  /opt/homebrew/include/boost/intrusive/detail/config_begin.hpp \
-  /opt/homebrew/include/boost/intrusive/detail/config_end.hpp \
-  /opt/homebrew/include/boost/container/detail/config_end.hpp \
-  /opt/homebrew/include/boost/container/detail/type_traits.hpp \
-  /opt/homebrew/include/boost/container/detail/placement_new.hpp \
-  /opt/homebrew/include/boost/intrusive/pointer_traits.hpp \
-  /opt/homebrew/include/boost/intrusive/detail/workaround.hpp \
-  /opt/homebrew/include/boost/intrusive/pointer_rebind.hpp \
-  /opt/homebrew/include/boost/intrusive/detail/has_member_function_callable_with.hpp \
-  /opt/homebrew/include/boost/move/detail/fwd_macros.hpp \
-  /opt/homebrew/include/boost/container/new_allocator.hpp \
-  /opt/homebrew/include/boost/container/throw_exception.hpp \
-  /opt/homebrew/include/boost/core/ignore_unused.hpp \
-  /opt/homebrew/include/boost/container/options.hpp \
-  /opt/homebrew/include/boost/intrusive/pack_options.hpp \
-  /opt/homebrew/include/boost/container/detail/advanced_insert_int.hpp \
-  /opt/homebrew/include/boost/container/detail/copy_move_algo.hpp \
-  /opt/homebrew/include/boost/container/detail/iterator.hpp \
-  /opt/homebrew/include/boost/intrusive/detail/iterator.hpp \
-  /opt/homebrew/include/boost/intrusive/detail/std_fwd.hpp \
-  /opt/homebrew/include/boost/container/detail/construct_in_place.hpp \
-  /opt/homebrew/include/boost/container/detail/iterators.hpp \
-  /opt/homebrew/include/boost/container/detail/value_init.hpp \
-  /opt/homebrew/include/boost/intrusive/detail/reverse_iterator.hpp \
-  /opt/homebrew/include/boost/move/detail/reverse_iterator.hpp \
-  /opt/homebrew/include/boost/container/detail/variadic_templates_tools.hpp \
-  /opt/homebrew/include/boost/container/detail/destroyers.hpp \
-  /opt/homebrew/include/boost/container/detail/version_type.hpp \
-  /opt/homebrew/include/boost/move/detail/force_ptr.hpp \
-  /opt/homebrew/include/boost/container/detail/algorithm.hpp \
-  /opt/homebrew/include/boost/intrusive/detail/algorithm.hpp \
-  /opt/homebrew/include/boost/container/detail/alloc_helpers.hpp \
-  /opt/homebrew/include/boost/container/detail/allocation_type.hpp \
-  /opt/homebrew/include/boost/container/detail/next_capacity.hpp \
-  /opt/homebrew/include/boost/container/detail/min_max.hpp \
-  /opt/homebrew/include/boost/container/detail/value_functors.hpp \
-  /opt/homebrew/include/boost/intrusive/detail/value_functors.hpp \
-  /opt/homebrew/include/boost/move/detail/move_helpers.hpp \
-  /opt/homebrew/include/boost/move/algo/adaptive_merge.hpp \
-  /opt/homebrew/include/boost/move/algo/detail/adaptive_sort_merge.hpp \
-  /opt/homebrew/include/boost/move/algo/detail/merge.hpp \
-  /opt/homebrew/include/boost/move/algo/detail/basic_op.hpp \
-  /opt/homebrew/include/boost/move/detail/destruct_n.hpp \
-  /opt/homebrew/include/boost/move/algo/predicate.hpp \
-  /opt/homebrew/include/boost/move/algo/detail/search.hpp \
-  /opt/homebrew/include/boost/move/algo/detail/insertion_sort.hpp \
-  /opt/homebrew/include/boost/move/detail/placement_new.hpp \
-  /opt/homebrew/include/boost/move/algo/detail/merge_sort.hpp \
-  /opt/homebrew/include/boost/move/algo/detail/heap_sort.hpp \
-  /opt/homebrew/include/boost/move/algo/detail/is_sorted.hpp \
-  /opt/homebrew/include/boost/move/algo/unique.hpp \
-  /opt/homebrew/include/boost/move/algo/detail/set_difference.hpp \
-  /opt/homebrew/include/CGAL/STL_Extension/internal/info_check.h \
-  /opt/homebrew/include/boost/iterator/zip_iterator.hpp \
-  /opt/homebrew/include/boost/iterator/minimum_category.hpp \
-  /opt/homebrew/include/boost/fusion/adapted/boost_tuple.hpp \
-  /opt/homebrew/include/boost/fusion/support/config.hpp \
-  /opt/homebrew/include/boost/fusion/adapted/boost_tuple/tag_of.hpp \
-  /opt/homebrew/include/boost/fusion/support/tag_of_fwd.hpp \
-  /opt/homebrew/include/boost/fusion/adapted/boost_tuple/detail/is_view_impl.hpp \
-  /opt/homebrew/include/boost/fusion/adapted/boost_tuple/detail/is_sequence_impl.hpp \
-  /opt/homebrew/include/boost/fusion/adapted/boost_tuple/detail/category_of_impl.hpp \
-  /opt/homebrew/include/boost/fusion/adapted/boost_tuple/detail/begin_impl.hpp \
-  /opt/homebrew/include/boost/fusion/adapted/boost_tuple/boost_tuple_iterator.hpp \
-  /opt/homebrew/include/boost/fusion/iterator/iterator_facade.hpp \
-  /opt/homebrew/include/boost/fusion/support/iterator_base.hpp \
-  /opt/homebrew/include/boost/fusion/iterator/detail/advance.hpp \
-  /opt/homebrew/include/boost/fusion/iterator/next.hpp \
-  /opt/homebrew/include/boost/fusion/support/tag_of.hpp \
-  /opt/homebrew/include/boost/fusion/support/detail/is_mpl_sequence.hpp \
-  /opt/homebrew/include/boost/fusion/support/detail/is_native_fusion_sequence.hpp \
-  /opt/homebrew/include/boost/fusion/support/sequence_base.hpp \
-  /opt/homebrew/include/boost/config/no_tr1/utility.hpp \
-  /opt/homebrew/include/boost/fusion/iterator/prior.hpp \
-  /opt/homebrew/include/boost/fusion/iterator/detail/distance.hpp \
-  /opt/homebrew/include/boost/fusion/iterator/equal_to.hpp \
-  /opt/homebrew/include/boost/fusion/support/is_iterator.hpp \
-  /opt/homebrew/include/boost/fusion/support/category_of.hpp \
-  /opt/homebrew/include/boost/fusion/adapted/boost_tuple/detail/end_impl.hpp \
-  /opt/homebrew/include/boost/fusion/adapted/boost_tuple/detail/size_impl.hpp \
-  /opt/homebrew/include/boost/fusion/adapted/boost_tuple/detail/at_impl.hpp \
-  /opt/homebrew/include/boost/fusion/adapted/boost_tuple/detail/value_at_impl.hpp \
-  /opt/homebrew/include/boost/fusion/adapted/boost_tuple/detail/convert_impl.hpp \
-  /opt/homebrew/include/boost/fusion/adapted/boost_tuple/detail/build_cons.hpp \
-  /opt/homebrew/include/boost/fusion/iterator/value_of.hpp \
-  /opt/homebrew/include/boost/fusion/iterator/deref.hpp \
-  /opt/homebrew/include/boost/fusion/sequence/intrinsic/begin.hpp \
-  /opt/homebrew/include/boost/mpl/empty_base.hpp \
-  /opt/homebrew/include/boost/fusion/sequence/intrinsic_fwd.hpp \
-  /opt/homebrew/include/boost/fusion/support/is_sequence.hpp \
-  /opt/homebrew/include/boost/fusion/support/is_segmented.hpp \
-  /opt/homebrew/include/boost/fusion/sequence/intrinsic/detail/segmented_begin.hpp \
-  /opt/homebrew/include/boost/fusion/sequence/intrinsic/detail/segmented_begin_impl.hpp \
-  /opt/homebrew/include/boost/fusion/container/list/cons_fwd.hpp \
-  /opt/homebrew/include/boost/fusion/sequence/intrinsic/detail/segmented_end_impl.hpp \
-  /opt/homebrew/include/boost/fusion/support/detail/segmented_fold_until_impl.hpp \
-  /opt/homebrew/include/boost/fusion/support/void.hpp \
-  /opt/homebrew/include/boost/fusion/sequence/intrinsic/segments.hpp \
-  /opt/homebrew/include/boost/fusion/iterator/segmented_iterator.hpp \
-  /opt/homebrew/include/boost/fusion/iterator/detail/segmented_iterator.hpp \
-  /opt/homebrew/include/boost/fusion/iterator/deref_data.hpp \
-  /opt/homebrew/include/boost/fusion/iterator/key_of.hpp \
-  /opt/homebrew/include/boost/fusion/iterator/value_of_data.hpp \
-  /opt/homebrew/include/boost/fusion/iterator/detail/segmented_equal_to.hpp \
-  /opt/homebrew/include/boost/fusion/iterator/detail/segmented_next_impl.hpp \
-  /opt/homebrew/include/boost/fusion/container/list/cons.hpp \
-  /opt/homebrew/include/boost/fusion/support/detail/enabler.hpp \
-  /opt/homebrew/include/boost/fusion/support/detail/access.hpp \
-  /opt/homebrew/include/boost/fusion/sequence/intrinsic/end.hpp \
-  /opt/homebrew/include/boost/fusion/sequence/intrinsic/detail/segmented_end.hpp \
-  /opt/homebrew/include/boost/fusion/container/list/nil.hpp \
-  /opt/homebrew/include/boost/fusion/container/list/cons_iterator.hpp \
-  /opt/homebrew/include/boost/fusion/container/list/detail/deref_impl.hpp \
-  /opt/homebrew/include/boost/fusion/container/list/detail/next_impl.hpp \
-  /opt/homebrew/include/boost/fusion/container/list/detail/value_of_impl.hpp \
-  /opt/homebrew/include/boost/fusion/container/list/detail/equal_to_impl.hpp \
-  /opt/homebrew/include/boost/fusion/container/list/list_fwd.hpp \
-  /opt/homebrew/include/boost/fusion/container/list/detail/begin_impl.hpp \
-  /opt/homebrew/include/boost/fusion/container/list/detail/end_impl.hpp \
-  /opt/homebrew/include/boost/fusion/container/list/detail/at_impl.hpp \
-  /opt/homebrew/include/boost/fusion/container/list/detail/value_at_impl.hpp \
-  /opt/homebrew/include/boost/fusion/container/list/detail/empty_impl.hpp \
-  /opt/homebrew/include/boost/fusion/view/iterator_range.hpp \
-  /opt/homebrew/include/boost/fusion/view/iterator_range/iterator_range.hpp \
-  /opt/homebrew/include/boost/fusion/iterator/distance.hpp \
-  /opt/homebrew/include/boost/fusion/iterator/mpl/convert_iterator.hpp \
-  /opt/homebrew/include/boost/fusion/view/iterator_range/detail/begin_impl.hpp \
-  /opt/homebrew/include/boost/fusion/view/iterator_range/detail/end_impl.hpp \
-  /opt/homebrew/include/boost/fusion/view/iterator_range/detail/at_impl.hpp \
-  /opt/homebrew/include/boost/fusion/iterator/advance.hpp \
-  /opt/homebrew/include/boost/fusion/view/iterator_range/detail/size_impl.hpp \
-  /opt/homebrew/include/boost/fusion/view/iterator_range/detail/value_at_impl.hpp \
-  /opt/homebrew/include/boost/fusion/view/iterator_range/detail/is_segmented_impl.hpp \
-  /opt/homebrew/include/boost/fusion/view/iterator_range/detail/segments_impl.hpp \
-  /opt/homebrew/include/boost/fusion/view/iterator_range/detail/segmented_iterator_range.hpp \
-  /opt/homebrew/include/boost/fusion/algorithm/transformation/push_back.hpp \
-  /opt/homebrew/include/boost/fusion/support/detail/as_fusion_element.hpp \
-  /opt/homebrew/include/boost/fusion/view/joint_view/joint_view.hpp \
-  /opt/homebrew/include/boost/fusion/view/joint_view/joint_view_fwd.hpp \
-  /opt/homebrew/include/boost/fusion/support/is_view.hpp \
-  /opt/homebrew/include/boost/fusion/sequence/intrinsic/size.hpp \
-  /opt/homebrew/include/boost/fusion/sequence/intrinsic/detail/segmented_size.hpp \
-  /opt/homebrew/include/boost/fusion/mpl/begin.hpp \
-  /opt/homebrew/include/boost/fusion/adapted/mpl/detail/begin_impl.hpp \
-  /opt/homebrew/include/boost/fusion/adapted/mpl/mpl_iterator.hpp \
-  /opt/homebrew/include/boost/fusion/support/detail/mpl_iterator_category.hpp \
-  /opt/homebrew/include/boost/mpl/begin.hpp \
-  /opt/homebrew/include/boost/fusion/iterator/mpl/fusion_iterator.hpp \
-  /opt/homebrew/include/boost/fusion/mpl/end.hpp \
-  /opt/homebrew/include/boost/fusion/adapted/mpl/detail/end_impl.hpp \
-  /opt/homebrew/include/boost/mpl/end.hpp \
-  /opt/homebrew/include/boost/fusion/view/joint_view/joint_view_iterator.hpp \
-  /opt/homebrew/include/boost/fusion/view/joint_view/detail/deref_impl.hpp \
-  /opt/homebrew/include/boost/fusion/iterator/detail/adapt_deref_traits.hpp \
-  /opt/homebrew/include/boost/fusion/view/joint_view/detail/next_impl.hpp \
-  /opt/homebrew/include/boost/fusion/view/joint_view/detail/value_of_impl.hpp \
-  /opt/homebrew/include/boost/fusion/iterator/detail/adapt_value_traits.hpp \
-  /opt/homebrew/include/boost/fusion/view/joint_view/detail/deref_data_impl.hpp \
-  /opt/homebrew/include/boost/fusion/view/joint_view/detail/value_of_data_impl.hpp \
-  /opt/homebrew/include/boost/fusion/view/joint_view/detail/key_of_impl.hpp \
-  /opt/homebrew/include/boost/fusion/view/joint_view/detail/begin_impl.hpp \
-  /opt/homebrew/include/boost/fusion/view/joint_view/detail/end_impl.hpp \
-  /opt/homebrew/include/boost/mpl/inherit.hpp \
-  /opt/homebrew/include/boost/mpl/aux_/preprocessed/gcc/inherit.hpp \
-  /opt/homebrew/include/boost/fusion/view/single_view/single_view.hpp \
-  /opt/homebrew/include/boost/fusion/view/single_view/single_view_iterator.hpp \
-  /opt/homebrew/include/boost/fusion/view/single_view/detail/deref_impl.hpp \
-  /opt/homebrew/include/boost/fusion/view/single_view/detail/next_impl.hpp \
-  /opt/homebrew/include/boost/fusion/view/single_view/detail/prior_impl.hpp \
-  /opt/homebrew/include/boost/fusion/view/single_view/detail/advance_impl.hpp \
-  /opt/homebrew/include/boost/fusion/view/single_view/detail/distance_impl.hpp \
-  /opt/homebrew/include/boost/fusion/view/single_view/detail/equal_to_impl.hpp \
-  /opt/homebrew/include/boost/fusion/view/single_view/detail/value_of_impl.hpp \
-  /opt/homebrew/include/boost/fusion/view/single_view/detail/at_impl.hpp \
-  /opt/homebrew/include/boost/fusion/view/single_view/detail/begin_impl.hpp \
-  /opt/homebrew/include/boost/fusion/view/single_view/detail/end_impl.hpp \
-  /opt/homebrew/include/boost/fusion/view/single_view/detail/size_impl.hpp \
-  /opt/homebrew/include/boost/fusion/view/single_view/detail/value_at_impl.hpp \
-  /opt/homebrew/include/boost/fusion/sequence/intrinsic/value_at.hpp \
-  /opt/homebrew/include/boost/fusion/algorithm/transformation/push_front.hpp \
-  /opt/homebrew/include/boost/fusion/container/list/detail/reverse_cons.hpp \
-  /opt/homebrew/include/boost/fusion/iterator/detail/segment_sequence.hpp \
-  /opt/homebrew/include/boost/fusion/sequence/intrinsic/empty.hpp \
-  /opt/homebrew/include/boost/fusion/adapted/boost_tuple/mpl/clear.hpp \
-  /opt/homebrew/include/boost/mpl/at.hpp \
-  /opt/homebrew/include/boost/mpl/aux_/at_impl.hpp \
-  /opt/homebrew/include/boost/fusion/algorithm/iteration/for_each.hpp \
-  /opt/homebrew/include/boost/fusion/algorithm/iteration/detail/for_each.hpp \
-  /opt/homebrew/include/boost/fusion/algorithm/iteration/detail/segmented_for_each.hpp \
-  /opt/homebrew/include/boost/fusion/algorithm/iteration/for_each_fwd.hpp \
-  /opt/homebrew/include/boost/fusion/support/segmented_fold_until.hpp \
-  /opt/homebrew/include/boost/fusion/algorithm/transformation/transform.hpp \
-  /opt/homebrew/include/boost/fusion/view/transform_view/transform_view.hpp \
-  /opt/homebrew/include/boost/fusion/view/transform_view/transform_view_iterator.hpp \
-  /opt/homebrew/include/boost/fusion/view/transform_view/detail/deref_impl.hpp \
-  /opt/homebrew/include/boost/fusion/view/transform_view/detail/next_impl.hpp \
-  /opt/homebrew/include/boost/fusion/view/transform_view/detail/prior_impl.hpp \
-  /opt/homebrew/include/boost/fusion/view/transform_view/detail/value_of_impl.hpp \
-  /opt/homebrew/include/boost/fusion/view/transform_view/detail/advance_impl.hpp \
-  /opt/homebrew/include/boost/fusion/view/transform_view/detail/distance_impl.hpp \
-  /opt/homebrew/include/boost/fusion/view/transform_view/detail/equal_to_impl.hpp \
-  /opt/homebrew/include/boost/fusion/view/transform_view/transform_view_fwd.hpp \
-  /opt/homebrew/include/boost/fusion/view/transform_view/detail/begin_impl.hpp \
-  /opt/homebrew/include/boost/fusion/view/transform_view/detail/end_impl.hpp \
-  /opt/homebrew/include/boost/fusion/view/transform_view/detail/at_impl.hpp \
-  /opt/homebrew/include/boost/fusion/sequence/intrinsic/at.hpp \
-  /opt/homebrew/include/boost/fusion/view/transform_view/detail/value_at_impl.hpp \
-  /opt/homebrew/include/boost/fusion/view/detail/strictest_traversal.hpp \
-  /opt/homebrew/include/boost/fusion/mpl.hpp \
-  /opt/homebrew/include/boost/fusion/iterator/mpl.hpp \
-  /opt/homebrew/include/boost/fusion/adapted/mpl.hpp \
-  /opt/homebrew/include/boost/fusion/adapted/mpl/detail/is_sequence_impl.hpp \
-  /opt/homebrew/include/boost/fusion/adapted/mpl/detail/size_impl.hpp \
-  /opt/homebrew/include/boost/fusion/adapted/mpl/detail/value_at_impl.hpp \
-  /opt/homebrew/include/boost/fusion/adapted/mpl/detail/at_impl.hpp \
-  /opt/homebrew/include/boost/fusion/adapted/mpl/detail/has_key_impl.hpp \
-  /opt/homebrew/include/boost/mpl/has_key.hpp \
-  /opt/homebrew/include/boost/mpl/has_key_fwd.hpp \
-  /opt/homebrew/include/boost/mpl/aux_/has_key_impl.hpp \
-  /opt/homebrew/include/boost/fusion/adapted/mpl/detail/category_of_impl.hpp \
-  /opt/homebrew/include/boost/fusion/adapted/mpl/detail/is_view_impl.hpp \
-  /opt/homebrew/include/boost/fusion/adapted/mpl/detail/empty_impl.hpp \
-  /opt/homebrew/include/boost/fusion/mpl/at.hpp \
-  /opt/homebrew/include/boost/fusion/mpl/back.hpp \
-  /opt/homebrew/include/boost/mpl/back.hpp \
-  /opt/homebrew/include/boost/mpl/aux_/back_impl.hpp \
-  /opt/homebrew/include/boost/fusion/mpl/clear.hpp \
-  /opt/homebrew/include/boost/fusion/mpl/detail/clear.hpp \
-  /opt/homebrew/include/boost/fusion/container/vector/vector_fwd.hpp \
-  /opt/homebrew/include/boost/fusion/container/vector/detail/config.hpp \
-  /opt/homebrew/include/boost/fusion/container/map/map_fwd.hpp \
-  /opt/homebrew/include/boost/fusion/container/set/set_fwd.hpp \
-  /opt/homebrew/include/boost/fusion/container/deque/deque_fwd.hpp \
-  /opt/homebrew/include/boost/fusion/mpl/empty.hpp \
-  /opt/homebrew/include/boost/fusion/mpl/erase.hpp \
-  /opt/homebrew/include/boost/mpl/erase.hpp \
-  /opt/homebrew/include/boost/mpl/erase_fwd.hpp \
-  /opt/homebrew/include/boost/mpl/aux_/erase_impl.hpp \
-  /opt/homebrew/include/boost/fusion/algorithm/transformation/erase.hpp \
-  /opt/homebrew/include/boost/fusion/sequence/convert.hpp \
-  /opt/homebrew/include/boost/fusion/mpl/erase_key.hpp \
-  /opt/homebrew/include/boost/mpl/erase_key.hpp \
-  /opt/homebrew/include/boost/mpl/erase_key_fwd.hpp \
-  /opt/homebrew/include/boost/mpl/aux_/erase_key_impl.hpp \
-  /opt/homebrew/include/boost/fusion/algorithm/transformation/erase_key.hpp \
-  /opt/homebrew/include/boost/fusion/algorithm/query/find.hpp \
-  /opt/homebrew/include/boost/fusion/algorithm/query/find_if_fwd.hpp \
-  /opt/homebrew/include/boost/fusion/algorithm/query/detail/find_if.hpp \
-  /opt/homebrew/include/boost/fusion/algorithm/query/detail/segmented_find.hpp \
-  /opt/homebrew/include/boost/fusion/algorithm/query/find_fwd.hpp \
-  /opt/homebrew/include/boost/fusion/mpl/front.hpp \
-  /opt/homebrew/include/boost/fusion/mpl/has_key.hpp \
-  /opt/homebrew/include/boost/fusion/sequence/intrinsic/has_key.hpp \
-  /opt/homebrew/include/boost/fusion/mpl/insert.hpp \
-  /opt/homebrew/include/boost/fusion/algorithm/transformation/insert.hpp \
-  /opt/homebrew/include/boost/fusion/mpl/insert_range.hpp \
-  /opt/homebrew/include/boost/fusion/algorithm/transformation/insert_range.hpp \
-  /opt/homebrew/include/boost/fusion/mpl/pop_back.hpp \
-  /opt/homebrew/include/boost/mpl/pop_back.hpp \
-  /opt/homebrew/include/boost/mpl/aux_/pop_back_impl.hpp \
-  /opt/homebrew/include/boost/fusion/algorithm/transformation/pop_back.hpp \
-  /opt/homebrew/include/boost/fusion/iterator/iterator_adapter.hpp \
-  /opt/homebrew/include/boost/fusion/mpl/pop_front.hpp \
-  /opt/homebrew/include/boost/mpl/pop_front.hpp \
-  /opt/homebrew/include/boost/mpl/aux_/pop_front_impl.hpp \
-  /opt/homebrew/include/boost/fusion/algorithm/transformation/pop_front.hpp \
-  /opt/homebrew/include/boost/fusion/mpl/push_back.hpp \
-  /opt/homebrew/include/boost/fusion/mpl/push_front.hpp \
-  /opt/homebrew/include/boost/fusion/mpl/size.hpp \
-  /opt/homebrew/include/boost/fusion/algorithm/iteration/fold.hpp \
-  /opt/homebrew/include/boost/fusion/algorithm/iteration/fold_fwd.hpp \
-  /opt/homebrew/include/boost/fusion/algorithm/iteration/detail/preprocessed/fold.hpp \
-  /opt/homebrew/include/boost/fusion/algorithm/iteration/detail/segmented_fold.hpp \
-  /opt/homebrew/include/boost/fusion/container/vector/vector10.hpp \
-  /opt/homebrew/include/boost/fusion/container/vector/vector.hpp \
-  /opt/homebrew/include/boost/fusion/support/detail/and.hpp \
-  /opt/homebrew/include/boost/fusion/support/detail/index_sequence.hpp \
-  /opt/homebrew/include/boost/fusion/container/vector/detail/at_impl.hpp \
-  /opt/homebrew/include/boost/fusion/container/vector/detail/value_at_impl.hpp \
-  /opt/homebrew/include/boost/fusion/container/vector/detail/begin_impl.hpp \
-  /opt/homebrew/include/boost/fusion/container/vector/vector_iterator.hpp \
-  /opt/homebrew/include/boost/fusion/container/vector/detail/deref_impl.hpp \
-  /opt/homebrew/include/boost/fusion/container/vector/detail/value_of_impl.hpp \
-  /opt/homebrew/include/boost/fusion/container/vector/detail/next_impl.hpp \
-  /opt/homebrew/include/boost/fusion/container/vector/detail/prior_impl.hpp \
-  /opt/homebrew/include/boost/fusion/container/vector/detail/equal_to_impl.hpp \
-  /opt/homebrew/include/boost/fusion/container/vector/detail/distance_impl.hpp \
-  /opt/homebrew/include/boost/fusion/container/vector/detail/advance_impl.hpp \
-  /opt/homebrew/include/boost/fusion/container/vector/detail/end_impl.hpp \
-  /opt/homebrew/include/boost/fusion/sequence/intrinsic/at_c.hpp \
-  /opt/homebrew/include/boost/fusion/sequence/comparison/equal_to.hpp \
-  /opt/homebrew/include/boost/fusion/sequence/comparison/detail/equal_to.hpp \
-  /opt/homebrew/include/boost/fusion/support/as_const.hpp \
-  /opt/homebrew/include/boost/fusion/sequence/comparison/enable_comparison.hpp \
-  /opt/homebrew/include/CGAL/Location_policy.h \
-  /opt/homebrew/include/CGAL/Complexity_tags.h \
-  /opt/homebrew/include/CGAL/Triangulation_3/internal/Delaunay_triangulation_hierarchy_3.h \
-  /opt/homebrew/include/CGAL/Triangulation_hierarchy_3.h \
-  /opt/homebrew/include/CGAL/STL_Extension/internal/Has_nested_type_Bare_point.h \
-  /opt/homebrew/include/CGAL/Triangulation_hierarchy_vertex_base_3.h \
-  /opt/homebrew/include/CGAL/IO/read_xyz_points.h \
-  /opt/homebrew/include/CGAL/license/Point_set_processing_3.h \
-  /opt/homebrew/include/CGAL/point_set_processing_assertions.h \
-  /opt/homebrew/include/CGAL/Named_function_parameters.h \
-  /opt/homebrew/include/CGAL/STL_Extension/internal/parameters_interface.h \
-  /opt/homebrew/include/CGAL/boost/graph/named_params_helper.h \
-  /opt/homebrew/include/CGAL/boost/graph/internal/initialized_index_maps_helpers.h \
-  /opt/homebrew/include/CGAL/boost/graph/properties.h \
-  /opt/homebrew/include/CGAL/Dynamic_property_map.h \
-  /opt/homebrew/include/boost/graph/graph_traits.hpp \
-  /opt/homebrew/include/boost/pending/property.hpp \
-  /opt/homebrew/include/boost/pending/detail/property.hpp \
-  /opt/homebrew/include/boost/graph/properties.hpp \
-  /opt/homebrew/include/boost/graph/property_maps/constant_property_map.hpp \
-  /opt/homebrew/include/boost/graph/property_maps/null_property_map.hpp \
-  /opt/homebrew/include/CGAL/Random.h \
-  /opt/homebrew/include/CGAL/Random_impl.h
+  /opt/homebrew/include/CGAL/Iterator_range.h \
+  /opt/homebrew/include/boost/foreach.hpp \
+  /opt/homebrew/include/boost/foreach_fwd.hpp
 
-
-/opt/homebrew/include/CGAL/Random_impl.h:
-
-/opt/homebrew/include/boost/pending/property.hpp:
-
-/opt/homebrew/include/CGAL/boost/graph/properties.h:
-
-/opt/homebrew/include/CGAL/boost/graph/internal/initialized_index_maps_helpers.h:
-
-/opt/homebrew/include/CGAL/STL_Extension/internal/parameters_interface.h:
-
-/opt/homebrew/include/CGAL/Named_function_parameters.h:
-
-/opt/homebrew/include/CGAL/point_set_processing_assertions.h:
-
-/opt/homebrew/include/CGAL/IO/read_xyz_points.h:
-
-/opt/homebrew/include/CGAL/Triangulation_hierarchy_vertex_base_3.h:
-
-/opt/homebrew/include/CGAL/STL_Extension/internal/Has_nested_type_Bare_point.h:
-
-/opt/homebrew/include/CGAL/Triangulation_hierarchy_3.h:
-
-/opt/homebrew/include/CGAL/Triangulation_3/internal/Delaunay_triangulation_hierarchy_3.h:
-
-/opt/homebrew/include/boost/fusion/sequence/comparison/equal_to.hpp:
-
-/opt/homebrew/include/boost/fusion/sequence/intrinsic/at_c.hpp:
-
-/opt/homebrew/include/boost/fusion/container/vector/detail/distance_impl.hpp:
-
-/opt/homebrew/include/boost/fusion/container/vector/detail/value_of_impl.hpp:
-
-/opt/homebrew/include/boost/fusion/container/vector/detail/deref_impl.hpp:
-
-/opt/homebrew/include/boost/fusion/container/vector/detail/begin_impl.hpp:
-
-/opt/homebrew/include/boost/fusion/container/vector/detail/at_impl.hpp:
-
-/opt/homebrew/include/boost/fusion/container/vector/vector.hpp:
-
-/opt/homebrew/include/boost/fusion/container/vector/vector10.hpp:
-
-/opt/homebrew/include/boost/fusion/algorithm/iteration/detail/segmented_fold.hpp:
-
-/opt/homebrew/include/boost/fusion/algorithm/iteration/detail/preprocessed/fold.hpp:
-
-/opt/homebrew/include/boost/fusion/algorithm/iteration/fold_fwd.hpp:
-
-/opt/homebrew/include/boost/fusion/mpl/size.hpp:
-
-/opt/homebrew/include/boost/mpl/pop_back.hpp:
-
-/opt/homebrew/include/boost/fusion/mpl/insert_range.hpp:
-
-/opt/homebrew/include/boost/fusion/sequence/intrinsic/has_key.hpp:
-
-/opt/homebrew/include/boost/fusion/algorithm/query/find_fwd.hpp:
-
-/opt/homebrew/include/boost/fusion/algorithm/query/detail/segmented_find.hpp:
-
-/opt/homebrew/include/boost/fusion/algorithm/query/detail/find_if.hpp:
-
-/opt/homebrew/include/boost/fusion/algorithm/query/find_if_fwd.hpp:
-
-/opt/homebrew/include/boost/mpl/erase_key_fwd.hpp:
-
-/opt/homebrew/include/boost/fusion/mpl/erase_key.hpp:
-
-/opt/homebrew/include/boost/mpl/aux_/erase_impl.hpp:
-
-/opt/homebrew/include/boost/mpl/erase_fwd.hpp:
-
-/opt/homebrew/include/boost/fusion/mpl/empty.hpp:
-
-/opt/homebrew/include/boost/fusion/container/set/set_fwd.hpp:
-
-/opt/homebrew/include/boost/fusion/container/map/map_fwd.hpp:
-
-/opt/homebrew/include/boost/fusion/container/vector/vector_fwd.hpp:
-
-/opt/homebrew/include/boost/fusion/mpl/detail/clear.hpp:
-
-/opt/homebrew/include/boost/fusion/mpl/clear.hpp:
-
-/opt/homebrew/include/boost/fusion/adapted/mpl/detail/empty_impl.hpp:
-
-/opt/homebrew/include/boost/mpl/has_key.hpp:
-
-/opt/homebrew/include/boost/fusion/adapted/mpl/detail/has_key_impl.hpp:
-
-/opt/homebrew/include/boost/fusion/adapted/mpl/detail/at_impl.hpp:
-
-/opt/homebrew/include/boost/fusion/adapted/mpl/detail/value_at_impl.hpp:
-
-/opt/homebrew/include/boost/fusion/adapted/mpl.hpp:
-
-/opt/homebrew/include/boost/fusion/iterator/mpl.hpp:
-
-/opt/homebrew/include/boost/fusion/view/detail/strictest_traversal.hpp:
-
-/opt/homebrew/include/boost/fusion/view/transform_view/detail/value_at_impl.hpp:
-
-/opt/homebrew/include/boost/fusion/sequence/intrinsic/at.hpp:
-
-/opt/homebrew/include/boost/fusion/view/transform_view/detail/at_impl.hpp:
-
-/opt/homebrew/include/boost/fusion/view/transform_view/transform_view_fwd.hpp:
-
-/opt/homebrew/include/boost/fusion/view/transform_view/detail/equal_to_impl.hpp:
-
-/opt/homebrew/include/boost/fusion/view/transform_view/detail/distance_impl.hpp:
-
-/opt/homebrew/include/boost/fusion/view/transform_view/detail/value_of_impl.hpp:
-
-/opt/homebrew/include/boost/fusion/view/transform_view/detail/prior_impl.hpp:
-
-/opt/homebrew/include/boost/fusion/view/transform_view/detail/next_impl.hpp:
-
-/opt/homebrew/include/boost/fusion/view/transform_view/transform_view_iterator.hpp:
-
-/opt/homebrew/include/boost/fusion/algorithm/transformation/transform.hpp:
-
-/opt/homebrew/include/boost/fusion/algorithm/iteration/detail/for_each.hpp:
-
-/opt/homebrew/include/boost/fusion/sequence/intrinsic/empty.hpp:
-
-/opt/homebrew/include/boost/fusion/sequence/intrinsic/value_at.hpp:
-
-/opt/homebrew/include/boost/fusion/view/single_view/detail/value_at_impl.hpp:
-
-/opt/homebrew/include/boost/fusion/view/single_view/detail/size_impl.hpp:
-
-/opt/homebrew/include/boost/fusion/view/single_view/detail/value_of_impl.hpp:
-
-/opt/homebrew/include/boost/fusion/view/single_view/detail/equal_to_impl.hpp:
-
-/opt/homebrew/include/boost/fusion/view/single_view/detail/distance_impl.hpp:
-
-/opt/homebrew/include/boost/fusion/view/single_view/detail/prior_impl.hpp:
-
-/opt/homebrew/include/boost/fusion/view/single_view/detail/next_impl.hpp:
-
-/opt/homebrew/include/boost/fusion/view/single_view/single_view.hpp:
-
-/opt/homebrew/include/boost/fusion/container/vector/vector_iterator.hpp:
-
-/opt/homebrew/include/boost/mpl/aux_/preprocessed/gcc/inherit.hpp:
-
-/opt/homebrew/include/boost/fusion/view/joint_view/detail/deref_data_impl.hpp:
-
-/opt/homebrew/include/boost/fusion/iterator/detail/adapt_value_traits.hpp:
-
-/opt/homebrew/include/boost/fusion/view/joint_view/detail/deref_impl.hpp:
-
-/opt/homebrew/include/boost/fusion/view/joint_view/joint_view_iterator.hpp:
-
-/opt/homebrew/include/boost/fusion/adapted/mpl/detail/end_impl.hpp:
-
-/opt/homebrew/include/boost/fusion/mpl/end.hpp:
-
-/opt/homebrew/include/boost/fusion/iterator/mpl/fusion_iterator.hpp:
-
-/opt/homebrew/include/boost/fusion/adapted/mpl/detail/begin_impl.hpp:
-
-/opt/homebrew/include/boost/fusion/sequence/intrinsic/detail/segmented_size.hpp:
-
-/opt/homebrew/include/boost/fusion/sequence/intrinsic/size.hpp:
-
-/opt/homebrew/include/boost/fusion/view/joint_view/joint_view_fwd.hpp:
-
-/opt/homebrew/include/boost/fusion/support/detail/as_fusion_element.hpp:
-
-/opt/homebrew/include/boost/fusion/view/iterator_range/detail/segmented_iterator_range.hpp:
-
-/opt/homebrew/include/boost/fusion/view/iterator_range/detail/is_segmented_impl.hpp:
-
-/opt/homebrew/include/boost/fusion/view/iterator_range/detail/value_at_impl.hpp:
-
-/opt/homebrew/include/boost/fusion/view/iterator_range/detail/size_impl.hpp:
-
-/opt/homebrew/include/boost/fusion/view/iterator_range/detail/at_impl.hpp:
-
-/opt/homebrew/include/boost/fusion/view/iterator_range/detail/end_impl.hpp:
-
-/opt/homebrew/include/boost/fusion/view/iterator_range/detail/begin_impl.hpp:
-
-/opt/homebrew/include/boost/fusion/iterator/mpl/convert_iterator.hpp:
-
-/opt/homebrew/include/boost/fusion/iterator/distance.hpp:
-
-/opt/homebrew/include/boost/fusion/container/list/detail/empty_impl.hpp:
-
-/opt/homebrew/include/boost/fusion/container/list/detail/at_impl.hpp:
-
-/opt/homebrew/include/boost/fusion/container/list/detail/equal_to_impl.hpp:
-
-/opt/homebrew/include/boost/fusion/container/list/detail/value_of_impl.hpp:
-
-/opt/homebrew/include/boost/fusion/container/list/detail/next_impl.hpp:
-
-/opt/homebrew/include/boost/fusion/container/list/cons_iterator.hpp:
-
-/opt/homebrew/include/boost/graph/property_maps/constant_property_map.hpp:
-
-/opt/homebrew/include/boost/fusion/sequence/intrinsic/end.hpp:
-
-/opt/homebrew/include/boost/fusion/iterator/detail/segmented_next_impl.hpp:
-
-/opt/homebrew/include/boost/fusion/iterator/detail/segmented_equal_to.hpp:
-
-/opt/homebrew/include/boost/fusion/iterator/key_of.hpp:
-
-/opt/homebrew/include/boost/fusion/iterator/detail/segmented_iterator.hpp:
-
-/opt/homebrew/include/boost/fusion/iterator/segmented_iterator.hpp:
-
-/opt/homebrew/include/boost/fusion/support/detail/segmented_fold_until_impl.hpp:
-
-/opt/homebrew/include/boost/fusion/container/list/cons_fwd.hpp:
-
-/opt/homebrew/include/boost/fusion/sequence/intrinsic/detail/segmented_begin_impl.hpp:
-
-/opt/homebrew/include/boost/fusion/sequence/intrinsic_fwd.hpp:
-
-/opt/homebrew/include/boost/fusion/sequence/intrinsic/begin.hpp:
-
-/opt/homebrew/include/boost/fusion/iterator/deref.hpp:
-
-/opt/homebrew/include/boost/fusion/iterator/value_of.hpp:
-
-/opt/homebrew/include/boost/fusion/adapted/boost_tuple/detail/build_cons.hpp:
-
-/opt/homebrew/include/boost/fusion/sequence/intrinsic/detail/segmented_begin.hpp:
-
-/opt/homebrew/include/boost/fusion/adapted/boost_tuple/detail/value_at_impl.hpp:
-
-/opt/homebrew/include/boost/fusion/adapted/boost_tuple/detail/size_impl.hpp:
-
-/opt/homebrew/include/boost/fusion/support/category_of.hpp:
-
-/opt/homebrew/include/boost/fusion/support/is_iterator.hpp:
-
-/opt/homebrew/include/boost/fusion/iterator/prior.hpp:
-
-/opt/homebrew/include/boost/fusion/support/sequence_base.hpp:
-
-/opt/homebrew/include/boost/fusion/iterator/detail/advance.hpp:
-
-/opt/homebrew/include/boost/fusion/adapted/boost_tuple/detail/begin_impl.hpp:
-
-/opt/homebrew/include/boost/fusion/adapted/boost_tuple/detail/category_of_impl.hpp:
-
-/opt/homebrew/include/boost/fusion/support/tag_of_fwd.hpp:
-
-/opt/homebrew/include/boost/fusion/adapted/boost_tuple/tag_of.hpp:
-
-/opt/homebrew/include/boost/fusion/adapted/boost_tuple.hpp:
-
-/opt/homebrew/include/CGAL/STL_Extension/internal/info_check.h:
-
-/opt/homebrew/include/boost/move/algo/detail/set_difference.hpp:
-
-/opt/homebrew/include/boost/move/algo/detail/heap_sort.hpp:
-
-/opt/homebrew/include/boost/move/detail/placement_new.hpp:
-
-/opt/homebrew/include/boost/move/detail/destruct_n.hpp:
-
-/opt/homebrew/include/boost/move/algo/detail/merge.hpp:
-
-/opt/homebrew/include/boost/move/algo/detail/adaptive_sort_merge.hpp:
-
-/opt/homebrew/include/boost/fusion/iterator/equal_to.hpp:
-
-/opt/homebrew/include/boost/container/detail/next_capacity.hpp:
-
-/opt/homebrew/include/boost/fusion/view/single_view/detail/deref_impl.hpp:
-
-/opt/homebrew/include/boost/container/detail/allocation_type.hpp:
-
-/opt/homebrew/include/boost/intrusive/detail/algorithm.hpp:
-
-/opt/homebrew/include/boost/container/detail/algorithm.hpp:
-
-/opt/homebrew/include/boost/container/detail/variadic_templates_tools.hpp:
-
-/opt/homebrew/include/boost/container/detail/iterators.hpp:
-
-/opt/homebrew/include/boost/core/ignore_unused.hpp:
-
-/opt/homebrew/include/boost/container/throw_exception.hpp:
-
-/opt/homebrew/include/boost/move/detail/fwd_macros.hpp:
-
-/opt/homebrew/include/boost/intrusive/pointer_rebind.hpp:
-
-/opt/homebrew/include/boost/intrusive/detail/workaround.hpp:
-
-/opt/homebrew/include/boost/container/detail/type_traits.hpp:
-
-/opt/homebrew/include/boost/container/detail/config_end.hpp:
-
-/opt/homebrew/include/boost/intrusive/detail/config_end.hpp:
-
-/opt/homebrew/include/boost/move/algo/detail/is_sorted.hpp:
-
-/opt/homebrew/include/boost/intrusive/detail/mpl.hpp:
-
-/opt/homebrew/include/boost/container/allocator_traits.hpp:
-
-/opt/homebrew/include/boost/container/small_vector.hpp:
-
-/opt/homebrew/include/boost/fusion/view/joint_view/detail/begin_impl.hpp:
-
-/opt/homebrew/include/boost/unordered/unordered_map_fwd.hpp:
-
-/opt/homebrew/include/boost/unordered/detail/map.hpp:
-
-/opt/homebrew/include/boost/fusion/view/joint_view/detail/key_of_impl.hpp:
-
-/opt/homebrew/include/boost/unordered/unordered_map.hpp:
-
-/opt/homebrew/include/boost/property_map/function_property_map.hpp:
-
-/opt/homebrew/include/CGAL/Triangulation_3/internal/Triangulation_segment_traverser_3_impl.h:
 
 /opt/homebrew/include/CGAL/boost/iterator/counting_iterator.hpp:
+
+/opt/homebrew/include/boost/config/pragma_message.hpp:
 
 /opt/homebrew/include/boost/smart_ptr/detail/sp_thread_sleep.hpp:
 
 /opt/homebrew/include/boost/smart_ptr/detail/sp_thread_pause.hpp:
 
 /opt/homebrew/include/boost/smart_ptr/detail/spinlock.hpp:
-
-/opt/homebrew/include/boost/mpl/erase_key.hpp:
 
 /opt/homebrew/include/boost/smart_ptr/detail/spinlock_pool.hpp:
 
@@ -2922,101 +2190,27 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/CGAL/value_type_traits.h:
 
-/opt/homebrew/include/CGAL/Spatial_sort_traits_adapter_3.h:
+/opt/homebrew/include/CGAL/Convex_hull_2/ch_bykat_impl.h:
 
-/opt/homebrew/include/CGAL/Hilbert_sort_middle_d.h:
+/opt/homebrew/include/CGAL/ch_bykat.h:
 
-/opt/homebrew/include/CGAL/Hilbert_sort_d.h:
+/opt/homebrew/include/CGAL/IO/Tee_for_output_iterator.h:
 
-/opt/homebrew/include/CGAL/Hilbert_sort_median_3.h:
+/opt/homebrew/include/CGAL/Convex_hull_2/ch_graham_andrew_impl.h:
 
-/opt/homebrew/include/CGAL/Hilbert_sort_middle_2.h:
+/opt/homebrew/include/CGAL/Convex_hull_2/convexity_check_2_impl.h:
 
-/opt/homebrew/include/CGAL/Hilbert_sort_base.h:
+/opt/homebrew/include/CGAL/Convex_hull_2/ch_akl_toussaint_impl.h:
 
-/opt/homebrew/include/CGAL/Hilbert_sort_median_2.h:
+/opt/homebrew/include/CGAL/ch_akl_toussaint.h:
 
-/opt/homebrew/include/boost/fusion/view/single_view/detail/advance_impl.hpp:
+/opt/homebrew/include/CGAL/distance_predicates_2.h:
 
-/opt/homebrew/include/boost/config/pragma_message.hpp:
-
-/opt/homebrew/include/CGAL/Hilbert_sort_2.h:
-
-/opt/homebrew/include/CGAL/Hilbert_policy_tags.h:
-
-/opt/homebrew/include/CGAL/TDS_3/internal/Triangulation_ds_iterators_3.h:
-
-/opt/homebrew/include/CGAL/Triangulation_ds_vertex_base_3.h:
-
-/opt/homebrew/include/CGAL/Time_stamper.h:
-
-/opt/homebrew/include/CGAL/CC_safe_handle.h:
-
-/opt/homebrew/include/boost/container/detail/copy_move_algo.hpp:
-
-/opt/homebrew/include/CGAL/circulator_bases.h:
-
-/opt/homebrew/include/CGAL/circulator.h:
-
-/opt/homebrew/include/CGAL/iterator.h:
-
-/opt/homebrew/include/boost/unordered/unordered_set_fwd.hpp:
-
-/opt/homebrew/include/boost/mp11/integer_sequence.hpp:
-
-/opt/homebrew/include/boost/mp11/detail/mp_map_find.hpp:
-
-/opt/homebrew/include/boost/mp11/detail/mp_remove_if.hpp:
-
-/opt/homebrew/include/boost/mp11/detail/mp_copy_if.hpp:
-
-/opt/homebrew/include/boost/mp11/detail/mp_count.hpp:
-
-/opt/homebrew/include/boost/mp11/detail/mp_rename.hpp:
-
-/opt/homebrew/include/boost/mp11/detail/mp_front.hpp:
-
-/opt/homebrew/include/boost/mp11/detail/mp_fold.hpp:
-
-/opt/homebrew/include/boost/mp11/utility.hpp:
-
-/opt/homebrew/include/boost/mp11/detail/mp_append.hpp:
-
-/opt/homebrew/include/boost/fusion/container/list/detail/reverse_cons.hpp:
-
-/opt/homebrew/include/boost/mp11/detail/mp_is_list.hpp:
-
-/opt/homebrew/include/boost/unordered/detail/fwd.hpp:
-
-/opt/homebrew/include/boost/core/empty_value.hpp:
-
-/opt/homebrew/include/boost/preprocessor/seq/for_each.hpp:
-
-/opt/homebrew/include/boost/unordered/detail/prime_fmod.hpp:
-
-/opt/homebrew/include/boost/unordered/detail/fca.hpp:
-
-/opt/homebrew/include/boost/core/pointer_traits.hpp:
-
-/opt/homebrew/include/boost/move/detail/to_raw_pointer.hpp:
-
-/opt/homebrew/include/boost/move/algo/move.hpp:
-
-/opt/homebrew/include/CGAL/Handle_hash_function.h:
-
-/opt/homebrew/include/CGAL/Triangulation_3.h:
-
-/opt/homebrew/include/CGAL/TDS_3/internal/Dummy_tds_3.h:
-
-/opt/homebrew/include/CGAL/Triangulation_cell_base_3.h:
-
-/opt/homebrew/include/CGAL/Delaunay_triangulation_cell_base_3.h:
+/opt/homebrew/include/CGAL/convex_hull_2.h:
 
 /opt/homebrew/include/CGAL/Triangulation_structural_filtering_traits.h:
 
 /opt/homebrew/include/boost/type_traits/remove_cv_ref.hpp:
-
-/opt/homebrew/include/boost/fusion/view/single_view/detail/begin_impl.hpp:
 
 /opt/homebrew/include/boost/type_traits/make_signed.hpp:
 
@@ -3024,15 +2218,9 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/type_traits/is_trivially_copyable.hpp:
 
-/opt/homebrew/include/boost/mp11/detail/mp_plus.hpp:
-
 /opt/homebrew/include/boost/type_traits/negation.hpp:
 
 /opt/homebrew/include/boost/type_traits/is_scoped_enum.hpp:
-
-/opt/homebrew/include/boost/fusion/view/joint_view/joint_view.hpp:
-
-/opt/homebrew/include/CGAL/Small_unordered_map.h:
 
 /opt/homebrew/include/boost/type_traits/is_polymorphic.hpp:
 
@@ -3049,8 +2237,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 /opt/homebrew/include/boost/type_traits/is_complex.hpp:
 
 /opt/homebrew/include/boost/type_traits/has_virtual_destructor.hpp:
-
-/opt/homebrew/include/boost/fusion/support/is_view.hpp:
 
 /opt/homebrew/include/boost/type_traits/has_unary_plus.hpp:
 
@@ -3072,15 +2258,9 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/type_traits/has_logical_or.hpp:
 
-/opt/homebrew/include/boost/config/no_tr1/utility.hpp:
-
-/opt/homebrew/include/CGAL/Hilbert_sort_median_d.h:
-
 /opt/homebrew/include/boost/type_traits/has_logical_and.hpp:
 
 /opt/homebrew/include/boost/type_traits/has_left_shift_assign.hpp:
-
-/opt/homebrew/include/boost/mpl/at.hpp:
 
 /opt/homebrew/include/boost/type_traits/has_greater_equal.hpp:
 
@@ -3106,23 +2286,17 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/CGAL/Filtered_kernel/internal/Static_filters/Coplanar_3.h:
 
-/opt/homebrew/include/boost/intrusive/pointer_traits.hpp:
-
 /opt/homebrew/include/CGAL/Filtered_kernel/internal/Static_filters/Do_intersect_2.h:
 
 /opt/homebrew/include/CGAL/Filtered_kernel/internal/Static_filters/Do_intersect_3.h:
 
 /opt/homebrew/include/CGAL/Filtered_kernel/internal/Static_filters/Angle_3.h:
 
-/opt/homebrew/include/boost/fusion/sequence/comparison/detail/equal_to.hpp:
-
 /opt/homebrew/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_y_2.h:
 
 /opt/homebrew/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_x_2.h:
 
 /opt/homebrew/include/CGAL/Filtered_kernel/internal/Static_filters/Equal_2.h:
-
-/opt/homebrew/include/boost/container/detail/alloc_helpers.hpp:
 
 /opt/homebrew/include/CGAL/Filtered_kernel/internal/Static_filters/Collinear_3.h:
 
@@ -3134,19 +2308,13 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/CGAL/Filtered_kernel/internal/Static_filters/tools.h:
 
-/opt/homebrew/include/boost/fusion/algorithm/transformation/insert_range.hpp:
-
 /opt/homebrew/include/CGAL/Filtered_kernel/internal/Static_filters/Static_filters.h:
 
 /opt/homebrew/include/CGAL/Homogeneous_converter.h:
 
 /opt/homebrew/include/CGAL/Mpzf.h:
 
-/opt/homebrew/include/boost/fusion/iterator/next.hpp:
-
 /opt/homebrew/include/CGAL/GMP_arithmetic_kernel.h:
-
-/opt/homebrew/include/boost/fusion/adapted/mpl/mpl_iterator.hpp:
 
 /opt/homebrew/include/CGAL/Gmpzf.h:
 
@@ -3170,8 +2338,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/math/special_functions/factorials.hpp:
 
-/opt/homebrew/include/boost/fusion/mpl/pop_back.hpp:
-
 /opt/homebrew/include/boost/math/special_functions/polygamma.hpp:
 
 /opt/homebrew/include/boost/math/tools/toms748_solve.hpp:
@@ -3189,8 +2355,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 /opt/homebrew/include/boost/math/special_functions/detail/igamma_large.hpp:
 
 /opt/homebrew/include/boost/math/special_functions/lanczos.hpp:
-
-/opt/homebrew/include/boost/move/algo/detail/insertion_sort.hpp:
 
 /opt/homebrew/include/boost/type_traits/is_union.hpp:
 
@@ -3216,17 +2380,11 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/multiprecision/debug_adaptor.hpp:
 
-/opt/homebrew/include/boost/pending/detail/property.hpp:
-
 /opt/homebrew/include/boost/multiprecision/gmp.hpp:
 
 /opt/homebrew/include/boost/multiprecision/cpp_int/import_export.hpp:
 
-/opt/homebrew/include/boost/fusion/mpl/push_front.hpp:
-
 /opt/homebrew/include/boost/multiprecision/cpp_int/literals.hpp:
-
-/opt/homebrew/include/boost/mp11/integral.hpp:
 
 /opt/homebrew/include/boost/integer/common_factor_rt.hpp:
 
@@ -3264,8 +2422,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/multiprecision/detail/ublas_interop.hpp:
 
-/opt/homebrew/include/boost/mpl/inherit.hpp:
-
 /opt/homebrew/include/boost/multiprecision/detail/hash.hpp:
 
 /opt/homebrew/include/boost/multiprecision/traits/is_complex.hpp:
@@ -3286,11 +2442,7 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/math/cstdfloat/cstdfloat_limits.hpp:
 
-/opt/homebrew/include/boost/unordered_map.hpp:
-
 /opt/homebrew/include/boost/multiprecision/detail/fpclassify.hpp:
-
-/opt/homebrew/include/boost/fusion/container/vector/detail/equal_to_impl.hpp:
 
 /opt/homebrew/include/boost/multiprecision/traits/is_backend.hpp:
 
@@ -3298,13 +2450,9 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/multiprecision/detail/generic_interconvert.hpp:
 
-/opt/homebrew/include/boost/fusion/support/is_sequence.hpp:
-
 /opt/homebrew/include/boost/multiprecision/detail/digits.hpp:
 
 /opt/homebrew/include/boost/math/tools/is_detected.hpp:
-
-/opt/homebrew/include/boost/move/algo/detail/basic_op.hpp:
 
 /opt/homebrew/include/boost/core/nvp.hpp:
 
@@ -3328,13 +2476,7 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/CGAL/Handle.h:
 
-/opt/homebrew/include/boost/fusion/view/transform_view/detail/end_impl.hpp:
-
 /opt/homebrew/include/CGAL/Lazy_exact_nt.h:
-
-/opt/homebrew/include/boost/fusion/mpl/erase.hpp:
-
-/opt/homebrew/include/boost/mpl/aux_/back_impl.hpp:
 
 /opt/homebrew/include/CGAL/MP_Float_arithmetic_kernel.h:
 
@@ -3350,8 +2492,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/CGAL/extended_euclidean_algorithm.h:
 
-/opt/homebrew/include/boost/fusion/view/joint_view/detail/next_impl.hpp:
-
 /opt/homebrew/include/CGAL/Chinese_remainder_traits.h:
 
 /opt/homebrew/include/CGAL/Sqrt_extension/Chinese_remainder_traits.h:
@@ -3361,8 +2501,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 /opt/homebrew/include/CGAL/Sqrt_extension/Real_embeddable_traits.h:
 
 /opt/homebrew/include/CGAL/Sqrt_extension/Algebraic_structure_traits.h:
-
-/opt/homebrew/include/boost/mpl/aux_/at_impl.hpp:
 
 /opt/homebrew/include/CGAL/Interval_arithmetic.h:
 
@@ -3402,8 +2540,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/CGAL/Homogeneous/Iso_rectangleH2.h:
 
-/opt/homebrew/include/CGAL/Location_policy.h:
-
 /opt/homebrew/include/CGAL/Homogeneous/predicates_on_pointsH2.h:
 
 /opt/homebrew/include/boost/smart_ptr/detail/local_sp_deleter.hpp:
@@ -3430,11 +2566,7 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/mpl/vector/aux_/include_preprocessed.hpp:
 
-/opt/homebrew/include/boost/container/detail/config_begin.hpp:
-
 /opt/homebrew/include/boost/mpl/vector/aux_/empty.hpp:
-
-/opt/homebrew/include/boost/fusion/mpl/push_back.hpp:
 
 /opt/homebrew/include/boost/mpl/minus.hpp:
 
@@ -3448,15 +2580,9 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/mpl/vector/aux_/push_back.hpp:
 
-/opt/homebrew/include/boost/container/detail/value_init.hpp:
-
 /opt/homebrew/include/boost/mpl/vector/aux_/pop_front.hpp:
 
-/opt/homebrew/include/boost/fusion/support/is_segmented.hpp:
-
 /opt/homebrew/include/boost/mpl/vector/aux_/push_front.hpp:
-
-/opt/homebrew/include/CGAL/Concurrent_compact_container.h:
 
 /opt/homebrew/include/boost/type_traits/has_multiplies_assign.hpp:
 
@@ -3468,19 +2594,13 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/mpl/vector/vector10.hpp:
 
-/opt/homebrew/include/boost/move/detail/move_helpers.hpp:
-
-/opt/homebrew/include/boost/intrusive/detail/has_member_function_callable_with.hpp:
-
 /opt/homebrew/include/boost/mpl/limits/vector.hpp:
-
-/opt/homebrew/include/boost/fusion/support/detail/index_sequence.hpp:
 
 /opt/homebrew/include/boost/mpl/remove_if.hpp:
 
-/opt/homebrew/include/CGAL/Enum_converter.h:
+/opt/homebrew/include/CGAL/ch_selected_extreme_points_2.h:
 
-/opt/homebrew/include/boost/container/detail/iterator.hpp:
+/opt/homebrew/include/CGAL/Enum_converter.h:
 
 /opt/homebrew/include/CGAL/Cartesian_converter.h:
 
@@ -3519,6 +2639,8 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 /opt/homebrew/include/CGAL/Intersections_3/internal/Segment_3_Sphere_3_do_intersect.h:
 
 /opt/homebrew/include/CGAL/Intersections_3/internal/Segment_3_Segment_3_intersection.h:
+
+/opt/homebrew/include/CGAL/Convex_hull_2/ch_assertions.h:
 
 /opt/homebrew/include/boost/multiprecision/detail/check_cpp11_config.hpp:
 
@@ -3572,8 +2694,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/CGAL/Intersections_3/Plane_3_Tetrahedron_3.h:
 
-/opt/homebrew/include/boost/fusion/container/vector/detail/config.hpp:
-
 /opt/homebrew/include/CGAL/Intersections_3/internal/Plane_3_Sphere_3_intersection.h:
 
 /opt/homebrew/include/CGAL/Intersections_3/internal/Plane_3_Ray_3_do_intersect.h:
@@ -3592,8 +2712,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/CGAL/Intersections_3/Line_3_Triangle_3.h:
 
-/opt/homebrew/include/boost/container/detail/min_max.hpp:
-
 /opt/homebrew/include/CGAL/Intersections_3/internal/tetrahedron_lines_intersections_3.h:
 
 /opt/homebrew/include/CGAL/Intersections_3/internal/Line_3_Segment_3_intersection.h:
@@ -3605,8 +2723,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 /opt/homebrew/include/CGAL/Intersections_3/internal/Point_3_Ray_3_do_intersect.h:
 
 /opt/homebrew/include/CGAL/Intersections_3/internal/Line_3_Ray_3_do_intersect.h:
-
-/opt/homebrew/include/boost/fusion/view/transform_view/detail/advance_impl.hpp:
 
 /opt/homebrew/include/CGAL/Intersections_3/Line_3_Ray_3.h:
 
@@ -3624,13 +2740,9 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/CGAL/Intersections_3/Iso_cuboid_3_Triangle_3.h:
 
-/opt/homebrew/include/boost/fusion/sequence/intrinsic/detail/segmented_end_impl.hpp:
-
 /opt/homebrew/include/CGAL/Intersections_3/internal/Triangle_3_Triangle_3_do_intersect.h:
 
 /opt/homebrew/include/CGAL/Intersections_3/internal/Sphere_3_Triangle_3_do_intersect.h:
-
-/opt/homebrew/include/boost/fusion/algorithm/iteration/for_each.hpp:
 
 /opt/homebrew/include/CGAL/Intersections_3/internal/Segment_3_Triangle_3_do_intersect.h:
 
@@ -3645,8 +2757,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 /opt/homebrew/include/boost/smart_ptr/detail/spinlock_gcc_atomic.hpp:
 
 /opt/homebrew/include/CGAL/Intersections_3/Iso_cuboid_3_Segment_3.h:
-
-/opt/homebrew/include/boost/mpl/back.hpp:
 
 /opt/homebrew/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Ray_3_do_intersect.h:
 
@@ -3680,8 +2790,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/CGAL/Intersections_3/Bbox_3_Sphere_3.h:
 
-/opt/homebrew/include/boost/container/detail/destroyers.hpp:
-
 /opt/homebrew/include/CGAL/Intersections_3/internal/Bbox_3_Ray_3_intersection.h:
 
 /opt/homebrew/include/CGAL/Intersections_3/internal/Bbox_3_Segment_3_do_intersect.h:
@@ -3690,15 +2798,9 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Point_3_intersection.h:
 
-/opt/homebrew/include/boost/fusion/mpl/pop_front.hpp:
-
 /opt/homebrew/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Point_3_do_intersect.h:
 
-/opt/homebrew/include/boost/mpl/has_key_fwd.hpp:
-
 /opt/homebrew/include/CGAL/Intersections_3/Bbox_3_Point_3.h:
-
-/opt/homebrew/include/boost/fusion/view/iterator_range.hpp:
 
 /opt/homebrew/include/CGAL/utility.h:
 
@@ -3715,8 +2817,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 /opt/homebrew/include/CGAL/Intersections_3/internal/Bbox_3_Segment_3_intersection.h:
 
 /opt/homebrew/include/CGAL/Intersections_3/internal/Bbox_3_Line_3_intersection.h:
-
-/opt/homebrew/include/boost/mpl/pop_front.hpp:
 
 /opt/homebrew/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Iso_cuboid_3_intersection.h:
 
@@ -3736,8 +2836,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/CGAL/Intersections_2/Point_2_Point_2.h:
 
-/opt/homebrew/include/boost/container/detail/version_type.hpp:
-
 /opt/homebrew/include/CGAL/Intersections_2/internal/Straight_2.h:
 
 /opt/homebrew/include/CGAL/Intersections_2/Line_2_Point_2.h:
@@ -3746,21 +2844,15 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/CGAL/predicates_on_points_2.h:
 
-/opt/homebrew/include/CGAL/license/Triangulation_3.h:
-
 /opt/homebrew/include/CGAL/Intersections_3/internal/Point_3_Triangle_3_do_intersect.h:
 
 /opt/homebrew/include/CGAL/Intersections_2/Segment_2_Segment_2.h:
 
 /opt/homebrew/include/CGAL/Intersections_2/Iso_rectangle_2_Segment_2.h:
 
-/opt/homebrew/include/boost/core/allocator_traits.hpp:
-
 /opt/homebrew/include/CGAL/Intersections_2/Iso_rectangle_2_Iso_rectangle_2.h:
 
 /opt/homebrew/include/CGAL/Intersections_2/Circle_2_Triangle_2.h:
-
-/opt/homebrew/include/boost/fusion/support/detail/access.hpp:
 
 /opt/homebrew/include/CGAL/Intersections_2/Circle_2_Segment_2.h:
 
@@ -3771,8 +2863,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 /opt/homebrew/include/CGAL/Intersections_2/Circle_2_Point_2.h:
 
 /opt/homebrew/include/CGAL/Intersections_2/Circle_2_Line_2.h:
-
-/opt/homebrew/include/CGAL/Hilbert_sort_middle_base.h:
 
 /opt/homebrew/include/CGAL/Intersection_traits_2.h:
 
@@ -3816,8 +2906,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/CGAL/Distance_3/Point_3_Point_3.h:
 
-/opt/homebrew/include/boost/fusion/view/iterator_range/detail/segments_impl.hpp:
-
 /opt/homebrew/include/CGAL/Cartesian_converter_fwd.h:
 
 /opt/homebrew/include/boost/move/core.hpp:
@@ -3829,8 +2917,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/initializer_list:
 
 /opt/homebrew/include/CGAL/Distance_2/Segment_2_Ray_2.h:
-
-/opt/homebrew/include/boost/move/detail/force_ptr.hpp:
 
 /opt/homebrew/include/CGAL/Distance_2/Segment_2_Segment_2.h:
 
@@ -3870,8 +2956,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/CGAL/Cartesian/Line_3.h:
 
-/opt/homebrew/include/boost/fusion/container/list/list_fwd.hpp:
-
 /opt/homebrew/include/CGAL/predicates/kernel_ftC3.h:
 
 /opt/homebrew/include/CGAL/Cartesian/Tetrahedron_3.h:
@@ -3886,8 +2970,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/CGAL/Cartesian/point_constructions_2.h:
 
-/opt/homebrew/include/boost/intrusive/detail/reverse_iterator.hpp:
-
 /opt/homebrew/include/boost/preprocessor/seq/limits/fold_left_256.hpp:
 
 /opt/homebrew/include/CGAL/Direction_2.h:
@@ -3898,6 +2980,8 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/CGAL/Cartesian/Aff_transformation_2.h:
 
+/opt/homebrew/include/CGAL/convex_hull_traits_2.h:
+
 /opt/homebrew/include/CGAL/enable_warnings.h:
 
 /opt/homebrew/include/CGAL/Cartesian/Circle_2.h:
@@ -3905,8 +2989,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 /opt/homebrew/include/boost/optional/detail/optional_factory_support.hpp:
 
 /opt/homebrew/include/CGAL/Cartesian/predicates_on_points_2.h:
-
-/opt/homebrew/include/CGAL/license/Point_set_processing_3.h:
 
 /opt/homebrew/include/boost/math/policies/error_handling.hpp:
 
@@ -3927,10 +3009,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 /opt/homebrew/include/boost/mpl/limits/list.hpp:
 
 /opt/homebrew/include/boost/random/triangle_distribution.hpp:
-
-/opt/homebrew/include/boost/fusion/support/as_const.hpp:
-
-/opt/homebrew/include/boost/fusion/algorithm/transformation/push_front.hpp:
 
 /opt/homebrew/include/boost/random/uniform_real.hpp:
 
@@ -3959,8 +3037,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 /opt/homebrew/include/boost/random/lognormal_distribution.hpp:
 
 /opt/homebrew/include/boost/type_traits/detail/has_prefix_operator.hpp:
-
-/opt/homebrew/include/boost/fusion/mpl/front.hpp:
 
 /opt/homebrew/include/boost/random/hyperexponential_distribution.hpp:
 
@@ -3992,15 +3068,9 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/random/shuffle_output.hpp:
 
-/opt/homebrew/include/boost/fusion/view/joint_view/detail/value_of_impl.hpp:
-
-/opt/homebrew/include/boost/mp11/set.hpp:
-
 /opt/homebrew/include/boost/range/distance.hpp:
 
 /opt/homebrew/include/boost/random/subtract_with_carry.hpp:
-
-/opt/homebrew/include/boost/move/detail/reverse_iterator.hpp:
 
 /opt/homebrew/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Triangle_3_do_intersect.h:
 
@@ -4070,8 +3140,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/tuple/tuple.hpp:
 
-/opt/homebrew/include/CGAL/Complexity_tags.h:
-
 /opt/homebrew/include/CGAL/Cartesian/Weighted_point_2.h:
 
 /opt/homebrew/include/CGAL/Kernel/hash_functions.h:
@@ -4098,11 +3166,7 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/CGAL/Point_3.h:
 
-/opt/homebrew/include/boost/fusion/adapted/boost_tuple/detail/is_sequence_impl.hpp:
-
 /opt/homebrew/include/CGAL/algorithm.h:
-
-/opt/homebrew/include/boost/intrusive/detail/std_fwd.hpp:
 
 /opt/homebrew/include/boost/config/detail/select_platform_config.hpp:
 
@@ -4117,8 +3181,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 /opt/homebrew/include/CGAL/Circle_2.h:
 
 /opt/homebrew/include/CGAL/Intersections_2/Iso_rectangle_2_Line_2.h:
-
-/opt/homebrew/include/boost/iterator/zip_iterator.hpp:
 
 /opt/homebrew/include/CGAL/Triangle_2.h:
 
@@ -4166,8 +3228,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/CGAL/basic_classes.h:
 
-/opt/homebrew/include/boost/move/algo/unique.hpp:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__memory/allocation_guard.h:
 
 /opt/homebrew/include/boost/math/special_functions/sign.hpp:
@@ -4186,21 +3246,13 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/optional/detail/optional_config.hpp:
 
-/opt/homebrew/include/boost/fusion/algorithm/query/find.hpp:
-
 /opt/homebrew/include/boost/optional/optional_fwd.hpp:
 
 /opt/homebrew/include/boost/utility/compare_pointees.hpp:
 
-/opt/homebrew/include/boost/fusion/view/joint_view/detail/value_of_data_impl.hpp:
-
 /opt/homebrew/include/boost/mpl/size.hpp:
 
 /opt/homebrew/include/boost/type_traits/remove_extent.hpp:
-
-/opt/homebrew/include/boost/fusion/view/transform_view/detail/begin_impl.hpp:
-
-/opt/homebrew/include/boost/mpl/empty_base.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/stdlib.h:
 
@@ -4234,8 +3286,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/CGAL/Cartesian/basic_constructions_2.h:
 
-/opt/homebrew/include/boost/move/detail/iterator_traits.hpp:
-
 /opt/homebrew/include/boost/mpl/push_back.hpp:
 
 /opt/homebrew/include/boost/optional/optional.hpp:
@@ -4250,8 +3300,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/mpl/size_t_fwd.hpp:
 
-/opt/homebrew/include/boost/fusion/support/config.hpp:
-
 /opt/homebrew/include/boost/preprocessor/repetition/detail/for.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/machine/_mcontext.h:
@@ -4265,8 +3313,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 /opt/homebrew/include/boost/mpl/vector/vector20.hpp:
 
 /opt/homebrew/include/boost/type_traits/same_traits.hpp:
-
-/opt/homebrew/include/boost/fusion/container/list/detail/deref_impl.hpp:
 
 /opt/homebrew/include/boost/mpl/aux_/iter_push_front.hpp:
 
@@ -4303,8 +3349,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 /opt/homebrew/include/boost/mpl/insert_range_fwd.hpp:
 
 /opt/homebrew/include/boost/mpl/insert_range.hpp:
-
-/opt/homebrew/include/boost/fusion/adapted/mpl/detail/category_of_impl.hpp:
 
 /opt/homebrew/include/boost/mpl/front.hpp:
 
@@ -4378,10 +3422,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/variant/detail/apply_visitor_binary.hpp:
 
-/opt/homebrew/include/boost/fusion/support/detail/is_native_fusion_sequence.hpp:
-
-/opt/homebrew/include/boost/unordered/detail/implementation.hpp:
-
 /opt/homebrew/include/CGAL/Distance_3/Triangle_3_Triangle_3.h:
 
 /opt/homebrew/include/boost/preprocessor/variadic/has_opt.hpp:
@@ -4408,11 +3448,7 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/mpl/aux_/advance_backward.hpp:
 
-/opt/homebrew/include/CGAL/hilbert_sort.h:
-
 /opt/homebrew/include/boost/math/tools/traits.hpp:
-
-/opt/homebrew/include/CGAL/Triangulation_ds_cell_base_3.h:
 
 /opt/homebrew/include/boost/mpl/aux_/preprocessed/gcc/advance_forward.hpp:
 
@@ -4450,10 +3486,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/variant/detail/over_sequence.hpp:
 
-/opt/homebrew/include/boost/container/detail/advanced_insert_int.hpp:
-
-/opt/homebrew/include/boost/mp11/detail/mp_min_element.hpp:
-
 /opt/homebrew/include/boost/mpl/aux_/clear_impl.hpp:
 
 /opt/homebrew/include/boost/mpl/aux_/preprocessed/gcc/list.hpp:
@@ -4467,8 +3499,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 /opt/homebrew/include/boost/mpl/list/aux_/begin_end.hpp:
 
 /opt/homebrew/include/boost/mpl/list/aux_/empty.hpp:
-
-/opt/homebrew/include/CGAL/license/TDS_3.h:
 
 /opt/homebrew/include/boost/mpl/list/aux_/size.hpp:
 
@@ -4520,8 +3550,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/mpl/aux_/begin_end_impl.hpp:
 
-/opt/homebrew/include/boost/unordered_set.hpp:
-
 /opt/homebrew/include/boost/mpl/begin_end.hpp:
 
 /opt/homebrew/include/boost/move/adl_move_swap.hpp:
@@ -4537,8 +3565,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 /opt/homebrew/include/boost/integer/integer_log2.hpp:
 
 /opt/homebrew/include/boost/type_traits/is_nothrow_move_constructible.hpp:
-
-/opt/homebrew/include/boost/unordered/detail/set.hpp:
 
 /opt/homebrew/include/boost/type_traits/has_nothrow_copy.hpp:
 
@@ -4592,8 +3618,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/set:
 
-/opt/homebrew/include/boost/fusion/adapted/mpl/detail/size_impl.hpp:
-
 /opt/homebrew/include/boost/detail/container_fwd.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/AvailabilityVersions.h:
@@ -4625,10 +3649,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 /opt/homebrew/include/boost/range/difference_type.hpp:
 
 /opt/homebrew/include/boost/variant.hpp:
-
-/opt/homebrew/include/boost/unordered/unordered_set.hpp:
-
-/opt/homebrew/include/CGAL/Unique_hash_map.h:
 
 /opt/homebrew/include/CGAL/Intersections_2/Bbox_2_Circle_2.h:
 
@@ -4716,8 +3736,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/CGAL/Quotient_fwd.h:
 
-/opt/homebrew/include/CGAL/Delaunay_triangulation_3.h:
-
 /opt/homebrew/include/CGAL/number_type_config.h:
 
 /opt/homebrew/include/boost/type_traits/has_nothrow_assign.hpp:
@@ -4750,15 +3768,11 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/lexical_cast/detail/lcast_unsigned_converters.hpp:
 
-/opt/homebrew/include/boost/fusion/iterator/detail/adapt_deref_traits.hpp:
-
 /opt/homebrew/include/boost/lexical_cast/detail/lcast_char_constants.hpp:
 
 /opt/homebrew/include/boost/predef/library/std/dinkumware.h:
 
 /opt/homebrew/include/boost/move/detail/std_ns_end.hpp:
-
-/opt/homebrew/include/CGAL/Random.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/iostream:
 
@@ -4806,6 +3820,8 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/mpl/aux_/largest_int.hpp:
 
+/opt/homebrew/include/CGAL/ch_graham_andrew.h:
+
 /opt/homebrew/include/boost/mpl/multiplies.hpp:
 
 /opt/homebrew/include/boost/mpl/at_fwd.hpp:
@@ -4819,8 +3835,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 /opt/homebrew/include/CGAL/Distance_3/Ray_3_Plane_3.h:
 
 /opt/homebrew/include/CGAL/Get_arithmetic_kernel.h:
-
-/opt/homebrew/include/boost/intrusive/pack_options.hpp:
 
 /opt/homebrew/include/boost/numeric/conversion/detail/udt_builtin_mixture.hpp:
 
@@ -4844,8 +3858,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/mpl/aux_/has_tag.hpp:
 
-/opt/homebrew/include/boost/fusion/view/transform_view/detail/deref_impl.hpp:
-
 /opt/homebrew/include/CGAL/Cartesian/Translation_rep_3.h:
 
 /opt/homebrew/include/CGAL/Cartesian/Vector_3.h:
@@ -4858,8 +3870,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/numeric/conversion/detail/conversion_traits.hpp:
 
-/opt/homebrew/include/boost/fusion/adapted/boost_tuple/mpl/clear.hpp:
-
 /opt/homebrew/include/boost/numeric/conversion/conversion_traits.hpp:
 
 /opt/homebrew/include/boost/lexical_cast/detail/converter_numeric.hpp:
@@ -4871,8 +3881,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 /opt/homebrew/include/boost/lexical_cast/detail/is_character.hpp:
 
 /opt/homebrew/include/boost/lexical_cast/try_lexical_convert.hpp:
-
-/opt/homebrew/include/boost/graph/graph_traits.hpp:
 
 /opt/homebrew/include/boost/preprocessor/enum_params.hpp:
 
@@ -4901,8 +3909,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 /opt/homebrew/include/boost/type_traits/detail/has_binary_operator.hpp:
 
 /opt/homebrew/include/boost/type_traits/has_plus.hpp:
-
-/opt/homebrew/include/boost/container/detail/mpl.hpp:
 
 /opt/homebrew/include/boost/type_traits.hpp:
 
@@ -4940,15 +3946,11 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/math/tools/precision.hpp:
 
-/opt/homebrew/include/CGAL/Hilbert_sort_3.h:
-
 /opt/homebrew/include/CGAL/Intersections_3/internal/Bbox_3_Triangle_3_do_intersect.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/pop_heap.h:
 
 /opt/homebrew/include/boost/mpl/list/list10.hpp:
-
-/opt/homebrew/include/boost/mpl/aux_/has_key_impl.hpp:
 
 /opt/homebrew/include/CGAL/GMP/Gmpfr_type_static.h:
 
@@ -4998,13 +4000,13 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/CGAL/predicates/kernel_ftC2.h:
 
-/opt/homebrew/include/boost/fusion/iterator/deref_data.hpp:
-
 /opt/homebrew/include/CGAL/Sqrt_extension/Modular_traits.h:
 
 /opt/homebrew/include/boost/preprocessor/seq/limits/elem_256.hpp:
 
 /opt/homebrew/include/boost/preprocessor/seq/elem.hpp:
+
+/opt/homebrew/include/CGAL/convexity_check_2.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__memory/addressof.h:
 
@@ -5036,8 +4038,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/concept/assert.hpp:
 
-/opt/homebrew/include/boost/fusion/support/void.hpp:
-
 /opt/homebrew/include/boost/iterator/reverse_iterator.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_wctrans_t.h:
@@ -5050,8 +4050,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/utility/enable_if.hpp:
 
-/opt/homebrew/include/boost/fusion/support/detail/is_mpl_sequence.hpp:
-
 /opt/homebrew/include/boost/range/has_range_iterator.hpp:
 
 /opt/homebrew/include/boost/preprocessor/enum.hpp:
@@ -5061,8 +4059,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 /opt/homebrew/include/boost/type_traits/conversion_traits.hpp:
 
 /opt/homebrew/include/boost/range/detail/common.hpp:
-
-/opt/homebrew/include/boost/fusion/support/segmented_fold_until.hpp:
 
 /opt/homebrew/include/CGAL/Distance_3/Line_3_Plane_3.h:
 
@@ -5093,8 +4089,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 /opt/homebrew/include/boost/predef/compiler/borland.h:
 
 /opt/homebrew/include/boost/range/mutable_iterator.hpp:
-
-/opt/homebrew/include/boost/container/new_allocator.hpp:
 
 /opt/homebrew/include/boost/mpl/aux_/insert_range_impl.hpp:
 
@@ -5138,8 +4132,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/mpl/bind.hpp:
 
-/opt/homebrew/include/boost/fusion/algorithm/transformation/pop_back.hpp:
-
 /opt/homebrew/include/boost/mpl/aux_/config/has_apply.hpp:
 
 /opt/homebrew/include/boost/preprocessor/array/data.hpp:
@@ -5159,8 +4151,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 /opt/homebrew/include/boost/variant/recursive_variant.hpp:
 
 /opt/homebrew/include/boost/mpl/always.hpp:
-
-/opt/homebrew/include/boost/move/detail/iterator_to_raw_pointer.hpp:
 
 /opt/homebrew/include/boost/mpl/aux_/iter_apply.hpp:
 
@@ -5182,8 +4172,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/type_traits/remove_const.hpp:
 
-/opt/homebrew/include/boost/fusion/adapted/boost_tuple/detail/is_view_impl.hpp:
-
 /opt/homebrew/include/boost/variant/apply_visitor.hpp:
 
 /opt/homebrew/include/boost/type_traits/add_reference.hpp:
@@ -5196,13 +4184,9 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/core/addressof.hpp:
 
-/opt/homebrew/include/CGAL/Triangulation_utils_3.h:
-
 /opt/homebrew/include/boost/iterator/detail/enable_if.hpp:
 
 /opt/homebrew/include/boost/utility/swap.hpp:
-
-/opt/homebrew/include/boost/fusion/container/deque/deque_fwd.hpp:
 
 /opt/homebrew/include/boost/type_traits/remove_pointer.hpp:
 
@@ -5234,8 +4218,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/preprocessor/list/reverse.hpp:
 
-/opt/homebrew/include/boost/intrusive/detail/value_functors.hpp:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_wint_t.h:
 
 /opt/homebrew/include/boost/mpl/aux_/preprocessed/gcc/arg.hpp:
@@ -5251,8 +4233,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__threading_support:
 
 /opt/homebrew/include/boost/mpl/aux_/value_wknd.hpp:
-
-/opt/homebrew/include/boost/fusion/view/iterator_range/iterator_range.hpp:
 
 /opt/homebrew/include/boost/preprocessor/slot/slot.hpp:
 
@@ -5288,8 +4268,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/generate_n.h:
 
-/opt/homebrew/include/boost/mp11/list.hpp:
-
 /opt/homebrew/include/CGAL/NT_converter.h:
 
 /opt/homebrew/include/boost/type_traits/is_lvalue_reference.hpp:
@@ -5305,8 +4283,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 /opt/homebrew/include/boost/type_traits/is_complete.hpp:
 
 /opt/homebrew/include/boost/type_traits/integral_constant.hpp:
-
-/opt/homebrew/include/boost/mp11/detail/config.hpp:
 
 /opt/homebrew/include/CGAL/Cartesian/Aff_transformation_3.h:
 
@@ -5364,19 +4340,13 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/preprocessor/tuple/elem.hpp:
 
-/opt/homebrew/include/boost/graph/properties.hpp:
-
 /opt/homebrew/include/boost/preprocessor/control/limits/while_256.hpp:
 
 /opt/homebrew/include/boost/preprocessor/control/detail/while.hpp:
 
-/opt/homebrew/include/boost/intrusive/detail/config_begin.hpp:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/compare:
 
 /opt/homebrew/include/boost/mpl/list/aux_/include_preprocessed.hpp:
-
-/opt/homebrew/include/boost/fusion/mpl/has_key.hpp:
 
 /opt/homebrew/include/boost/preprocessor/list/detail/fold_right.hpp:
 
@@ -5404,10 +4374,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/random/xor_combine.hpp:
 
-/opt/homebrew/include/boost/fusion/support/detail/mpl_iterator_category.hpp:
-
-/opt/homebrew/include/CGAL/Triangulation_simplex_3.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/xlocale/_wctype.h:
 
 /opt/homebrew/include/boost/predef/compiler/ekopath.h:
@@ -5432,8 +4398,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/is_sorted.h:
 
-/opt/homebrew/include/boost/container/detail/placement_new.hpp:
-
 /opt/homebrew/include/boost/preprocessor/list/detail/fold_left.hpp:
 
 /opt/homebrew/include/boost/preprocessor/list/fold_left.hpp:
@@ -5448,8 +4412,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/preprocessor/control/while.hpp:
 
-/opt/homebrew/include/boost/fusion/support/tag_of.hpp:
-
 /opt/homebrew/include/boost/math/tools/mp.hpp:
 
 /opt/homebrew/include/CGAL/Intersections_3/internal/Ray_3_Triangle_3_intersection.h:
@@ -5463,10 +4425,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 /opt/homebrew/include/boost/preprocessor/arithmetic/dec.hpp:
 
 /opt/homebrew/include/boost/preprocessor/arithmetic/add.hpp:
-
-/opt/homebrew/include/boost/mpl/aux_/erase_key_impl.hpp:
-
-/opt/homebrew/include/boost/fusion/mpl.hpp:
 
 /opt/homebrew/include/boost/preprocessor/logical/bitand.hpp:
 
@@ -5488,8 +4446,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/preprocessor/arithmetic/inc.hpp:
 
-/opt/homebrew/include/boost/fusion/view/joint_view/detail/end_impl.hpp:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/reverse.h:
 
 /opt/homebrew/include/boost/preprocessor/control/if.hpp:
@@ -5502,11 +4458,7 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/mpl/aux_/preprocessed/gcc/quote.hpp:
 
-/opt/homebrew/include/boost/fusion/iterator/iterator_facade.hpp:
-
 /opt/homebrew/include/boost/preprocessor/detail/limits/auto_rec_256.hpp:
-
-/opt/homebrew/include/boost/intrusive/detail/iterator.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/search.h:
 
@@ -5572,8 +4524,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/predef/detail/_cassert.h:
 
-/opt/homebrew/include/boost/fusion/support/iterator_base.hpp:
-
 /opt/homebrew/include/boost/mpl/aux_/na_spec.hpp:
 
 /opt/homebrew/include/boost/multiprecision/cpp_int/value_pack.hpp:
@@ -5598,8 +4548,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/lexical_cast/bad_lexical_cast.hpp:
 
-/opt/homebrew/include/boost/fusion/adapted/mpl/detail/is_view_impl.hpp:
-
 /opt/homebrew/include/boost/mpl/aux_/config/use_preprocessed.hpp:
 
 /opt/homebrew/include/boost/predef/platform/windows_system.h:
@@ -5610,17 +4558,11 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/preprocessor/seq/seq.hpp:
 
-/opt/homebrew/include/boost/move/algo/predicate.hpp:
-
 /opt/homebrew/include/boost/iterator/interoperable.hpp:
-
-/opt/homebrew/include/boost/fusion/adapted/boost_tuple/boost_tuple_iterator.hpp:
 
 /opt/homebrew/include/boost/iterator/iterator_facade.hpp:
 
 /opt/homebrew/include/CGAL/Cartesian/Triangle_2.h:
-
-/opt/homebrew/include/boost/fusion/container/vector/detail/next_impl.hpp:
 
 /opt/homebrew/include/boost/mpl/vector/aux_/at.hpp:
 
@@ -5638,13 +4580,9 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/preprocessor/logical/not.hpp:
 
-/opt/homebrew/include/boost/fusion/sequence/convert.hpp:
-
 /opt/homebrew/include/boost/math/special_functions/digamma.hpp:
 
 /opt/homebrew/include/boost/random/mixmax.hpp:
-
-/opt/homebrew/include/boost/container/detail/value_functors.hpp:
 
 /opt/homebrew/include/CGAL/Algebraic_structure_traits.h:
 
@@ -5665,8 +4603,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/stdint.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/sstream:
-
-/opt/homebrew/include/boost/container/detail/workaround.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/map:
 
@@ -5702,8 +4638,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/list:
 
-/opt/homebrew/include/boost/fusion/container/list/nil.hpp:
-
 /opt/homebrew/include/boost/type_traits/has_divides_assign.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/fenv.h:
@@ -5713,8 +4647,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 /opt/homebrew/include/boost/mpl/list.hpp:
 
 /opt/homebrew/include/boost/predef/compiler/dignus.h:
-
-/opt/homebrew/include/CGAL/Triangulation_data_structure_3.h:
 
 /opt/homebrew/include/boost/type_traits/detail/is_function_cxx_11.hpp:
 
@@ -5732,8 +4664,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/math/special_functions/cbrt.hpp:
 
-/opt/homebrew/include/boost/fusion/algorithm/transformation/push_back.hpp:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/nl_types.h:
 
 /opt/homebrew/include/boost/functional/hash.hpp:
@@ -5742,15 +4672,11 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__memory/auto_ptr.h:
 
-/opt/homebrew/include/CGAL/Triangulation_segment_traverser_3.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/ios:
 
 /opt/homebrew/include/CGAL/IO/Color.h:
 
 /opt/homebrew/include/boost/type_traits/is_member_function_pointer.hpp:
-
-/opt/homebrew/include/boost/move/iterator.hpp:
 
 /opt/homebrew/include/boost/detail/select_type.hpp:
 
@@ -5762,15 +4688,9 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/xlocale/__wctype.h:
 
-/opt/homebrew/include/boost/mpl/aux_/pop_front_impl.hpp:
-
-/opt/homebrew/include/CGAL/triangulation_assertions.h:
-
 /opt/homebrew/include/CGAL/Cartesian/predicates_on_directions_2.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/utility:
-
-/opt/homebrew/include/CGAL/Hilbert_sort_middle_3.h:
 
 /opt/homebrew/include/boost/type_traits/is_void.hpp:
 
@@ -5792,8 +4712,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/mutex:
 
-/opt/homebrew/include/boost/move/algo/detail/merge_sort.hpp:
-
 /opt/homebrew/include/boost/numeric/conversion/bounds.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/stdio.h:
@@ -5803,8 +4721,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 /opt/homebrew/include/CGAL/Intersections_3/Plane_3_Segment_3.h:
 
 /opt/homebrew/include/boost/mpl/assert.hpp:
-
-/opt/homebrew/include/boost/fusion/adapted/mpl/detail/is_sequence_impl.hpp:
 
 /opt/homebrew/include/boost/predef/detail/os_detected.h:
 
@@ -5922,15 +4838,9 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/lexical_cast/detail/widest_char.hpp:
 
-/opt/homebrew/include/CGAL/Triangulation_vertex_base_3.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/unique.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/shift_right.h:
-
-/opt/homebrew/include/boost/fusion/sequence/intrinsic/detail/segmented_end.hpp:
-
-/opt/homebrew/include/boost/fusion/adapted/boost_tuple/detail/end_impl.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/replace.h:
 
@@ -5968,13 +4878,9 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__functional/unary_negate.h:
 
-/opt/homebrew/include/CGAL/Has_member.h:
-
 /opt/homebrew/include/CGAL/assertions_behaviour.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/replace_copy.h:
-
-/opt/homebrew/include/boost/container/vector.hpp:
 
 /opt/homebrew/include/CGAL/Sqrt_extension.h:
 
@@ -6005,8 +4911,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 /opt/homebrew/include/boost/smart_ptr/detail/sp_convertible.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/partial_sort_copy.h:
-
-/opt/homebrew/include/CGAL/spatial_sort.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_blkcnt_t.h:
 
@@ -6072,8 +4976,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/CGAL/Handle_for_virtual.h:
 
-/opt/homebrew/include/boost/fusion/iterator/detail/distance.hpp:
-
 /opt/homebrew/include/boost/predef/os/cygwin.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/max.h:
@@ -6116,21 +5018,15 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/adjacent_find.h:
 
-/opt/homebrew/include/boost/fusion/container/list/detail/begin_impl.hpp:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/generate.h:
 
 /opt/homebrew/include/boost/predef/compiler/greenhills.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__functional/perfect_forward.h:
 
-/opt/homebrew/include/boost/move/algo/adaptive_merge.hpp:
-
 /opt/homebrew/include/boost/predef/library/c/gnu.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/for_each_n.h:
-
-/opt/homebrew/include/boost/fusion/iterator/iterator_adapter.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/for_each.h:
 
@@ -6155,8 +5051,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__debug:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/find_if.h:
-
-/opt/homebrew/include/boost/fusion/container/vector/detail/advance_impl.hpp:
 
 /opt/homebrew/include/CGAL/Cartesian/Direction_2.h:
 
@@ -6232,8 +5126,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/preprocessor/variadic/limits/size_64.hpp:
 
-/opt/homebrew/include/boost/mp11/function.hpp:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__functional/ranges_operations.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_key_t.h:
@@ -6246,8 +5138,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/variant/detail/variant_io.hpp:
 
-/opt/homebrew/include/boost/fusion/container/list/detail/value_at_impl.hpp:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/arm/_limits.h:
 
 /opt/homebrew/include/CGAL/Origin.h:
@@ -6259,8 +5149,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 /opt/homebrew/include/CGAL/Kernel/interface_macros.h:
 
 /opt/homebrew/include/CGAL/Object.h:
-
-/opt/homebrew/include/CGAL/Multiscale_sort.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__iterator/advance.h:
 
@@ -6322,8 +5210,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_seek_set.h:
 
-/opt/homebrew/include/boost/fusion/mpl/at.hpp:
-
 /opt/homebrew/include/CGAL/gmpxx_coercion_traits.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/variant:
@@ -6334,8 +5220,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/type_traits/copy_cv_ref.hpp:
 
-/opt/homebrew/include/CGAL/Spatial_lock_grid_3.h:
-
 /opt/homebrew/include/CGAL/Scalar_factor_traits.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__ranges/enable_borrowed_range.h:
@@ -6345,8 +5229,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__iterator/common_iterator.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__function_like.h:
-
-/opt/homebrew/include/boost/fusion/algorithm/transformation/erase.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__thread/poll_with_backoff.h:
 
@@ -6390,13 +5272,9 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/stable_sort.h:
 
-/opt/homebrew/include/boost/fusion/adapted/boost_tuple/detail/at_impl.hpp:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_once_t.h:
 
 /opt/homebrew/include/boost/mpl/times.hpp:
-
-/opt/homebrew/include/boost/fusion/iterator/value_of_data.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/cstdint:
 
@@ -6412,11 +5290,7 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/CGAL/determinant.h:
 
-/opt/homebrew/include/boost/mp11/detail/mp_void.hpp:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/math.h:
-
-/opt/homebrew/include/boost/mpl/end.hpp:
 
 /opt/homebrew/include/boost/type_traits/extent.hpp:
 
@@ -6504,8 +5378,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/CGAL/Distance_2/Line_2_Triangle_2.h:
 
-/opt/homebrew/include/CGAL/Compact_container.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/stddef.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__iterator/concepts.h:
@@ -6574,6 +5446,8 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/preprocessor/repetition/enum_params.hpp:
 
+/opt/homebrew/include/CGAL/Convex_hull_traits_adapter_2.h:
+
 /opt/homebrew/include/CGAL/Coercion_traits.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/push_heap.h:
@@ -6598,8 +5472,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/stdio.h:
 
-/opt/homebrew/include/boost/container/detail/construct_in_place.hpp:
-
 /opt/homebrew/include/boost/mpl/aux_/preprocessed/gcc/iter_fold_if_impl.hpp:
 
 /opt/homebrew/include/boost/preprocessor/empty.hpp:
@@ -6622,13 +5494,9 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_in_addr_t.h:
 
-/opt/homebrew/include/boost/fusion/container/list/detail/end_impl.hpp:
-
 /opt/homebrew/include/boost/random/seed_seq.hpp:
 
 /opt/homebrew/include/boost/mpl/aux_/inserter_algorithm.hpp:
-
-/opt/homebrew/include/boost/fusion/algorithm/transformation/erase_key.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__memory/construct_at.h:
 
@@ -6714,8 +5582,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/predef/compiler/digitalmars.h:
 
-/opt/homebrew/include/boost/fusion/view/single_view/detail/end_impl.hpp:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/pthread/pthread_impl.h:
 
 /opt/homebrew/include/CGAL/Distance_2/Point_2_Point_2.h:
@@ -6726,15 +5592,11 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/predef/other.h:
 
-/opt/homebrew/include/boost/fusion/algorithm/transformation/insert.hpp:
-
 /opt/homebrew/include/boost/predef/hardware/simd/x86.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/ratio:
 
 /opt/homebrew/include/boost/random/detail/vector_io.hpp:
-
-/opt/homebrew/include/boost/iterator/minimum_category.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/limits:
 
@@ -6744,13 +5606,9 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/utility/detail/result_of_variadic.hpp:
 
-/opt/homebrew/include/boost/fusion/view/single_view/detail/at_impl.hpp:
-
 /opt/homebrew/include/boost/predef/os/os400.h:
 
 /opt/homebrew/include/boost/mpl/distance_fwd.hpp:
-
-/opt/homebrew/include/CGAL/TDS_3/internal/Triangulation_ds_circulators_3.h:
 
 /opt/homebrew/include/boost/predef/os/linux.h:
 
@@ -6796,6 +5654,8 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/range/functions.hpp:
 
+/opt/homebrew/include/CGAL/Convex_hull_2/ch_selected_extreme_points_2_impl.h:
+
 /opt/homebrew/include/CGAL/GMP/Gmpz_type.h:
 
 /opt/homebrew/include/CGAL/aff_transformation_tags.h:
@@ -6810,8 +5670,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/cwchar:
 
-/opt/homebrew/include/CGAL/Iterator_project.h:
-
 /opt/homebrew/include/boost/mpl/vector/aux_/size.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/wait.h:
@@ -6819,10 +5677,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 /opt/homebrew/include/CGAL/Intersections_3/Point_3_Segment_3.h:
 
 /opt/homebrew/include/boost/predef/os/bsd/free.h:
-
-/opt/homebrew/include/boost/fusion/view/single_view/single_view_iterator.hpp:
-
-/opt/homebrew/include/boost/fusion/sequence/intrinsic/segments.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/find_first_of.h:
 
@@ -6878,6 +5732,8 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_mutex_t.h:
 
+/opt/homebrew/include/CGAL/license/Convex_hull_2.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__functional/weak_result_type.h:
 
 /opt/homebrew/include/boost/numeric/conversion/detail/meta.hpp:
@@ -6932,8 +5788,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__iterator/reverse_access.h:
 
-/opt/homebrew/include/boost/mp11/detail/mp_with_index.hpp:
-
 /opt/homebrew/include/boost/config/user.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__functional/bind_front.h:
@@ -6962,8 +5816,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/preprocessor/repetition/enum_binary_params.hpp:
 
-/opt/homebrew/include/boost/fusion/iterator/detail/segment_sequence.hpp:
-
 /opt/homebrew/include/CGAL/Cartesian/Point_3.h:
 
 /opt/homebrew/include/CGAL/Intersections_2/Point_2_Ray_2.h:
@@ -6982,15 +5834,11 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__tuple:
 
-/opt/homebrew/include/boost/fusion/support/detail/enabler.hpp:
-
 /opt/homebrew/include/boost/type_traits/has_new_operator.hpp:
 
 /opt/homebrew/include/boost/preprocessor/list/limits/fold_left_256.hpp:
 
 /opt/homebrew/include/CGAL/Distance_2/Ray_2_Line_2.h:
-
-/opt/homebrew/include/boost/move/move.hpp:
 
 /opt/homebrew/include/CGAL/Intersections_3/internal/Plane_3_Sphere_3_do_intersect.h:
 
@@ -7092,19 +5940,11 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/preprocessor/stringize.hpp:
 
-/opt/homebrew/include/boost/graph/property_maps/null_property_map.hpp:
-
-/opt/homebrew/include/CGAL/STL_Extension/internal/Has_member_visited.h:
-
 /opt/homebrew/include/boost/foreach_fwd.hpp:
 
 /opt/homebrew/include/boost/optional/detail/optional_aligned_storage.hpp:
 
-/opt/homebrew/include/boost/mp11/algorithm.hpp:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__iterator/next.h:
-
-/opt/homebrew/include/boost/mp11/detail/mp_list.hpp:
 
 /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stdarg.h:
 
@@ -7122,11 +5962,7 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/cdefs.h:
 
-/opt/homebrew/include/boost/fusion/container/vector/detail/prior_impl.hpp:
-
 /opt/homebrew/include/boost/config.hpp:
-
-/opt/homebrew/include/boost/move/algorithm.hpp:
 
 /opt/homebrew/include/boost/mpl/tag.hpp:
 
@@ -7162,8 +5998,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/predef/compiler/intel.h:
 
-/opt/homebrew/include/boost/fusion/algorithm/iteration/for_each_fwd.hpp:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/cstdlib:
 
 /opt/homebrew/include/boost/predef/library/std/vacpp.h:
@@ -7177,10 +6011,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 /opt/homebrew/include/boost/numeric/conversion/detail/numeric_cast_traits.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_intptr_t.h:
-
-/opt/homebrew/include/boost/mpl/begin.hpp:
-
-/opt/homebrew/include/CGAL/Has_timestamp.h:
 
 /opt/homebrew/include/CGAL/Intersections_2/Point_2_Segment_2.h:
 
@@ -7196,11 +6026,7 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/mpl/aux_/config/integral.hpp:
 
-/opt/homebrew/include/boost/fusion/iterator/advance.hpp:
-
 /opt/homebrew/include/CGAL/Vector_2.h:
-
-/opt/homebrew/include/boost/mp11/version.hpp:
 
 /opt/homebrew/include/CGAL/Intersections_3/Line_3_Point_3.h:
 
@@ -7224,8 +6050,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__iterator/reverse_iterator.h:
 
-/opt/homebrew/include/boost/fusion/support/detail/and.hpp:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__iterator/incrementable_traits.h:
 
 /opt/homebrew/include/boost/preprocessor/config/config.hpp:
@@ -7247,8 +6071,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 /opt/homebrew/include/CGAL/Intersections_3/internal/Line_3_Tetrahedron_3_do_intersect.h:
 
 /opt/homebrew/include/boost/predef/os/beos.h:
-
-/opt/homebrew/include/boost/fusion/container/vector/detail/value_at_impl.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/cassert:
 
@@ -7296,10 +6118,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__iterator/iterator_traits.h:
 
-/opt/homebrew/include/boost/fusion/sequence/comparison/enable_comparison.hpp:
-
-/opt/homebrew/include/boost/fusion/view/transform_view/transform_view.hpp:
-
 /opt/homebrew/include/boost/predef/architecture/arm.h:
 
 /opt/homebrew/include/boost/predef/language/cuda.h:
@@ -7314,13 +6132,9 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/mpl/aux_/config/pp_counter.hpp:
 
-/opt/homebrew/include/CGAL/boost/graph/named_params_helper.h:
-
 /opt/homebrew/include/CGAL/Intersections_2/Ray_2_Segment_2.h:
 
 /opt/homebrew/include/boost/math/tools/promotion.hpp:
-
-/opt/homebrew/include/boost/mpl/erase.hpp:
 
 /opt/homebrew/include/boost/predef/make.h:
 
@@ -7346,15 +6160,11 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/preprocessor/repetition/enum_trailing_params.hpp:
 
-/opt/homebrew/include/boost/fusion/container/vector/detail/end_impl.hpp:
-
 /opt/homebrew/include/CGAL/export/helpers.h:
 
 /opt/homebrew/include/boost/math/tools/fraction.hpp:
 
 /opt/homebrew/include/boost/math/special_functions/math_fwd.hpp:
-
-/opt/homebrew/include/CGAL/Hash_map/internal/chained_map.h:
 
 /opt/homebrew/include/boost/variant/detail/enable_recursive.hpp:
 
@@ -7393,8 +6203,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 /opt/homebrew/include/boost/numeric/conversion/detail/preprocessed/numeric_cast_traits_common.hpp:
 
 /opt/homebrew/include/boost/predef/compiler/watcom.h:
-
-/opt/homebrew/include/boost/move/detail/pointer_element.hpp:
 
 /opt/homebrew/include/boost/predef/compiler/iar.h:
 
@@ -7472,8 +6280,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/unistd.h:
 
-/opt/homebrew/include/CGAL/Dynamic_property_map.h:
-
 /opt/homebrew/include/boost/range/iterator_range_core.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_ino_t.h:
@@ -7482,11 +6288,7 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/CGAL/Kernel_traits_fwd.h:
 
-/opt/homebrew/include/boost/container/options.hpp:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__ranges/access.h:
-
-/opt/homebrew/include/boost/fusion/algorithm/transformation/pop_front.hpp:
 
 /opt/homebrew/include/CGAL/Cartesian/plane_constructions_3.h:
 
@@ -7498,15 +6300,11 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/core/explicit_operator_bool.hpp:
 
-/opt/homebrew/include/boost/fusion/mpl/insert.hpp:
-
 /opt/homebrew/include/CGAL/Homogeneous/Iso_cuboidH3.h:
 
 /opt/homebrew/include/boost/mpl/iter_fold_if.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_u_int64_t.h:
-
-/opt/homebrew/include/boost/mpl/aux_/pop_back_impl.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/set_intersection.h:
 
@@ -7519,8 +6317,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 /opt/homebrew/include/boost/move/detail/addressof.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_pid_t.h:
-
-/opt/homebrew/include/boost/core/allocator_access.hpp:
 
 /opt/homebrew/include/boost/mpl/aux_/config/static_constant.hpp:
 
@@ -7542,8 +6338,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_u_int32_t.h:
 
-/opt/homebrew/include/boost/fusion/container/list/cons.hpp:
-
 /opt/homebrew/include/boost/type_traits/is_arithmetic.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_xlocale.h:
@@ -7562,11 +6356,7 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_posix_vdisable.h:
 
-/opt/homebrew/include/boost/move/algo/detail/search.hpp:
-
 /opt/homebrew/include/boost/mpl/aux_/preprocessed/gcc/apply_wrap.hpp:
-
-/opt/homebrew/include/boost/fusion/adapted/boost_tuple/detail/convert_impl.hpp:
 
 /opt/homebrew/include/boost/predef/library.h:
 
@@ -7587,8 +6377,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 /opt/homebrew/include/boost/random/fisher_f_distribution.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_rune_t.h:
-
-/opt/homebrew/include/boost/fusion/mpl/begin.hpp:
 
 /opt/homebrew/include/boost/predef/compiler/microtec.h:
 
@@ -7620,8 +6408,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 
 /opt/homebrew/include/boost/config/platform/macos.hpp:
 
-/opt/homebrew/include/boost/fusion/algorithm/iteration/detail/segmented_for_each.hpp:
-
 /opt/homebrew/include/CGAL/Intersections_3/internal/Plane_3_Segment_3_do_intersect.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_timeval.h:
@@ -7633,8 +6419,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 /opt/homebrew/include/boost/config/detail/cxx_composite.hpp:
 
 /opt/homebrew/include/boost/array.hpp:
-
-/opt/homebrew/include/boost/fusion/mpl/back.hpp:
 
 /opt/homebrew/include/boost/preprocessor/list/detail/limits/fold_right_256.hpp:
 
@@ -7661,8 +6445,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKU
 /opt/homebrew/include/boost/mpl/prior.hpp:
 
 /opt/homebrew/include/boost/random/discrete_distribution.hpp:
-
-/opt/homebrew/include/boost/fusion/algorithm/iteration/fold.hpp:
 
 /opt/homebrew/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_weighted_squared_radius_3.h:
 
