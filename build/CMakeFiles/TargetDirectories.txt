@@ -1,0 +1,3 @@
+/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/build/CMakeFiles/main.dir
+/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/build/CMakeFiles/edit_cache.dir
+/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/build/CMakeFiles/rebuild_cache.dir
