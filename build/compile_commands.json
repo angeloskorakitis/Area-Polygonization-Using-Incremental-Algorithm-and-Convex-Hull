@@ -1,7 +1,7 @@
 [
 {
-  "directory": "blabla/build",
-  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCGAL_USE_GMPXX=1 -Iblabla/programs/../include -isystem /opt/homebrew/include -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14 -o CMakeFiles/main.dir/main.cpp.o -c blabla/programs/main.cpp",
-  "file": "blabla/programs/main.cpp"
+  "directory": "/home/sdi1900191/2023-emiris-k23-assignment-1/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCGAL_USE_GMPXX=1 -I/home/sdi1900191/2023-emiris-k23-assignment-1/programs/../include -isystem /opt/homebrew/include -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14 -o CMakeFiles/main.dir/main.cpp.o -c /home/sdi1900191/2023-emiris-k23-assignment-1/programs/main.cpp",
+  "file": "/home/sdi1900191/2023-emiris-k23-assignment-1/programs/main.cpp"
 }
 ]
