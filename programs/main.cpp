@@ -33,19 +33,24 @@ typedef std::string                                           String;
 // παίρνουμε το ΚΠ των σημείων μας και κάνουμε iterate τα σημεία του ΚΠ 'προσπαθώντας' να προσθέσουμε σημεία στο πολύγωνο διατηρώντας το απλό
 //
 bool is_edge_visible(Point , Segment , Polygon );
+bool is_edge_visible(Segment , Segment , Polygon );
 
+
+// Να το δούμε
 // class Polygonization
 // {
 //   private:
 //     const PointVector input_points;
 //     const String algorithm;
 //     const String output_file;
+//     const String edge_selection;
 //     Polygon polygon;
 //   public:
 //     Polygonization(std::string input_string);
 //     ~Polygonization();
 //     String get_algorithm()const;
 //     String get_output_file()const;
+//     String get_edge_selection()const;
 //     Polygon get_polygon();
 //     Polygon incremental_algorithm(Polygon);
 //     Polygon convex_hull_algorithm(Polygon);
@@ -53,13 +58,11 @@ bool is_edge_visible(Point , Segment , Polygon );
 // };
 
 
-
-
-
-
-
 int main(int argc, char *argv[])
 {
+  // Επεξεργασία Παραμέτρων Εισόδου
+
+
   // Το σύνολο των αρχικών σημείων τα οποία θα δίνει ο χρήστης από ένα αρχείο (προσωρινό - να αλλάξει)
   PointVector vertices = { Point(0,1), Point(1,3),
                                   Point(2,2),
@@ -110,7 +113,7 @@ int main(int argc, char *argv[])
     }
 
     // Για κάθε ορατή ακμή του ΚΠ θέλω να βρώ τις ορατές ακμές στο πολύγωνο και ανάλογα με το strategy (τυχαία επιλογή, μέγιστο, ελάχστο εμβαδόν) να τις επιλέξω...
-  advance(p_vertices, 1);
+    advance(p_vertices, 1);
 
   }
     return EXIT_SUCCESS;
@@ -183,29 +186,30 @@ bool is_edge_visible(Segment ch_segment, Segment polygon_segment, Polygon convex
   Point ch_target = ch_segment.target();
 
   // Δημιουργώ το τρίγωνο με κορυφές Source Target Point
-  if(polygon_source == ch_source) Triangle triangle( polygon_source, polygon_target, ch_target);
-
+  // if(polygon_source == ch_source) triangle( polygon_source, polygon_target, ch_target);
+  // if(polygon_source == ch_target) triangle( polygon_source, polygon_target, ch_source);
   //...........................................................................................
-
   // Υπολογίζεις το intersection των παραπάνω segments με το polygon και θες να έχουν μόνο ένα κοινό σημείο δηλ. το σημείο source και target αντίστοιχα
   // Για κάθε segment του CH να υπολογίζω τα σημεία που κάνει intersect
   // Για να ξερω οτι τα δυο segments τεμνουν μονο τη μια κορυφη αρκει να ελεγξω αν τεμνουν μονο (!) τις δυο γειτονικες ακμές του ΚΠ
   //!!! Ενδεχομένως να μπορω να παρω το τριγωνο και να δω αν υπαρχουν γραμμες του πολυγωνου που το τεμνουν !!!
+  Triangle triangle( polygon_source, polygon_target, ch_target);
+
   for (EdgeIterator edge_itr = convex_hull.edges_begin(); edge_itr != convex_hull.edges_end(); ++edge_itr) 
   {
     Point intersection_point;
     Segment intersection_segment;
 
     Object result = CGAL::intersection(triangle, *edge_itr);
-    
+
     // Αν η τομή τους είναι ένα σημείο...
     if (CGAL::assign(intersection_point, result)) 
     {
-      if(intersection_point == target) continue;
-      if(intersection_point == source) continue;
+      if(intersection_point == ch_target) continue;
+      if(intersection_point == ch_source) continue;
       // !!! Δεν είμαι σίγουρος γι αυτό...να το σκεφτώ περισσότερο !!!
-      else if(intersection_point != target) return false;
-      else if(intersection_point != source) return false;
+      else if(intersection_point != ch_target) return false;
+      else if(intersection_point != ch_source) return false;
 
     }
     else
@@ -214,10 +218,10 @@ bool is_edge_visible(Segment ch_segment, Segment polygon_segment, Polygon convex
       if (CGAL::assign(intersection_segment, result)) 
       {
         // Αν η τομή τους είναι segment που είναι το segment τότε είναι ορατό...άρα συνεχίζουμε
-        if(intersection_segment == segment) continue;
+        if(intersection_segment == ch_segment) continue;
         
         // Αν η τομή τους είναι segment που δεν είναι το segment τότε δεν είναι ορατό...άρα επιστροφή false
-        else if(intersection_segment != segment) return false;
+        else if(intersection_segment != ch_segment) return false;
       
       // Αν δεν υπάρχει τομή τότε...συνέχισε    
       } 
@@ -228,3 +232,4 @@ bool is_edge_visible(Segment ch_segment, Segment polygon_segment, Polygon convex
 
   return true;
 }
+

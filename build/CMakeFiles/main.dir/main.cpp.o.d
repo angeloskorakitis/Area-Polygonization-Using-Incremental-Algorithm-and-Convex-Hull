@@ -2109,6 +2109,20 @@ CMakeFiles/main.dir/main.cpp.o: \
   /opt/homebrew/include/CGAL/tuple.h \
   /opt/homebrew/include/CGAL/ch_bykat.h \
   /opt/homebrew/include/CGAL/Convex_hull_2/ch_bykat_impl.h \
+  /opt/homebrew/include/CGAL/Polygon_2.h \
+  /opt/homebrew/include/CGAL/circulator.h \
+  /opt/homebrew/include/CGAL/circulator_bases.h \
+  /opt/homebrew/include/CGAL/Iterator_range.h \
+  /opt/homebrew/include/boost/foreach.hpp \
+  /opt/homebrew/include/boost/foreach_fwd.hpp \
+  /opt/homebrew/include/CGAL/Polygon_2_algorithms.h \
+  /opt/homebrew/include/CGAL/Polygon_2/polygon_assertions.h \
+  /opt/homebrew/include/CGAL/Polygon_2/Polygon_2_algorithms_impl.h \
+  /opt/homebrew/include/CGAL/Polygon_2/Polygon_2_simplicity.h \
+  /opt/homebrew/include/CGAL/Polygon_2/Polygon_2_vertex_circulator.h \
+  /opt/homebrew/include/CGAL/Polygon_2/Polygon_2_edge_iterator.h \
+  /opt/homebrew/include/CGAL/Polygon_2/Polygon_2_edge_circulator.h \
+  /opt/homebrew/include/CGAL/Polygon_2/Polygon_2_impl.h \
   /opt/homebrew/include/CGAL/Convex_hull_traits_adapter_2.h \
   /opt/homebrew/include/CGAL/property_map.h \
   /opt/homebrew/include/CGAL/value_type_traits.h \
@@ -2141,6 +2155,6 @@ CMakeFiles/main.dir/main.cpp.o: \
   /opt/homebrew/include/CGAL/boost/iterator/counting_iterator.hpp \
   /opt/homebrew/include/boost/iterator/counting_iterator.hpp \
   /opt/homebrew/include/boost/detail/numeric_traits.hpp \
-  /opt/homebrew/include/CGAL/Iterator_range.h \
-  /opt/homebrew/include/boost/foreach.hpp \
-  /opt/homebrew/include/boost/foreach_fwd.hpp
+  /opt/homebrew/include/CGAL/draw_polygon_2.h \
+  /opt/homebrew/include/CGAL/Qt/Basic_viewer_qt.h \
+  /opt/homebrew/include/CGAL/license/GraphicsView.h
