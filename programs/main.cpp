@@ -73,8 +73,11 @@ int main(int argc, char *argv[])
   
 
   // Πρώτο κάνω sort τα σημεία με βάση μια συντεταγμένη (για την ώρα είναι σορταρισμένα στην x) STD::SORT
+
+  // Πολυγωνοποίηση
   Polygon polygon = incremental_algorithm(vertices);
 
+  // Εκτύπωση πολυγώνου
 
   return EXIT_SUCCESS;
 
@@ -131,7 +134,7 @@ bool is_edge_visible(Point point, Segment segment, Polygon convex_hull)
   return true;
 }
 
-// OXI OLOKLHRWMENH !!!
+// ΟΧΙ ΟΛΟΚΛΗΡΩΜΕΝΗ !!!
 // Ελέγχει αν ένα segment είναι ορατό από ένα σημείο
 // Ιδέα: Θα μπορούσαμε να χρησιμοποιησουμε την προηγούμενη συνάρτηση στα άκρα του segment
 bool is_edge_visible(Segment ch_segment, Segment polygon_segment, Polygon convex_hull)
@@ -190,6 +193,7 @@ bool is_edge_visible(Segment ch_segment, Segment polygon_segment, Polygon convex
   return true;
 }
 
+// ΟΧΙ ΟΛΟΚΛΗΡΩΜΕΝΗ !!!
 // Η υλοποίηση του αυξητικού αλγορίθμου
 Polygon incremental_algorithm(PointVector input_points)
 {
