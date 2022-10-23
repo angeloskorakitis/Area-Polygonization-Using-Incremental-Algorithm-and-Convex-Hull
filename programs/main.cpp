@@ -24,16 +24,16 @@ typedef PointVector::iterator                                 pPointVector;
 typedef SegmentVector::iterator                               pSegmentVector;
 typedef std::string                                           String;
 
-
-
 //
 // Περιγραφή του κώδικα
 // Από ένα vector που έχουμε τα δεδομένα σημεία ξεκινάμε κάνοντας τα iterate με έναν pointer και βάζοντας αρχικά
 // 3 στο πολύγωνο μας. Ξεκιναμε μια επανάληψη όπου για όσο υπάρχουν σημεία που δεν έχουμε εισάγει στην πολυγωνική μας γραμμή
 // παίρνουμε το ΚΠ των σημείων μας και κάνουμε iterate τα σημεία του ΚΠ 'προσπαθώντας' να προσθέσουμε σημεία στο πολύγωνο διατηρώντας το απλό
 //
-bool is_edge_visible(Point , Segment , Polygon );
-bool is_edge_visible(Segment , Segment , Polygon );
+
+bool is_edge_visible(Point ,Segment ,Polygon );
+bool is_edge_visible(Segment ,Segment ,Polygon );
+Polygon incremental_algorithm(PointVector );
 
 
 // Να το δούμε
@@ -62,7 +62,6 @@ int main(int argc, char *argv[])
 {
   // Επεξεργασία Παραμέτρων Εισόδου
 
-
   // Το σύνολο των αρχικών σημείων τα οποία θα δίνει ο χρήστης από ένα αρχείο (προσωρινό - να αλλάξει)
   PointVector vertices = { Point(0,1), Point(1,3),
                                   Point(2,2),
@@ -72,57 +71,16 @@ int main(int argc, char *argv[])
                                   Point(3,4),
                                   Point(5,3)};
   
-  pPointVector p_vertices = vertices.begin();
 
   // Πρώτο κάνω sort τα σημεία με βάση μια συντεταγμένη (για την ώρα είναι σορταρισμένα στην x) STD::SORT
+  Polygon polygon = incremental_algorithm(vertices);
 
-  // Επιλέγω αρχικό πολύγωνο - τρίγωνο, τα τρια σημεία με το μικρότερο x
-  Polygon polygon(p_vertices, p_vertices+ 3);
 
-  // Ο δείκτης στο points να δείχνει 3 θέσεις μετά
-  advance(p_vertices, 3);
-
-  Polygon convex_hull;
-
-  // Οσο ο αριθμός των κορυφών του πολυγώνου είναι διαφορετικός από τον αριθμό των σημείων, επανάλαβε... 
-  while(vertices.size() != polygon.size())
-  {
-    // Υπολογισμός του ΚΠ
-    CGAL::convex_hull_2(polygon.edges_begin(), polygon.edges_end(), convex_hull);
-    
-    // Vector που θα περιέχει τις κόκκινες ακμές
-    SegmentVector red_edges;
-
-    // Για κάθε ακμή του ΚΠ, επανάλαβε...
-    for (EdgeIterator edge_itr = convex_hull.edges_begin(); edge_itr != convex_hull.edges_end(); ++edge_itr) 
-    {
-      if(is_edge_visible(*p_vertices, *edge_itr, convex_hull) == true) red_edges.push_back(*edge_itr);
-    }
-
-    pSegmentVector p_red_edges;
-
-    // Αν υπάρχουν κόκκινες ακμές στο ΚΠ δηλ. ορατές από το σημείο...
-    if(red_edges.size() != 0)
-    {
-      // Για κάθε μία βρίσκω τις ορατές ακμές 
-      for(p_red_edges = red_edges.begin(); p_red_edges != red_edges.end(); ++p_red_edges)
-      {
-        // Έστω ότι η επιλογή ορατή ακμής γίνεται τυχαία...(δηλαδή επιλέγω την πρώτη ακμή)
-        // Για κάθε κόκκινη πρέπει να βρώ ποιες γραμμές είναι ορατές...
-      }
-    }
-
-    // Για κάθε ορατή ακμή του ΚΠ θέλω να βρώ τις ορατές ακμές στο πολύγωνο και ανάλογα με το strategy (τυχαία επιλογή, μέγιστο, ελάχστο εμβαδόν) να τις επιλέξω...
-    advance(p_vertices, 1);
-
-  }
-    return EXIT_SUCCESS;
+  return EXIT_SUCCESS;
 
 }
 
 // Ελέγχει αν ένα segment είναι ορατό από ένα σημείο
-// !!! Υπάρχει περίπτωση να χρειαστώ ένα template για τη συγκεκριμένη συνάρτηση
-// update: Μαλλόν οχι απλως δημιουργία υποσυναρτησης
 bool is_edge_visible(Point point, Segment segment, Polygon convex_hull)
 {
   Point source = segment.source();
@@ -175,8 +133,7 @@ bool is_edge_visible(Point point, Segment segment, Polygon convex_hull)
 
 // OXI OLOKLHRWMENH !!!
 // Ελέγχει αν ένα segment είναι ορατό από ένα σημείο
-// !!! Υπάρχει περίπτωση να χρειαστώ ένα template για τη συγκεκριμένη συνάρτηση
-// update: Μαλλόν ναι 
+// Ιδέα: Θα μπορούσαμε να χρησιμοποιησουμε την προηγούμενη συνάρτηση στα άκρα του segment
 bool is_edge_visible(Segment ch_segment, Segment polygon_segment, Polygon convex_hull)
 {
   Point polygon_source = polygon_segment.source();
@@ -233,3 +190,51 @@ bool is_edge_visible(Segment ch_segment, Segment polygon_segment, Polygon convex
   return true;
 }
 
+// Η υλοποίηση του αυξητικού αλγορίθμου
+Polygon incremental_algorithm(PointVector input_points)
+{
+  pPointVector p_input_points = input_points.begin();
+  Polygon polygon(p_input_points, p_input_points+ 3);
+
+   // Ο δείκτης στο points να δείχνει 3 θέσεις μετά
+  advance(p_input_points, 3);
+
+  Polygon polygon;
+  Polygon convex_hull;
+
+  // Οσο ο αριθμός των κορυφών του πολυγώνου είναι διαφορετικός από τον αριθμό των σημείων, επανάλαβε... 
+  while(input_points.size() != polygon.size())
+  {
+    // Υπολογισμός του ΚΠ
+    CGAL::convex_hull_2(polygon.edges_begin(), polygon.edges_end(), convex_hull);
+    
+    // Vector που θα περιέχει τις κόκκινες ακμές
+    SegmentVector red_edges;
+
+    // Για κάθε ακμή του ΚΠ, επανάλαβε...
+    for (EdgeIterator edge_itr = convex_hull.edges_begin(); edge_itr != convex_hull.edges_end(); ++edge_itr) 
+    {
+      if(is_edge_visible(*p_input_points, *edge_itr, convex_hull) == true) red_edges.push_back(*edge_itr);
+    }
+
+    pSegmentVector p_red_edges;
+
+    // Αν υπάρχουν κόκκινες ακμές στο ΚΠ δηλ. ορατές από το σημείο...
+    if(red_edges.size() != 0)
+    {
+      // Για κάθε μία βρίσκω τις ορατές ακμές 
+      for(p_red_edges = red_edges.begin(); p_red_edges != red_edges.end(); ++p_red_edges)
+      {
+        // Έστω ότι η επιλογή ορατή ακμής γίνεται τυχαία...(δηλαδή επιλέγω την πρώτη ακμή)
+        // Για κάθε κόκκινη πρέπει να βρώ ποιες γραμμές είναι ορατές...
+      }
+    }
+
+    // Για κάθε ορατή ακμή του ΚΠ θέλω να βρώ τις ορατές ακμές στο πολύγωνο και ανάλογα με το strategy (τυχαία επιλογή, μέγιστο, ελάχστο εμβαδόν) να τις επιλέξω...
+    
+    // 22
+    advance(input_points, 1);
+
+  }
+  return polygon;
+}
