@@ -10,6 +10,8 @@
 #include <vector>
 #include <numeric>
 #include <string>
+#include <iostream>
+#include <time.h>
 
 typedef CGAL::Exact_predicates_inexact_constructions_kernel   K;
 typedef K::Point_2                                            Point;
@@ -33,6 +35,7 @@ bool point_is_on_polygon(Point point, Polygon polygon);
 
 void add_point_to_polygon(Point point, Polygon* polygon);
 Segment pick_visible_edge(Point point, Polygon polygon);
+Segment pick_random_edge(Polygon polygon);
 
 void print_point(Point point);
 void print_segment(Segment seg);
@@ -45,28 +48,38 @@ Polygon convex_hull_algorithm(PointVector initial_points);
 
 int main()
 {
-  // PointVector points = {
-  //                       Point(10,0),
-  //                       Point(0,10),
-  //                       Point(1,1),
-  //                       Point(8,11),
-  //                       Point(3,4),
-  //                       Point(0,0),
-  //                       Point(6,6),
-  //                       Point(18,4),
-  //                       Point(16,16),
-  //                       Point(10,10),
-  //                       Point(2,6) 
-  // };
+
+  srand(time(0));
   PointVector points = {
-                        Point(0,0),
-                        Point(10,10),
-                        Point(3,7),
-                        Point(3,2),
-                        Point(7,2),
                         Point(10,0),
                         Point(0,10),
+                        Point(1,1),
+                        Point(8,11),
+                        Point(3,4),
+                        Point(0,0),
+                        Point(6,6),
+                        Point(18,4),
+                        Point(16,16),
+                        Point(10,10),
+                        Point(2,6) 
   };
+  // PointVector points = {
+  //                       Point(0,0),
+  //                       Point(10,10),
+  //                       Point(3,7),
+  //                       Point(3,2),
+  //                       Point(7,2),
+  //                       Point(10,0),
+  //                       Point(0,10),
+  // };
+  // PointVector points = {
+  //                       Point(0,0),
+  //                       Point(2,2),
+  //                       Point(4,6),
+  //                       Point(4,0),
+  //                       Point(2,4),
+  //                       Point(0,6),
+  // };
 
   Polygon polygon = convex_hull_algorithm(points);
 
@@ -156,8 +169,20 @@ Polygon convex_hull_create(PointVector points) {
 
 
 bool edge_is_visible(Point point, Segment segment, Polygon polygon) {
+
+  std::cout << "Checking visibility from point " << point << " to segment " << segment << std::endl;
+
   Point segment_source = segment.source();
   Point segment_target = segment.target();
+
+  // Τι θα κάνουμε με τα συνευθειακά σημεία; Προς το παρόν τα συμπεριφέρομαι ως not visible.
+  if(CGAL::collinear(point, segment_source, segment_target)) {
+    std::cout << "COLLINEAR!" << std::endl;
+    return false;
+  }
+
+
+
 
   Triangle triangle(segment_source, segment_target, point);
 
@@ -171,6 +196,8 @@ bool edge_is_visible(Point point, Segment segment, Polygon polygon) {
     // Αν η τομή τους είναι ένα σημείο...
     if (CGAL::assign(intersection_point, result)) 
     {
+
+      std::cout << "INTERSECTION POINT " << intersection_point << std::endl;
       if(intersection_point == segment_target) continue;
       if(intersection_point == segment_source) continue;
       
@@ -195,6 +222,7 @@ bool edge_is_visible(Point point, Segment segment, Polygon polygon) {
       // Αν η τομή τους είναι ένα ευθύγραμμο τμήμα τότε...
       if (CGAL::assign(intersection_segment, result)) 
       {
+        std::cout << "INTERSECTION SEGMENT " << intersection_segment << std::endl;
         // Αν η τομή τους είναι segment που είναι το segment τότε είναι ορατό...άρα συνεχίζουμε
         if((intersection_segment == segment) || (intersection_segment == segment.opposite())) continue;
         
@@ -213,31 +241,46 @@ bool edge_is_visible(Point point, Segment segment, Polygon polygon) {
 
 Segment pick_visible_edge(Point point, Polygon polygon) {
   // Εδώ θα πρέπει να γίνεται επιλογή ανάλογα με το τι έχει δώσει ο χρήστης, μεγιστοποίηση/ελαχιστοποίηση εμβαδού κλπ. 
-  // Προς το παρόν ας παίρνουμε την πρώτη ορατή που βρίσκουμε. 
-  for(EdgeIterator edge = polygon.edges_begin(); edge != polygon.edges_end(); edge++) {
-    if(edge_is_visible(point, *edge, polygon)) return *edge;
-  }
 
+  // Επιλέγω μία τυχαία ορατή ακμή. 
+  Segment edge;
+  while(!edge_is_visible(point, edge = pick_random_edge(polygon), polygon));
+
+  return edge;
   // Γίνεται να φτάσω στο τέλος χωρίς να έχω ορατή ακμή; Οέο;
 }
 
 
 void add_point_to_polygon(Point point, Polygon* polygon) {
-  Segment edge = pick_visible_edge(point, *polygon);
 
-  int counter = 0;
-  for(EdgeIterator edge_itr = (*polygon).edges_begin(); edge_itr != (*polygon).edges_end(); edge_itr++) {
-    if((edge == *edge_itr) || (edge.opposite() == *edge_itr)) break;
+  // If point was added to the polygon on a previous iteration "by accident",
+  // just continue to next inner point.
+  if(!point_is_on_polygon(point, *polygon)) {
 
-    counter++;
+
+    Segment edge = pick_visible_edge(point, *polygon);
+
+    int counter = 1;
+    for(EdgeIterator edge_itr = (*polygon).edges_begin(); edge_itr != (*polygon).edges_end(); edge_itr++) {
+      if((edge == *edge_itr) || (edge.opposite() == *edge_itr)) break;
+
+      counter++;
+    }
+
+    std::cout << "ΚΡΙΣΙΜΟ ΣΗΜΕΙΟ. " << counter << " ~~~ " << edge << std::endl;
+    // Δεν δουλεύει ακόμα!
+    (*polygon).insert((*polygon).begin() + counter, point);
   }
-
-  std::cout << "ΚΡΙΣΙΜΟ ΣΗΜΕΙΟ. " << counter << std::endl;
-  // Δεν δουλεύει ακόμα!
-  (*polygon).insert((*polygon).begin() + counter, point);
 
 
 }
+
+
+Segment pick_random_edge(Polygon polygon) {
+  int r = rand() % polygon.size();
+  return *(polygon.edges_begin() + r);
+}
+
 
 
 
