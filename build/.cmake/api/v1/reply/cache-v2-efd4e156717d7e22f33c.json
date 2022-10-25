@@ -103,11 +103,11 @@
 			[
 				{
 					"name" : "HELPSTRING",
-					"value" : "The directory containing a CMake configuration file for CGAL."
+					"value" : "No help, variable specified on the command line."
 				}
 			],
-			"type" : "PATH",
-			"value" : "/opt/homebrew/lib/cmake/CGAL"
+			"type" : "UNINITIALIZED",
+			"value" : "/opt/homebrew/opt/cgal/lib/cmake/CGAL"
 		},
 		{
 			"name" : "CGAL_EXECUTABLE_TARGETS",
@@ -119,7 +119,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "main;main;main;main;main;main;main;main;main;main"
+			"value" : "main;main;main;main;main;main;main;main;main;main;main;main;main;main;main"
 		},
 		{
 			"name" : "CGAL_TEST_DRAW_FUNCTIONS",

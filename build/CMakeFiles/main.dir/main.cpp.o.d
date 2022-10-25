@@ -2122,39 +2122,4 @@ CMakeFiles/main.dir/main.cpp.o: \
   /opt/homebrew/include/CGAL/Polygon_2/Polygon_2_vertex_circulator.h \
   /opt/homebrew/include/CGAL/Polygon_2/Polygon_2_edge_iterator.h \
   /opt/homebrew/include/CGAL/Polygon_2/Polygon_2_edge_circulator.h \
-  /opt/homebrew/include/CGAL/Polygon_2/Polygon_2_impl.h \
-  /opt/homebrew/include/CGAL/Convex_hull_traits_adapter_2.h \
-  /opt/homebrew/include/CGAL/property_map.h \
-  /opt/homebrew/include/CGAL/value_type_traits.h \
-  /opt/homebrew/include/boost/property_map/property_map.hpp \
-  /opt/homebrew/include/boost/concept_archetype.hpp \
-  /opt/homebrew/include/boost/property_map/vector_property_map.hpp \
-  /opt/homebrew/include/boost/smart_ptr/shared_ptr.hpp \
-  /opt/homebrew/include/boost/smart_ptr/detail/shared_count.hpp \
-  /opt/homebrew/include/boost/smart_ptr/bad_weak_ptr.hpp \
-  /opt/homebrew/include/boost/smart_ptr/detail/sp_counted_base.hpp \
-  /opt/homebrew/include/boost/smart_ptr/detail/sp_has_gcc_intrinsics.hpp \
-  /opt/homebrew/include/boost/smart_ptr/detail/sp_has_sync_intrinsics.hpp \
-  /opt/homebrew/include/boost/smart_ptr/detail/sp_counted_base_gcc_atomic.hpp \
-  /opt/homebrew/include/boost/smart_ptr/detail/sp_typeinfo_.hpp \
-  /opt/homebrew/include/boost/smart_ptr/detail/sp_counted_impl.hpp \
-  /opt/homebrew/include/boost/smart_ptr/detail/sp_noexcept.hpp \
-  /opt/homebrew/include/boost/smart_ptr/detail/sp_disable_deprecated.hpp \
-  /opt/homebrew/include/boost/smart_ptr/detail/sp_convertible.hpp \
-  /opt/homebrew/include/boost/smart_ptr/detail/sp_nullptr_t.hpp \
-  /opt/homebrew/include/boost/smart_ptr/detail/spinlock_pool.hpp \
-  /opt/homebrew/include/boost/smart_ptr/detail/spinlock.hpp \
-  /opt/homebrew/include/boost/smart_ptr/detail/spinlock_gcc_atomic.hpp \
-  /opt/homebrew/include/boost/smart_ptr/detail/yield_k.hpp \
-  /opt/homebrew/include/boost/smart_ptr/detail/sp_thread_pause.hpp \
-  /opt/homebrew/include/boost/smart_ptr/detail/sp_thread_sleep.hpp \
-  /opt/homebrew/include/boost/config/pragma_message.hpp \
-  /opt/homebrew/include/boost/smart_ptr/detail/operator_bool.hpp \
-  /opt/homebrew/include/boost/smart_ptr/detail/local_sp_deleter.hpp \
-  /opt/homebrew/include/boost/smart_ptr/detail/local_counted_base.hpp \
-  /opt/homebrew/include/CGAL/boost/iterator/counting_iterator.hpp \
-  /opt/homebrew/include/boost/iterator/counting_iterator.hpp \
-  /opt/homebrew/include/boost/detail/numeric_traits.hpp \
-  /opt/homebrew/include/CGAL/draw_polygon_2.h \
-  /opt/homebrew/include/CGAL/Qt/Basic_viewer_qt.h \
-  /opt/homebrew/include/CGAL/license/GraphicsView.h
+  /opt/homebrew/include/CGAL/Polygon_2/Polygon_2_impl.h
