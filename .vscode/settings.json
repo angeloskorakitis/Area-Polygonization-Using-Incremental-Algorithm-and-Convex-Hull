@@ -1,3 +1,6 @@
 {
-    "cmake.sourceDirectory": "${workspaceFolder}/programs"
+    "cmake.sourceDirectory": "${workspaceFolder}/programs",
+    "files.associations": {
+        "vector": "cpp"
+    }
 }

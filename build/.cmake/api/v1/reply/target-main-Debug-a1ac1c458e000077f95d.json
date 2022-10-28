@@ -21,10 +21,10 @@
 		"files" : 
 		[
 			"CMakeLists.txt",
-			"/opt/homebrew/opt/cgal/lib/cmake/CGAL/CGAL_SetupGMP.cmake",
-			"/opt/homebrew/opt/cgal/lib/cmake/CGAL/CGAL_SetupCGALDependencies.cmake",
-			"/opt/homebrew/opt/cgal/lib/cmake/CGAL/CGAL_setup_target_dependencies.cmake",
-			"/opt/homebrew/opt/cgal/lib/cmake/CGAL/CGALConfig.cmake"
+			"/opt/homebrew/lib/cmake/CGAL/CGAL_SetupGMP.cmake",
+			"/opt/homebrew/lib/cmake/CGAL/CGAL_SetupCGALDependencies.cmake",
+			"/opt/homebrew/lib/cmake/CGAL/CGAL_setup_target_dependencies.cmake",
+			"/opt/homebrew/lib/cmake/CGAL/CGALConfig.cmake"
 		],
 		"nodes" : 
 		[
@@ -120,11 +120,6 @@
 					"backtrace" : 9,
 					"isSystem" : true,
 					"path" : "/opt/homebrew/include"
-				},
-				{
-					"backtrace" : 9,
-					"isSystem" : true,
-					"path" : "/opt/homebrew/opt/cgal/include"
 				}
 			],
 			"language" : "CXX",
