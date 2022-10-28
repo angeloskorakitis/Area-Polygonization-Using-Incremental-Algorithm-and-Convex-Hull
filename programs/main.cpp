@@ -37,7 +37,7 @@ Polygon incremental_algorithm(PointVector );
 void print_point(Point);
 void print_segment(Segment);
 void print_polygon(Polygon);
-Segment pick_visible_edge(Point point, Polygon polygon);
+Segment pick_visible_edge(Point , SegmentVector, Polygon );
 Segment pick_random_edge(Polygon polygon);
 Segment pick_max_area_edge(Point point, Polygon polygon);
 Segment pick_min_area_edge(Point point, Polygon polygon);
@@ -150,7 +150,7 @@ bool is_edge_visible(Point point, Segment segment, Polygon convex_hull)
 }
 
 // _____________________________________________________________________
-Segment pick_visible_edge(Point point, Polygon polygon) 
+Segment pick_visible_edge(Point point,SegmentVector visible_edges, Polygon polygon) 
 {
   // Εδώ θα πρέπει να γίνεται επιλογή ανάλογα με το τι έχει δώσει ο χρήστης, μεγιστοποίηση/ελαχιστοποίηση εμβαδού κλπ. 
   Segment edge;
@@ -268,7 +268,7 @@ Polygon incremental_algorithm(PointVector input_points)
     }
 
     pSegmentVector p_red_edges;
-
+    SegmentVector visible_polygon_edges;
     // Αν υπάρχουν κόκκινες ακμές στο ΚΠ δηλ. ορατές από το σημείο...
     if(red_edges.size() != 0)
     {
@@ -277,14 +277,29 @@ Polygon incremental_algorithm(PointVector input_points)
       {
         // Για κάθε κόκκινη πρέπει να βρώ ποιες γραμμές είναι ορατές...
         // Κάθε κόκκινη θα έχει τις κορυφές της στην πολυγωνική γραμμή...
-        // EEEXW MPERDEUTEIII
-
+        bool flag = false;
+        for(EdgeIterator edge_itr = polygon.edges_begin(); edge_itr != polygon.edges_end(); ++edge_itr)
+        {
+          // Αν η κορυφή του πολυγώνου είναι η κορυφή της κόκκινης ακμής...
+          if((*edge_itr).source() == (*p_red_edges).source()){
+            flag = true;
+            visible_polygon_edges.push_back(*edge_itr);
+          }
+          if(flag == true){
+            visible_polygon_edges.push_back(*edge_itr);
+          }
+          if((*edge_itr).target() == (*p_red_edges).target()){
+            visible_polygon_edges.push_back(*edge_itr);
+            break;
+          }
+        }
       }
     }
 
     // Για κάθε ορατή ακμή του ΚΠ θέλω να βρώ τις ορατές ακμές στο πολύγωνο και ανάλογα με το strategy (τυχαία επιλογή, μέγιστο, ελάχστο εμβαδόν) να τις επιλέξω...
+    pick_visible_edge(*p_input_points, visible_polygon_edges, polygon);
     
-    // 22
+    // Συνεχίζουμε στο επόμενο σημείο
     advance(p_input_points, 1);
 
   }
