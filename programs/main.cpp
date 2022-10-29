@@ -65,19 +65,33 @@ int main(int argc, char *argv[])
   // Επεξεργασία Παραμέτρων Εισόδου
 
   // Το σύνολο των αρχικών σημείων τα οποία θα δίνει ο χρήστης από ένα αρχείο (προσωρινό - να αλλάξει)
-PointVector points = {
-                        Point(0,0),
-                        Point(10,10),
-                        Point(3,7),
-                        Point(3,2),
-                        Point(7,2),
+// PointVector points = {
+//                         Point(0,0),
+//                         Point(10,10),
+//                         Point(3,7),
+//                         Point(3,2),
+//                         Point(7,2),
+//                         Point(10,0),
+//                         Point(0,10)
+//   };
+  PointVector points = {
                         Point(10,0),
                         Point(0,10),
+                        Point(1,1),
+                        Point(8,11),
+                        Point(3,4),
+                        Point(0,0),
+                        Point(6,6),
+                        Point(18,4),
+                        Point(16,16),
+                        Point(10,10),
+                        Point(2,6) 
   };
-
+  // for(pPointVector itr = points.begin(); itr != points.end(); ++itr) print_point(*itr);
+  //   std::cout << "POINTS!" << std::endl;
   // Polygon convex_hull;
   // Πρώτο κάνω sort τα σημεία με βάση μια συντεταγμένη (για την ώρα είναι σορταρισμένα στην x) STD::SORT
-  // std::sort(points.begin(), points.end());
+  std::sort(points.begin(), points.end());
   // Polygon polygon(vertices.begin(), vertices.begin()+ 3);
   // CGAL::convex_hull_2(points.begin(), points.end(), std::back_inserter(convex_hull));
   // print_polygon(convex_hull);
@@ -97,10 +111,10 @@ bool is_edge_visible(Point point, Segment segment, Polygon convex_hull)
   Point segment_target = segment.target();
 
 // Τι θα κάνουμε με τα συνευθειακά σημεία; Προς το παρόν τα συμπεριφέρομαι ως not visible.
-  // if(CGAL::collinear(point, segment_source, segment_target)) {
-  //   std::cout << "COLLINEAR!" << std::endl;
-  //   return false;
-  // }
+  if(CGAL::collinear(point, segment_source, segment_target)) {
+    // std::cout << "COLLINEAR!" << std::endl;
+    return false;
+  }
 
   // Δημιουργώ το τρίγωνο με κορυφές Source Target Point
   Triangle triangle(point, segment_source, segment_target);
@@ -167,11 +181,9 @@ void add_visible_edge(Point point, SegmentVector visible_polygon_edges, Polygon*
 Polygon incremental_algorithm(PointVector input_points)
 {
   pPointVector p_input_points = input_points.begin();
-  Polygon polygon(p_input_points, p_input_points + 2);
-
+  Polygon polygon(p_input_points, p_input_points + 3);
    // Ο δείκτης στο points να δείχνει 3 θέσεις μετά
   advance(p_input_points, 3);
-
   Polygon convex_hull;
 
   // Οσο ο αριθμός των κορυφών του πολυγώνου είναι διαφορετικός από τον αριθμό των σημείων, επανάλαβε... 
@@ -197,6 +209,8 @@ Polygon incremental_algorithm(PointVector input_points)
     // Αν υπάρχουν κόκκινες ακμές στο ΚΠ δηλ. ορατές από το σημείο...
     if(red_edges.size() != 0)
     {
+      
+      // std::cout << red_edges.size();
       // Για κάθε μία κόκκινη ακμή βρίσκω τις ορατές ακμές στο πολύγωνο...
       for(p_red_edges = red_edges.begin(); p_red_edges != red_edges.end(); ++p_red_edges)
       {
@@ -215,6 +229,7 @@ Polygon incremental_algorithm(PointVector input_points)
           }
           if((*edge_itr).target() == (*p_red_edges).target()){
             visible_polygon_edges.push_back(*edge_itr);
+            // std::cout << visible_polygon_edges.size();
             break;
           }
         }
@@ -223,7 +238,6 @@ Polygon incremental_algorithm(PointVector input_points)
     // Δεν δουλεύει ακομα...
     // Για κάθε ορατή ακμή του ΚΠ θέλω να βρώ τις ορατές ακμές στο πολύγωνο και ανάλογα με το strategy (τυχαία επιλογή, μέγιστο, ελάχστο εμβαδόν) να τις επιλέξω...
     add_visible_edge(*p_input_points, visible_polygon_edges, &polygon);
-    
     // Συνεχίζουμε στο επόμενο σημείο
     advance(p_input_points, 1);
   }
