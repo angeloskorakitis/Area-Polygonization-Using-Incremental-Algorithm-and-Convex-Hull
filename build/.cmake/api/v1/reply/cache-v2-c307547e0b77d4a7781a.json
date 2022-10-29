@@ -119,7 +119,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "main"
+			"value" : "main;main;main"
 		},
 		{
 			"name" : "CGAL_TEST_DRAW_FUNCTIONS",

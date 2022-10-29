@@ -1,6 +1,6 @@
-#include <CGAL/Exact_predicates_inexact_constructions_kernel.h>
 #include <CGAL/convex_hull_2.h>
-// #include <CGAL/Cartesian.h>
+#include <CGAL/Exact_predicates_inexact_constructions_kernel.h>
+#include <CGAL/Simple_Cartesian.h>
 #include <CGAL/Polygon_2.h>
 // #include <CGAL/property_map.h>
 // #include <CGAL/draw_polygon_2.h>
@@ -9,7 +9,7 @@
 #include <numeric>
 #include <string>
 
-typedef CGAL::Exact_predicates_inexact_constructions_kernel   K;
+typedef CGAL::Epick   K;
 typedef K::Point_2                                            Point;
 typedef CGAL::Segment_2<K>                                    Segment;
 typedef CGAL::Object                                          Object;   
@@ -32,15 +32,11 @@ typedef std::string                                           String;
 //
 
 bool is_edge_visible(Point ,Segment ,Polygon );
-// bool is_edge_visible(Segment ,Segment ,Polygon );
 Polygon incremental_algorithm(PointVector );
 void print_point(Point);
 void print_segment(Segment);
 void print_polygon(Polygon);
-Segment pick_visible_edge(Point , SegmentVector, Polygon );
-Segment pick_random_edge(Polygon polygon);
-Segment pick_max_area_edge(Point point, Polygon polygon);
-Segment pick_min_area_edge(Point point, Polygon polygon);
+void add_visible_edge(Point , SegmentVector, Polygon* );
 
 // Να το δούμε
 // class Polygonization
@@ -69,24 +65,26 @@ int main(int argc, char *argv[])
   // Επεξεργασία Παραμέτρων Εισόδου
 
   // Το σύνολο των αρχικών σημείων τα οποία θα δίνει ο χρήστης από ένα αρχείο (προσωρινό - να αλλάξει)
-  PointVector points;
-  points.push_back(Point(0,0));
-  points.push_back(Point(10,0));
-  // points.push_back(Point(10,10));
-  points.push_back(Point(6,5));
-  points.push_back(Point(4,1));
-  points.push_back(Point(1,1));
-  points.push_back(Point(3,1));
+PointVector points = {
+                        Point(0,0),
+                        Point(10,10),
+                        Point(3,7),
+                        Point(3,2),
+                        Point(7,2),
+                        Point(10,0),
+                        Point(0,10),
+  };
 
-  Polygon convex_hull;
+  // Polygon convex_hull;
   // Πρώτο κάνω sort τα σημεία με βάση μια συντεταγμένη (για την ώρα είναι σορταρισμένα στην x) STD::SORT
-  std::sort(points.begin(), points.end());
+  // std::sort(points.begin(), points.end());
   // Polygon polygon(vertices.begin(), vertices.begin()+ 3);
-  CGAL::convex_hull_2(points.begin(), points.end(), std::back_inserter(convex_hull));
-  print_polygon(convex_hull);
+  // CGAL::convex_hull_2(points.begin(), points.end(), std::back_inserter(convex_hull));
+  // print_polygon(convex_hull);
   // Πολυγωνοποίηση
   Polygon polygon1 = incremental_algorithm(points);
   print_polygon(polygon1);
+  if(!polygon1.is_simple()) return EXIT_FAILURE;
   // Εκτύπωση πολυγώνου
   return EXIT_SUCCESS;
 
@@ -99,10 +97,10 @@ bool is_edge_visible(Point point, Segment segment, Polygon convex_hull)
   Point segment_target = segment.target();
 
 // Τι θα κάνουμε με τα συνευθειακά σημεία; Προς το παρόν τα συμπεριφέρομαι ως not visible.
-  if(CGAL::collinear(point, segment_source, segment_target)) {
-    std::cout << "COLLINEAR!" << std::endl;
-    return false;
-  }
+  // if(CGAL::collinear(point, segment_source, segment_target)) {
+  //   std::cout << "COLLINEAR!" << std::endl;
+  //   return false;
+  // }
 
   // Δημιουργώ το τρίγωνο με κορυφές Source Target Point
   Triangle triangle(point, segment_source, segment_target);
@@ -150,99 +148,26 @@ bool is_edge_visible(Point point, Segment segment, Polygon convex_hull)
 }
 
 // _____________________________________________________________________
-Segment pick_visible_edge(Point point,SegmentVector visible_edges, Polygon polygon) 
+void add_visible_edge(Point point, SegmentVector visible_polygon_edges, Polygon* polygon)
 {
-  // Εδώ θα πρέπει να γίνεται επιλογή ανάλογα με το τι έχει δώσει ο χρήστης, μεγιστοποίηση/ελαχιστοποίηση εμβαδού κλπ. 
-  Segment edge;
-
-  // // Επιλέγω μία τυχαία ορατή ακμή. 
-  // while(!edge_is_visible(point, edge = pick_random_edge(polygon), polygon));
-
-  // Επιλέγω την ορατή ακμή που φτιάχνει το μεγαλύτερο τρίγωνο με το σημείο.
-  edge = pick_max_area_edge(point, polygon);
-
-  // // Επιλέγω την ορατή ακμή που φτιάχνει το μικρότερο τρίγωνο με το σημείο. 
-  // edge = pick_min_area_edge(point, polygon);
-
-  return edge;
-  // Γίνεται να φτάσω στο τέλος χωρίς να έχω ορατή ακμή; Οέο;
-}
-
-
-// Returns random edge of polygon.
-Segment pick_random_edge(Polygon polygon) {
-  int r = rand() % polygon.size();
-  return *(polygon.edges_begin() + r);
-}
-
-
-// Returns the -visible from point- edge of the polygon, that creates the largest (area-wise) triangle with the given point.
-Segment pick_max_area_edge(Point point, Polygon polygon) {
-  Segment max_segment;
-  double max_area = -1;
-  double current_area;
-
-  for(EdgeIterator edge = polygon.edges_begin(); edge != polygon.edges_end(); edge++) {
-
-
-    // If the edge is not visible, skip the edge. 
-   if(!is_edge_visible(point, *edge, polygon)) continue;
-
-
-    Triangle triangle((*edge).source(), (*edge).target(), point);
-    // area() function may return negative number.
-    current_area = CGAL::abs(triangle.area());
-
-    if(current_area > max_area) {
-      max_segment = *edge;
-      max_area = current_area;
+  Segment insert_segment =  visible_polygon_edges.back();
+  for(VertexIterator itr = polygon->vertices_begin(); itr != polygon->vertices_end(); ++itr)
+  {
+    if(insert_segment.target() == *itr){
+      polygon->insert(itr, point);
+      break;
     }
-
   }
-
-
-  return max_segment;
 }
 
-
-// Returns the -visible from point- edge of the polygon, that creates the smallest (area-wise) triangle with the given point.
-Segment pick_min_area_edge(Point point, Polygon polygon) {
-  Segment min_segment;
-  double min_area;
-  double current_area;
-
-  for(EdgeIterator edge = polygon.edges_begin(); edge != polygon.edges_end(); edge++) {
-
-    // If the edge is not visible, skip the edge. 
-    if(!is_edge_visible(point, *edge, polygon)) continue;
-
-    Triangle triangle((*edge).source(), (*edge).target(), point);
-    // area() function may return negative number.
-    current_area = CGAL::abs(triangle.area());
-
-    if(edge == polygon.edges_begin()) {
-      min_area = current_area;
-      min_segment = *edge;
-    }
-
-    if(current_area < min_area) {
-      min_segment = *edge;
-      min_area = current_area;
-    }
-
-  }
-
-  return min_segment;
-}
-// _____________________________________________________________________
-
+//______________________________________________________________________
 
 // ΟΧΙ ΟΛΟΚΛΗΡΩΜΕΝΗ !!!
 // Η υλοποίηση του αυξητικού αλγορίθμου
 Polygon incremental_algorithm(PointVector input_points)
 {
   pPointVector p_input_points = input_points.begin();
-  Polygon polygon(p_input_points, p_input_points+ 3);
+  Polygon polygon(p_input_points, p_input_points + 2);
 
    // Ο δείκτης στο points να δείχνει 3 θέσεις μετά
   advance(p_input_points, 3);
@@ -275,7 +200,7 @@ Polygon incremental_algorithm(PointVector input_points)
       // Για κάθε μία κόκκινη ακμή βρίσκω τις ορατές ακμές στο πολύγωνο...
       for(p_red_edges = red_edges.begin(); p_red_edges != red_edges.end(); ++p_red_edges)
       {
-        // Για κάθε κόκκινη πρέπει να βρώ ποιες γραμμές είναι ορατές...
+        // Για κάθε κόκκινη πρέπει να βρώ ποιες ακμές είναι ορατές...
         // Κάθε κόκκινη θα έχει τις κορυφές της στην πολυγωνική γραμμή...
         bool flag = false;
         for(EdgeIterator edge_itr = polygon.edges_begin(); edge_itr != polygon.edges_end(); ++edge_itr)
@@ -295,13 +220,12 @@ Polygon incremental_algorithm(PointVector input_points)
         }
       }
     }
-
+    // Δεν δουλεύει ακομα...
     // Για κάθε ορατή ακμή του ΚΠ θέλω να βρώ τις ορατές ακμές στο πολύγωνο και ανάλογα με το strategy (τυχαία επιλογή, μέγιστο, ελάχστο εμβαδόν) να τις επιλέξω...
-    pick_visible_edge(*p_input_points, visible_polygon_edges, polygon);
+    add_visible_edge(*p_input_points, visible_polygon_edges, &polygon);
     
     // Συνεχίζουμε στο επόμενο σημείο
     advance(p_input_points, 1);
-
   }
   return polygon;
 }
