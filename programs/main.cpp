@@ -2,9 +2,7 @@
 #include <CGAL/Exact_predicates_inexact_constructions_kernel.h>
 #include <CGAL/Simple_Cartesian.h>
 #include <CGAL/Polygon_2.h>
-// #include <CGAL/property_map.h>
-// #include <CGAL/draw_polygon_2.h>
-// #include <CGAL/intersections.h>
+#include <CGAL/intersections.h>
 #include <vector>
 #include <numeric>
 #include <string>
@@ -15,7 +13,6 @@ typedef CGAL::Segment_2<K>                                    Segment;
 typedef CGAL::Object                                          Object;   
 typedef CGAL::Polygon_2<K>                                    Polygon;
 typedef CGAL::Triangle_2<K>                                   Triangle;
-// typedef CGAL::Convex_hull_traits_adapter_2<K,CGAL::Pointer_property_map<Point>::type > Convex_hull_traits_2;
 typedef Polygon::Vertex_iterator                              VertexIterator;
 typedef Polygon::Edge_const_iterator                          EdgeIterator;
 typedef std::vector<Point>                                    PointVector;
@@ -32,39 +29,19 @@ typedef std::string                                           String;
 //
 
 bool is_edge_visible(Point ,Segment ,Polygon );
+SegmentVector find_red_edges(Point, Polygon );
+SegmentVector find_visible_edges(SegmentVector, Polygon);
+void add_visible_edge(Point , SegmentVector, Polygon* );
 Polygon incremental_algorithm(PointVector );
 void print_point(Point);
 void print_segment(Segment);
 void print_polygon(Polygon);
-void add_visible_edge(Point , SegmentVector, Polygon* );
-
-// Να το δούμε
-// class Polygonization
-// {
-//   private:
-//     const PointVector input_points;
-//     const String algorithm;
-//     const String output_file;
-//     const String edge_selection;
-//     Polygon polygon;
-//   public:
-//     Polygonization(std::string input_string);
-//     ~Polygonization();
-//     String get_algorithm()const;
-//     String get_output_file()const;
-//     String get_edge_selection()const;
-//     Polygon get_polygon();
-//     Polygon incremental_algorithm(Polygon);
-//     Polygon convex_hull_algorithm(Polygon);
-//     void set_polygon(Polygon);
-// };
 
 
 int main(int argc, char *argv[])
 {
   // Επεξεργασία Παραμέτρων Εισόδου
 
-  // Το σύνολο των αρχικών σημείων τα οποία θα δίνει ο χρήστης από ένα αρχείο (προσωρινό - να αλλάξει)
 // PointVector points = {
 //                         Point(0,0),
 //                         Point(10,10),
@@ -87,30 +64,28 @@ int main(int argc, char *argv[])
                         Point(10,10),
                         Point(2,6) 
   };
-  // for(pPointVector itr = points.begin(); itr != points.end(); ++itr) print_point(*itr);
-  //   std::cout << "POINTS!" << std::endl;
-  // Polygon convex_hull;
-  // Πρώτο κάνω sort τα σημεία με βάση μια συντεταγμένη (για την ώρα είναι σορταρισμένα στην x) STD::SORT
-  std::sort(points.begin(), points.end());
-  // Polygon polygon(vertices.begin(), vertices.begin()+ 3);
-  // CGAL::convex_hull_2(points.begin(), points.end(), std::back_inserter(convex_hull));
-  // print_polygon(convex_hull);
-  // Πολυγωνοποίηση
-  Polygon polygon1 = incremental_algorithm(points);
-  print_polygon(polygon1);
-  if(!polygon1.is_simple()) return EXIT_FAILURE;
-  // Εκτύπωση πολυγώνου
-  return EXIT_SUCCESS;
 
+  // Sorting
+  std::sort(points.begin(), points.end());
+
+  // Poligonization
+  Polygon polygon = incremental_algorithm(points);
+
+  // Print polygon
+  print_polygon(polygon);
+
+  // If the polygon is not simple then failure...
+  if(!polygon.is_simple()) return EXIT_FAILURE;
+  
+  return EXIT_SUCCESS;
 }
 
-// // Ελέγχει αν ένα segment είναι ορατό από ένα σημείο
+
 bool is_edge_visible(Point point, Segment segment, Polygon convex_hull)
 {
   Point segment_source = segment.source();
   Point segment_target = segment.target();
 
-// Τι θα κάνουμε με τα συνευθειακά σημεία; Προς το παρόν τα συμπεριφέρομαι ως not visible.
   if(CGAL::collinear(point, segment_source, segment_target)) {
     // std::cout << "COLLINEAR!" << std::endl;
     return false;
@@ -161,9 +136,14 @@ bool is_edge_visible(Point point, Segment segment, Polygon convex_hull)
   return true;
 }
 
-// _____________________________________________________________________
+
 void add_visible_edge(Point point, SegmentVector visible_polygon_edges, Polygon* polygon)
 {
+  //
+  //
+  // Παίρνει την πρώτη γραμμή και την εισάγει...πρέπει να το υλοποιήσω σύμφωνα με τον σχεδιασμό
+  //
+  //
   Segment insert_segment =  visible_polygon_edges.back();
   for(VertexIterator itr = polygon->vertices_begin(); itr != polygon->vertices_end(); ++itr)
   {
@@ -174,73 +154,90 @@ void add_visible_edge(Point point, SegmentVector visible_polygon_edges, Polygon*
   }
 }
 
-//______________________________________________________________________
-
-// ΟΧΙ ΟΛΟΚΛΗΡΩΜΕΝΗ !!!
-// Η υλοποίηση του αυξητικού αλγορίθμου
-Polygon incremental_algorithm(PointVector input_points)
+// Returns a vector of Segments with the red edges of the CH
+SegmentVector find_red_edges(Point point, Polygon polygon)
 {
-  pPointVector p_input_points = input_points.begin();
-  Polygon polygon(p_input_points, p_input_points + 3);
-   // Ο δείκτης στο points να δείχνει 3 θέσεις μετά
-  advance(p_input_points, 3);
   Polygon convex_hull;
+  // Υπολογισμός του ΚΠ
+  CGAL::convex_hull_2(polygon.begin(), polygon.end(), std::back_inserter(convex_hull));
 
-  // Οσο ο αριθμός των κορυφών του πολυγώνου είναι διαφορετικός από τον αριθμό των σημείων, επανάλαβε... 
-  while(input_points.size() != polygon.size())
+  // Vector που θα περιέχει τις κόκκινες ακμές
+  SegmentVector red_edges;
+
+  // Βρες τις κόκκινες ακμές...
+  for (EdgeIterator edge_itr = convex_hull.edges_begin(); edge_itr != convex_hull.edges_end(); ++edge_itr) 
   {
-    // Υπολογισμός του ΚΠ
-    CGAL::convex_hull_2(polygon.begin(), polygon.end(), std::back_inserter(convex_hull));
-
-    // Vector που θα περιέχει τις κόκκινες ακμές
-    SegmentVector red_edges;
-
-    // Βρες τις κόκκινες ακμές...
-    for (EdgeIterator edge_itr = convex_hull.edges_begin(); edge_itr != convex_hull.edges_end(); ++edge_itr) 
+    if(is_edge_visible(point, *edge_itr, convex_hull))
     {
-      if(is_edge_visible(*p_input_points, *edge_itr, convex_hull))
-      {
-        red_edges.push_back(*edge_itr);
-      } 
-    }
+      red_edges.push_back(*edge_itr);
+    } 
+  }
 
-    pSegmentVector p_red_edges;
-    SegmentVector visible_polygon_edges;
-    // Αν υπάρχουν κόκκινες ακμές στο ΚΠ δηλ. ορατές από το σημείο...
-    if(red_edges.size() != 0)
+  return red_edges;
+}
+
+// Returns a vector of Segments with the visible edges of the Polygon
+SegmentVector find_visible_edges(SegmentVector red_edges, Polygon polygon)
+{
+  SegmentVector visible_edges;
+  // Αν υπάρχουν κόκκινες ακμές στο ΚΠ δηλ. ορατές από το σημείο...
+  if(red_edges.size() != 0)
+  {      
+    // Για κάθε μία κόκκινη ακμή βρίσκω τις ορατές ακμές στο πολύγωνο...
+    for(pSegmentVector p_red_edges = red_edges.begin(); p_red_edges != red_edges.end(); ++p_red_edges)
     {
-      
-      // std::cout << red_edges.size();
-      // Για κάθε μία κόκκινη ακμή βρίσκω τις ορατές ακμές στο πολύγωνο...
-      for(p_red_edges = red_edges.begin(); p_red_edges != red_edges.end(); ++p_red_edges)
+      // Για κάθε κόκκινη πρέπει να βρώ ποιες ακμές είναι ορατές...
+      // Κάθε κόκκινη θα έχει τις κορυφές της στην πολυγωνική γραμμή...
+      bool flag = false;
+      for(EdgeIterator edge_itr = polygon.edges_begin(); edge_itr != polygon.edges_end(); ++edge_itr)
       {
-        // Για κάθε κόκκινη πρέπει να βρώ ποιες ακμές είναι ορατές...
-        // Κάθε κόκκινη θα έχει τις κορυφές της στην πολυγωνική γραμμή...
-        bool flag = false;
-        for(EdgeIterator edge_itr = polygon.edges_begin(); edge_itr != polygon.edges_end(); ++edge_itr)
-        {
-          // Αν η κορυφή του πολυγώνου είναι η κορυφή της κόκκινης ακμής...
-          if((*edge_itr).source() == (*p_red_edges).source()){
-            flag = true;
-            visible_polygon_edges.push_back(*edge_itr);
-          }
-          if(flag == true){
-            visible_polygon_edges.push_back(*edge_itr);
-          }
-          if((*edge_itr).target() == (*p_red_edges).target()){
-            visible_polygon_edges.push_back(*edge_itr);
-            // std::cout << visible_polygon_edges.size();
-            break;
-          }
+        // Αν η κορυφή του πολυγώνου είναι η κορυφή της κόκκινης ακμής...
+        if((*edge_itr).source() == (*p_red_edges).source()){
+          flag = true;
+          visible_edges.push_back(*edge_itr);
+        }
+        if(flag == true){
+          visible_edges.push_back(*edge_itr);
+        }
+        if((*edge_itr).target() == (*p_red_edges).target()){
+          visible_edges.push_back(*edge_itr);
+          break;
         }
       }
     }
-    // Δεν δουλεύει ακομα...
-    // Για κάθε ορατή ακμή του ΚΠ θέλω να βρώ τις ορατές ακμές στο πολύγωνο και ανάλογα με το strategy (τυχαία επιλογή, μέγιστο, ελάχστο εμβαδόν) να τις επιλέξω...
-    add_visible_edge(*p_input_points, visible_polygon_edges, &polygon);
-    // Συνεχίζουμε στο επόμενο σημείο
+  }
+  return visible_edges;
+}
+
+
+// Implementation of the incremental algorithm
+Polygon incremental_algorithm(PointVector input_points)
+{
+  pPointVector p_input_points = input_points.begin();
+
+  // Start with the first 3 points
+  Polygon polygon(p_input_points, p_input_points + 3);
+
+  // SPECIAL CASE: Check if the first 3 points are collinear...add a 4th
+
+  advance(p_input_points, 3);
+
+  // While the number of the input points is different of the size of the polygon, repeat...
+  while(input_points.size() != polygon.size())
+  {
+    // Find the red edges of the CH, i.e the visible from the CH
+    SegmentVector red_edges = find_red_edges(*p_input_points, polygon);
+
+    // Find the visible edges of the Polygon
+    SegmentVector visible_edges = find_visible_edges(red_edges, polygon);
+    
+    // For every visible edge, insert a vertex in the polygon according to the strategy (random, min/ max area)
+    add_visible_edge(*p_input_points, visible_edges, &polygon);
+    
+    // Continue with the next point...
     advance(p_input_points, 1);
   }
+
   return polygon;
 }
 
