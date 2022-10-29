@@ -33,9 +33,16 @@ SegmentVector find_red_edges(Point, Polygon );
 SegmentVector find_visible_edges(SegmentVector, Polygon);
 void add_visible_edge(Point , SegmentVector, Polygon* );
 Polygon incremental_algorithm(PointVector );
+
+Segment pick_max_area_edge(Point point ,SegmentVector visible_polygon_edges);
+Segment pick_min_area_edge(Point point ,SegmentVector visible_polygon_edges);
+Segment pick_random_edge(SegmentVector visible_polygon_edges);
+
 void print_point(Point);
 void print_segment(Segment);
 void print_polygon(Polygon);
+
+
 
 
 int main(int argc, char *argv[])
@@ -52,16 +59,17 @@ int main(int argc, char *argv[])
 //                         Point(0,10)
 //   };
   PointVector points = {
+                        Point(0,0),
+                        Point(0,5),
+                        Point(0,10),
                         Point(10,0),
                         Point(0,10),
                         Point(1,1),
                         Point(8,11),
                         Point(3,4),
-                        Point(0,0),
                         Point(6,6),
                         Point(18,4),
                         Point(16,16),
-                        Point(10,10),
                         Point(2,6) 
   };
 
@@ -73,6 +81,7 @@ int main(int argc, char *argv[])
 
   // Print polygon
   print_polygon(polygon);
+  std::cout << CGAL::abs(polygon.area()) << std::endl;
 
   // If the polygon is not simple then failure...
   if(!polygon.is_simple()) return EXIT_FAILURE;
@@ -143,8 +152,9 @@ void add_visible_edge(Point point, SegmentVector visible_polygon_edges, Polygon*
   //
   // Παίρνει την πρώτη γραμμή και την εισάγει...πρέπει να το υλοποιήσω σύμφωνα με τον σχεδιασμό
   //
+  Segment insert_segment =  pick_max_area_edge(point, visible_polygon_edges);
   //
-  Segment insert_segment =  visible_polygon_edges.back();
+  //
   for(VertexIterator itr = polygon->vertices_begin(); itr != polygon->vertices_end(); ++itr)
   {
     if(insert_segment.target() == *itr){
@@ -219,6 +229,12 @@ Polygon incremental_algorithm(PointVector input_points)
   Polygon polygon(p_input_points, p_input_points + 3);
 
   // SPECIAL CASE: Check if the first 3 points are collinear...add a 4th
+  // Not ready yeeet!
+  if(CGAL::collinear(input_points.at(0), input_points.at(1), input_points.at(2))){
+    VertexIterator itr = polygon.vertices_begin();
+    polygon.insert(itr, input_points.at(3));
+    advance(p_input_points, 1);
+  } 
 
   advance(p_input_points, 3);
 
@@ -252,4 +268,61 @@ void print_segment(Segment seg) {
 void print_polygon(Polygon polygon) {
   for (EdgeIterator edge_itr = polygon.edges_begin(); edge_itr != polygon.edges_end(); ++edge_itr) 
     print_segment(*edge_itr);
+}
+
+
+// _________________________________________________________________________________
+// Returns the -visible from point- edge of the polygon, that creates the largest (area-wise) triangle with the given point.
+Segment pick_max_area_edge(Point point ,SegmentVector visible_polygon_edges) {
+  Segment max_segment;
+  double max_area = -1;
+  double current_area;
+
+  for(pSegmentVector edge = visible_polygon_edges.begin(); edge != visible_polygon_edges.end(); edge++) {
+
+    Triangle triangle(edge->source(), edge->target(), point);
+    // area() function may return negative number.
+    current_area = CGAL::abs(triangle.area());
+
+    if(current_area > max_area) {
+      max_segment = *edge;
+      max_area = current_area;
+    }
+
+  }
+
+  return max_segment;
+}
+
+// Returns the -visible from point- edge of the polygon, that creates the smallest (area-wise) triangle with the given point.
+Segment pick_min_area_edge(Point point ,SegmentVector visible_polygon_edges) {
+  Segment min_segment;
+  double min_area = -1;
+  double current_area;
+
+  for(pSegmentVector edge = visible_polygon_edges.begin(); edge != visible_polygon_edges.end(); edge++) {
+
+    Triangle triangle(edge->source(), edge->target(), point);
+    // area() function may return negative number.
+    current_area = CGAL::abs(triangle.area());
+
+    if(edge == visible_polygon_edges.begin()) {
+      min_area = current_area;
+      min_segment = *edge;
+    }
+
+    if(current_area < min_area) {
+      min_segment = *edge;
+      min_area = current_area;
+    }
+
+  }
+
+  return min_segment;
+}
+
+// Returns random edge of polygon.
+Segment pick_random_edge(SegmentVector visible_polygon_edges) {
+  int r = rand() % visible_polygon_edges.size();
+  return visible_polygon_edges.at(r);
 }
