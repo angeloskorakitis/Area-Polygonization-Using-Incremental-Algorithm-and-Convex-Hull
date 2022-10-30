@@ -3,7 +3,8 @@
         {
             "name": "Mac",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "/opt/homebrew/Cellar/cgal/5.5.1/include"
             ],
             "defines": [],
             "macFrameworkPath": [

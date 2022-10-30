@@ -35,8 +35,8 @@ CGAL_CTEST_DISPLAY_MEM_AND_TIME:BOOL=OFF
 //Activate the CGAL developers mode. See https://github.com/CGAL/cgal/wiki/CGAL_DEV_MODE
 CGAL_DEV_MODE:BOOL=OFF
 
-//The directory containing a CMake configuration file for CGAL.
-CGAL_DIR:PATH=/opt/homebrew/lib/cmake/CGAL
+//No help, variable specified on the command line.
+CGAL_DIR:UNINITIALIZED=/opt/homebrew/opt/cgal/lib/cmake/CGAL
 
 //If set, the ctest command will not skip the tests of the draw
 // functions.
@@ -52,8 +52,9 @@ CMAKE_ADDR2LINE:FILEPATH=CMAKE_ADDR2LINE-NOTFOUND
 //Path to a program.
 CMAKE_AR:FILEPATH=/Library/Developer/CommandLineTools/usr/bin/ar
 
-//No help, variable specified on the command line.
-CMAKE_BUILD_TYPE:STRING=Debug
+//Choose the type of build, options are: None Debug Release RelWithDebInfo
+// MinSizeRel ...
+CMAKE_BUILD_TYPE:STRING=Release
 
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
@@ -112,8 +113,8 @@ CMAKE_EXE_LINKER_FLAGS_RELEASE:STRING=
 //Flags used by the linker during RELWITHDEBINFO builds.
 CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
-//No help, variable specified on the command line.
-CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE
+//Enable/Disable output of compile commands during generation.
+CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=
 
 //Value Computed by CMake.
 CMAKE_FIND_PACKAGE_REDIRECTS_DIR:STATIC=/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/build/CMakeFiles/pkgRedirects
@@ -290,7 +291,7 @@ Boost_DEBUG-ADVANCED:INTERNAL=1
 Boost_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CGAL_Boost_USE_STATIC_LIBS
 CGAL_Boost_USE_STATIC_LIBS-ADVANCED:INTERNAL=1
-CGAL_EXECUTABLE_TARGETS:INTERNAL=main;main;main
+CGAL_EXECUTABLE_TARGETS:INTERNAL=main
 //CGAL library is configured to use GMP
 CGAL_USE_GMP:INTERNAL=TRUE
 //CGAL library is configured to use MPFR
@@ -355,6 +356,8 @@ CMAKE_EXE_LINKER_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_EXE_LINKER_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO
 CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_EXPORT_COMPILE_COMMANDS
+CMAKE_EXPORT_COMPILE_COMMANDS-ADVANCED:INTERNAL=1
 //Name of external makefile project generator.
 CMAKE_EXTRA_GENERATOR:INTERNAL=
 //Name of generator.

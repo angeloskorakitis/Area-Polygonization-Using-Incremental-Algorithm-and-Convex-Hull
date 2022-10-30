@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp" "CMakeFiles/main.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.o" "gcc" "CMakeFiles/main.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.o.d"
   "/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/programs/main.cpp" "CMakeFiles/main.dir/main.cpp.o" "gcc" "CMakeFiles/main.dir/main.cpp.o.d"
   )
 

@@ -129,6 +129,30 @@ main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.o: Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.o
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.o
+
+# target to build an object file
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.o
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.o
+
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.i: Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.i
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.i
+
+# target to preprocess a source file
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.i
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.i
+
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.s: Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.s
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.s
+
+# target to generate assembly for a file
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.s
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -162,6 +186,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... main"
+	@echo "... Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.o"
+	@echo "... Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.i"
+	@echo "... Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

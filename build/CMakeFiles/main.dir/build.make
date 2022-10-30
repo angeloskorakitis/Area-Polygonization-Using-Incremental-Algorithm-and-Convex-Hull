@@ -83,20 +83,36 @@ CMakeFiles/main.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/main.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/programs/main.cpp -o CMakeFiles/main.dir/main.cpp.s
 
+CMakeFiles/main.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.o: /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp
+CMakeFiles/main.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.o -MF CMakeFiles/main.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.o.d -o CMakeFiles/main.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.o -c /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp
+
+CMakeFiles/main.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp > CMakeFiles/main.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.i
+
+CMakeFiles/main.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp -o CMakeFiles/main.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.s
+
 # Object files for target main
 main_OBJECTS = \
-"CMakeFiles/main.dir/main.cpp.o"
+"CMakeFiles/main.dir/main.cpp.o" \
+"CMakeFiles/main.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.o"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
 
 main: CMakeFiles/main.dir/main.cpp.o
+main: CMakeFiles/main.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.o
 main: CMakeFiles/main.dir/build.make
 main: /opt/homebrew/lib/libgmpxx.dylib
 main: /opt/homebrew/lib/libmpfr.dylib
 main: /opt/homebrew/lib/libgmp.dylib
 main: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
