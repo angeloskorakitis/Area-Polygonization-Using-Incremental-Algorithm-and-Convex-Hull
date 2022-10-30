@@ -1,3 +1,11 @@
+/////////////////////////////////////////////////////////////////////////////////
+//
+//
+// Implementation of Polygonization Using the Incremental Algorithm 
+//
+//
+/////////////////////////////////////////////////////////////////////////////////
+
 #include "Polygonization_Using_Incremental_Algorithm.hpp"
 
 bool is_edge_visible(Point point, Segment segment, Polygon convex_hull)
@@ -74,7 +82,7 @@ void add_visible_edge(Point point, SegmentVector visible_polygon_edges, Polygon*
   }
 }
 
-// Returns a vector of Segments with the red edges of the CH
+
 SegmentVector find_red_edges(Point point, Polygon polygon)
 {
   Polygon convex_hull;
@@ -96,7 +104,7 @@ SegmentVector find_red_edges(Point point, Polygon polygon)
   return red_edges;
 }
 
-// Returns a vector of Segments with the visible edges of the Polygon
+
 SegmentVector find_visible_edges(SegmentVector red_edges, Polygon polygon)
 {
   SegmentVector visible_edges;
@@ -130,7 +138,6 @@ SegmentVector find_visible_edges(SegmentVector red_edges, Polygon polygon)
 }
 
 
-// Implementation of the incremental algorithm
 Polygon incremental_algorithm(PointVector input_points)
 {
   pPointVector p_input_points = input_points.begin();
@@ -167,22 +174,10 @@ Polygon incremental_algorithm(PointVector input_points)
   return polygon;
 }
 
-void print_point(Point point) {
-  std::cout << "(" << point.x() << ", " << point.y() << ")" << std::endl;
-}
 
-void print_segment(Segment seg) {
-  std::cout << "(" << seg.source().x() << ", " << seg.source().y() << ") - (" << seg.target().x() << ", " << seg.target().y() << ")" << std::endl;
-}
-
-void print_polygon(Polygon polygon) {
-  for (EdgeIterator edge_itr = polygon.edges_begin(); edge_itr != polygon.edges_end(); ++edge_itr) 
-    print_segment(*edge_itr);
-}
+//_____________Edge selection functions according to the input <strategy>_________
 
 
-// _________________________________________________________________________________
-// Returns the -visible from point- edge of the polygon, that creates the largest (area-wise) triangle with the given point.
 Segment pick_max_area_edge(Point point ,SegmentVector visible_polygon_edges) {
   Segment max_segment;
   double max_area = -1;
@@ -204,7 +199,6 @@ Segment pick_max_area_edge(Point point ,SegmentVector visible_polygon_edges) {
   return max_segment;
 }
 
-// Returns the -visible from point- edge of the polygon, that creates the smallest (area-wise) triangle with the given point.
 Segment pick_min_area_edge(Point point ,SegmentVector visible_polygon_edges) {
   Segment min_segment;
   double min_area = -1;
@@ -231,8 +225,24 @@ Segment pick_min_area_edge(Point point ,SegmentVector visible_polygon_edges) {
   return min_segment;
 }
 
-// Returns random edge of polygon.
 Segment pick_random_edge(SegmentVector visible_polygon_edges) {
   int r = rand() % visible_polygon_edges.size();
   return visible_polygon_edges.at(r);
+}
+
+
+//___________________________Printing functions_________________________________
+
+
+void print_point(Point point) {
+  std::cout << "(" << point.x() << ", " << point.y() << ")" << std::endl;
+}
+
+void print_segment(Segment seg) {
+  std::cout << "(" << seg.source().x() << ", " << seg.source().y() << ") - (" << seg.target().x() << ", " << seg.target().y() << ")" << std::endl;
+}
+
+void print_polygon(Polygon polygon) {
+  for (EdgeIterator edge_itr = polygon.edges_begin(); edge_itr != polygon.edges_end(); ++edge_itr) 
+    print_segment(*edge_itr);
 }

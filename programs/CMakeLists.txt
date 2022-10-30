@@ -39,8 +39,5 @@ add_executable( main main.cpp ../modules/Polygonization_Using_Incremental_Algori
 
 add_to_cached_list( CGAL_EXECUTABLE_TARGETS main )
 
-# target_include_directories(main BEFORE PUBLIC ../include)
-# target_link_directories(main BEFORE PRIVATE ../modules)
-
 # Link the executable to CGAL and third-party libraries
 target_link_libraries(main PRIVATE CGAL::CGAL)
