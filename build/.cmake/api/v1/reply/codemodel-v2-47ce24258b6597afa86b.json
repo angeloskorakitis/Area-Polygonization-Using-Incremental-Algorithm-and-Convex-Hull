@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "main",
+					"name" : "to_polygon",
 					"targetIndexes" : 
 					[
 						0
@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "main::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-main-Debug-f5269d925c5c8e187f08.json",
-					"name" : "main",
+					"id" : "to_polygon::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-to_polygon-Debug-fb61aceafd25828f7d14.json",
+					"name" : "to_polygon",
 					"projectIndex" : 0
 				}
 			]

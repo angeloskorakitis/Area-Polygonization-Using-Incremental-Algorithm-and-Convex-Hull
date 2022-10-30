@@ -119,7 +119,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "main;main"
+			"value" : "main;main;main;to_polygon"
 		},
 		{
 			"name" : "CGAL_TEST_DRAW_FUNCTIONS",
@@ -1019,7 +1019,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "main"
+			"value" : "to_polygon"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1499,6 +1499,42 @@
 		},
 		{
 			"name" : "main_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/programs"
+		},
+		{
+			"name" : "to_polygon_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/build"
+		},
+		{
+			"name" : "to_polygon_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "ON"
+		},
+		{
+			"name" : "to_polygon_SOURCE_DIR",
 			"properties" : 
 			[
 				{

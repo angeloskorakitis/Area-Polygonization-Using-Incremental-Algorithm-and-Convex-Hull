@@ -3,7 +3,7 @@
 
 cmake_minimum_required(VERSION 3.1...3.23)
 
-project( main )
+project( to_polygon )
 
 
 # CGAL and its components
@@ -33,11 +33,11 @@ include_directories(BEFORE ../include)
 # include for local package
 
 
-# Creating entries for target: main
+# Creating entries for target: 
 # ############################
-add_executable( main main.cpp ../modules/Polygonization_Using_Incremental_Algorithm.cpp)
+add_executable( ${PROJECT_NAME} main.cpp ../modules/Polygonization_Using_Incremental_Algorithm.cpp)
 
-add_to_cached_list( CGAL_EXECUTABLE_TARGETS main )
+add_to_cached_list( CGAL_EXECUTABLE_TARGETS ${PROJECT_NAME} )
 
 # Link the executable to CGAL and third-party libraries
-target_link_libraries(main PRIVATE CGAL::CGAL)
+target_link_libraries(${PROJECT_NAME} PRIVATE CGAL::CGAL)

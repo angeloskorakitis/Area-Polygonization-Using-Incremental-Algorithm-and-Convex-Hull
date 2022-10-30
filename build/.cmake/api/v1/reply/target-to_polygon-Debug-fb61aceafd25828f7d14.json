@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "main"
+			"path" : "to_polygon"
 		}
 	],
 	"backtrace" : 1,
@@ -143,7 +143,7 @@
 			]
 		}
 	],
-	"id" : "main::@6890427a1f51a3e7e1df",
+	"id" : "to_polygon::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -174,8 +174,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "main",
-	"nameOnDisk" : "main",
+	"name" : "to_polygon",
+	"nameOnDisk" : "to_polygon",
 	"paths" : 
 	{
 		"build" : ".",

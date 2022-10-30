@@ -177,7 +177,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=main
+CMAKE_PROJECT_NAME:STATIC=to_polygon
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/Library/Developer/CommandLineTools/usr/bin/ranlib
@@ -279,6 +279,15 @@ main_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 main_SOURCE_DIR:STATIC=/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/programs
 
+//Value Computed by CMake
+to_polygon_BINARY_DIR:STATIC=/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/build
+
+//Value Computed by CMake
+to_polygon_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+to_polygon_SOURCE_DIR:STATIC=/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/programs
+
 
 ########################
 # INTERNAL cache entries
@@ -290,7 +299,7 @@ Boost_DEBUG-ADVANCED:INTERNAL=1
 Boost_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CGAL_Boost_USE_STATIC_LIBS
 CGAL_Boost_USE_STATIC_LIBS-ADVANCED:INTERNAL=1
-CGAL_EXECUTABLE_TARGETS:INTERNAL=main;main
+CGAL_EXECUTABLE_TARGETS:INTERNAL=main;main;main;to_polygon
 //CGAL library is configured to use GMP
 CGAL_USE_GMP:INTERNAL=TRUE
 //CGAL library is configured to use MPFR

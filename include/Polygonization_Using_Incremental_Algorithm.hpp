@@ -14,6 +14,10 @@
 #include <CGAL/Polygon_2.h>
 #include <CGAL/intersections.h>
 
+#include <vector>
+#include <numeric>
+#include <string>
+
 
 // Some typedefs in order to make the code more readable
 
