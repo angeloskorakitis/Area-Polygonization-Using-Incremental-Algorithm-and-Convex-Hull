@@ -12,6 +12,9 @@
 #include <string>
 #include <iostream>
 #include <time.h>
+#include <sstream>
+#include <fstream>
+
 
 typedef CGAL::Exact_predicates_inexact_constructions_kernel   K;
 typedef K::Point_2                                            Point;
@@ -36,6 +39,7 @@ bool edge_is_visible_check_all(Point point, Segment segment, Polygon polygon, Po
 bool point_is_on_polygon(Point point, Polygon polygon);
 Point point_closest_to_edge(Segment edge, PointVector points, Polygon polygon);
 Segment edge_closest_to_point(Point point, Polygon polygon);
+PointVector parse_file(std::string filename);
 
 void add_point_to_polygon(Point point, Polygon* polygon);
 void add_point_to_polygon_in_specific_edge(Point point, Segment edge, Polygon* polygon);
@@ -52,26 +56,91 @@ void print_convex_hull(SegmentVector convex_hull);
 void print_polygon(Polygon polygon);
 void print_polygon_alt(Polygon polygon);
 
+
+int edge_selection;
+
 // Κανονικά πρέπει να επιστρέφει Polygon. Αλλά προς το παρόν το αφήνω έτσι, γιατί δεν δουλεύει σωστά το ch creation. 
 Polygon convex_hull_algorithm(PointVector initial_points);
 
-int main()
-{
+int main(int argc, char* argv[]) {
+
+  std::string input_file = "-1";
+  std::string output_file = "-1";
+  std::string algorithm = "-1";
+  std::string initialization = "-1";
+
+  // Arguments count check.
+  if((argc != 9) && (argc != 11)) {
+    return EXIT_FAILURE;
+  }
+
+  // Argument pass.
+  for(int i = 1; i < argc; i+=2) {
+    if(strcmp(argv[i], "-i") == 0) {
+      input_file = argv[i+1];
+    }
+    else if(strcmp(argv[i], "-o") == 0) {
+      output_file = argv[i+1];
+    }
+    else if(strcmp(argv[i], "-algorithm") == 0) {
+      algorithm = argv[i+1];
+    }
+    else if(strcmp(argv[i], "-edge_selection") == 0) {
+      edge_selection = atoi(argv[i+1]);
+    }
+    else if(strcmp(argv[i], "-initialization") == 0) {
+      initialization = argv[i+1];
+    }
+  }
+
+
+  // Argument content check.
+  if(input_file == "-1") {
+    std::cout << "Usage: ./to_polygon -i <point set input file> -o <output file> -algorithm <incremental or convex_hull> -edge_selection <1 or 2 or 3> -initialization <1a or 1b or 2a or 2b | μόνο στον αυξητικό αλγόριθμο> " << std::endl;
+    return EXIT_FAILURE;
+  }
+  if(output_file == "-1") {
+    std::cout << "Usage: ./to_polygon -i <point set input file> -o <output file> -algorithm <incremental or convex_hull> -edge_selection <1 or 2 or 3> -initialization <1a or 1b or 2a or 2b | μόνο στον αυξητικό αλγόριθμο> " << std::endl;
+    return EXIT_FAILURE;
+  }
+  if(algorithm == "-1") {
+    std::cout << "Usage: ./to_polygon -i <point set input file> -o <output file> -algorithm <incremental or convex_hull> -edge_selection <1 or 2 or 3> -initialization <1a or 1b or 2a or 2b | μόνο στον αυξητικό αλγόριθμο> " << std::endl;
+    return EXIT_FAILURE;
+  }
+  if(initialization == "-1") {
+    if(algorithm == "incremental") {
+      std::cout << "Usage: ./to_polygon -i <point set input file> -o <output file> -algorithm <incremental or convex_hull> -edge_selection <1 or 2 or 3> -initialization <1a or 1b or 2a or 2b | μόνο στον αυξητικό αλγόριθμο> " << std::endl;
+      return EXIT_FAILURE;
+    }
+  }
+  if((edge_selection < 1) || (edge_selection > 3)) {
+    std::cout << "Usage: ./to_polygon -i <point set input file> -o <output file> -algorithm <incremental or convex_hull> -edge_selection <1 or 2 or 3> -initialization <1a or 1b or 2a or 2b | μόνο στον αυξητικό αλγόριθμο> " << std::endl;
+    return EXIT_FAILURE;
+  }
+
+
+
+  PointVector points = parse_file(input_file);
+
+  print_point_vector(points);
+
 
   srand(time(0));
-  PointVector points = {
-                        Point(10,0),
-                        Point(0,10),
-                        Point(1,1),
-                        Point(8,11),
-                        Point(3,4),
-                        Point(0,0),
-                        Point(6,6),
-                        Point(18,4),
-                        Point(16,16),
-                        Point(10,10),
-                        Point(2,6) 
-  };
+
+
+  // PointVector points = {
+  //                       Point(10,0),
+  //                       Point(0,10),
+  //                       Point(1,1),
+  //                       Point(8,11),
+  //                       Point(3,4),
+  //                       Point(0,0),
+  //                       Point(6,6),
+  //                       Point(18,4),
+  //                       Point(16,16),
+  //                       Point(10,10),
+  //                       Point(2,6) 
+  // };
   // PointVector points = {
   //                       Point(0,0),
   //                       Point(10,10),
@@ -346,7 +415,6 @@ void add_point_to_polygon(Point point, Polygon* polygon) {
     }
 
     std::cout << "ΚΡΙΣΙΜΟ ΣΗΜΕΙΟ. " << counter << " ~~~ " << edge << std::endl;
-    // Δεν δουλεύει ακόμα!
     (*polygon).insert((*polygon).begin() + counter, point);
   }
 
@@ -555,4 +623,31 @@ Polygon convex_hull_algorithm(PointVector input_points) {
   }
 
   return polygon;
+}
+
+
+PointVector parse_file(std::string filename) {
+  std::ifstream infile(filename);
+
+  std::string line;
+  std::getline(infile, line);
+  std::cout << line;
+  std::getline(infile, line);
+  std::cout << line;
+
+PointVector points;
+
+  while (std::getline(infile, line))
+  {
+    std::istringstream iss(line);
+    int count, x, y;
+    if (!(iss >> count >> x >> y)) { break; } // error
+
+        std::cout << "Count = " << count << " x = " << x << " y = " << y << std::endl;
+        Point point(x, y);
+        points.push_back(point);
+  }
+
+return points;
+
 }
