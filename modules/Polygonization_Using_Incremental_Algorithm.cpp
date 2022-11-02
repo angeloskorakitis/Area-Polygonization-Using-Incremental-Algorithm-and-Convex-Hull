@@ -64,15 +64,11 @@ bool is_edge_visible(Point point, Segment segment, Polygon convex_hull)
 }
 
 
-void add_visible_edge(Point point, SegmentVector visible_polygon_edges, Polygon* polygon)
+void add_visible_edge(Point point, SegmentVector visible_polygon_edges, int edge_selection, Polygon* polygon)
 {
-  //
-  //
-  // Παίρνει την πρώτη γραμμή και την εισάγει...πρέπει να το υλοποιήσω σύμφωνα με τον σχεδιασμό
-  //
-  Segment insert_segment =  pick_max_area_edge(point, visible_polygon_edges);
-  //
-  //
+
+  Segment insert_segment =  pick_edge(point, visible_polygon_edges, edge_selection);
+
   for(VertexIterator itr = polygon->vertices_begin(); itr != polygon->vertices_end(); ++itr)
   {
     if(insert_segment.target() == *itr){
@@ -138,7 +134,7 @@ SegmentVector find_visible_edges(SegmentVector red_edges, Polygon polygon)
 }
 
 
-Polygon incremental_algorithm(PointVector input_points)
+Polygon incremental_algorithm(PointVector input_points, int edge_selection)
 {
   pPointVector p_input_points = input_points.begin();
 
@@ -164,8 +160,8 @@ Polygon incremental_algorithm(PointVector input_points)
     // Find the visible edges of the Polygon
     SegmentVector visible_edges = find_visible_edges(red_edges, polygon);
     
-    // For every visible edge, insert a vertex in the polygon according to the strategy (random, min/ max area)
-    add_visible_edge(*p_input_points, visible_edges, &polygon);
+    // For every visible edge, insert a vertex in the polygon according to the edge selection strategy (random, min/ max area)
+    add_visible_edge(*p_input_points, visible_edges, edge_selection, &polygon);
     
     // Continue with the next point...
     advance(p_input_points, 1);
@@ -177,6 +173,13 @@ Polygon incremental_algorithm(PointVector input_points)
 
 //_____________Edge selection functions according to the input <strategy>_________
 
+Segment pick_edge(Point point ,SegmentVector visible_polygon_edges,int edge_selection){
+  switch(edge_selection){
+  case 1: return pick_random_edge(visible_polygon_edges); break;
+  case 2: return pick_min_area_edge(point, visible_polygon_edges); break;
+  }
+  return pick_max_area_edge(point, visible_polygon_edges);
+}
 
 Segment pick_max_area_edge(Point point ,SegmentVector visible_polygon_edges) {
   Segment max_segment;
@@ -245,4 +248,32 @@ void print_segment(Segment seg) {
 void print_polygon(Polygon polygon) {
   for (EdgeIterator edge_itr = polygon.edges_begin(); edge_itr != polygon.edges_end(); ++edge_itr) 
     print_segment(*edge_itr);
+}
+
+void print_point_vector(PointVector points) {
+  for(Point point : points) {
+    print_point(point);
+  }
+}
+
+PointVector parse_file(std::string filename) {
+  std::ifstream infile(filename);
+
+  std::string line;
+  std::getline(infile, line);
+  std::getline(infile, line);
+
+PointVector points;
+
+  while (std::getline(infile, line))
+  {
+    std::istringstream iss(line);
+    int count, x, y;
+    if (!(iss >> count >> x >> y)) { break; } // error
+
+        Point point(x, y);
+        points.push_back(point);
+  }
+
+return points;
 }

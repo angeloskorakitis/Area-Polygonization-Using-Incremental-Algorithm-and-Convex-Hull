@@ -10,7 +10,6 @@
 
 #include <CGAL/Exact_predicates_inexact_constructions_kernel.h>
 #include <CGAL/convex_hull_2.h>
-#include <CGAL/Simple_Cartesian.h>
 #include <CGAL/Polygon_2.h>
 #include <CGAL/intersections.h>
 
@@ -39,7 +38,7 @@ typedef std::string                                           String;
 bool is_edge_visible(Point ,Segment ,Polygon );
 
 
-void add_visible_edge(Point , SegmentVector, Polygon* );
+void add_visible_edge(Point , SegmentVector,int , Polygon* );
 
 
 // Returns a vector of Segments with the red edges of the CH
@@ -53,10 +52,12 @@ SegmentVector find_visible_edges(SegmentVector, Polygon);
 
 // Implementation of the incremental algorithm
 
-Polygon incremental_algorithm(PointVector );
+Polygon incremental_algorithm(PointVector ,int );
 
 
 //_____________Edge selection functions according to the input <strategy>_________
+
+Segment pick_edge(Point  ,SegmentVector , int );
 
 // Returns the -visible from point- edge of the polygon, that creates the largest (area-wise) triangle with the given point.
 
@@ -84,3 +85,11 @@ void print_segment(Segment);
 // Prints a Polygon
 
 void print_polygon(Polygon);
+
+// Prints a PointVector
+
+void print_point_vector(PointVector points);
+
+// Parses the file and returns a Vector with the input points
+
+PointVector parse_file(std::string filename);

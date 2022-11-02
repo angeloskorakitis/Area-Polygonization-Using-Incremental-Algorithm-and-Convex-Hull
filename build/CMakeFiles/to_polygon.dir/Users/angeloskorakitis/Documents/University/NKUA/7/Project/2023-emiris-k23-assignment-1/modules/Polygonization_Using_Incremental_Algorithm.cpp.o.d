@@ -2110,7 +2110,6 @@ CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Pro
   /opt/homebrew/include/CGAL/tuple.h \
   /opt/homebrew/include/CGAL/ch_bykat.h \
   /opt/homebrew/include/CGAL/Convex_hull_2/ch_bykat_impl.h \
-  /opt/homebrew/include/CGAL/Simple_Cartesian.h \
   /opt/homebrew/include/CGAL/Polygon_2.h \
   /opt/homebrew/include/CGAL/circulator.h \
   /opt/homebrew/include/CGAL/circulator_bases.h \

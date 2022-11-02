@@ -1,5 +1,9 @@
 #include "Polygonization_Using_Incremental_Algorithm.hpp"
+#include <time.h>
 #include <fstream>
+#include <sstream>
+#include <iostream>
+#include <cstring>
 
 //
 // Περιγραφή του κώδικα
@@ -11,72 +15,76 @@
 
 int main(int argc, char *argv[])
 {
+  // Επεξεργασία Παραμέτρων Εισόδου
 
-// Επεξεργασία Παραμέτρων Εισόδου
 
-// if(argc != 11 || argc != 9)
-// {
-//   perror("Error Handling - Command Line Arguments.\n");
-//   return -1;
-// }
+  // String input_file = "-1";
+  // String output_file = "-1";
+  // String algorithm = "-1";
+  // String initialization = "-1";
+  // int edge_selection = -1;
 
-// std::ifstream input_file;
-// std::ofstream output_file;
-// String algorithm, edge_selection, initialiazation;
-// if(argv[1] == "-i") input_file.open(argv[2]);
-// if(argv[3] == "-o") output_file.open(argv[4]);
-// if(argv[5] == "-algorithm") algorithm = argv[6];
-// if(argv[7] == "-edge_selection") edge_selection = argv[8];
-// if(argc == 11)  if(argv[9] == "-initialization") edge_selection = argv[10];
+  // // Arguments count check.
+  // if((argc != 9) && (argc != 11)) {
+  //   return EXIT_FAILURE;
+  // }
+  
 
-// if(input_file.fail())
-// {
-//   perror("Error Handling - File Didn't Open.\n");
-//   return -1;
-// }
+  // String argument;
+  // String data;
+  // // Argument pass.
+  // for(int i = 1; i < argc; i+=2) {
+  //   argument = argv[i];
+  //   data = argv[i+1];
+  //   std::cout << argument << "\n";
+  //   std::cout << data << "\n";
+  //   if(argument == "-i")  input_file = data;
+  //   else if(argument.compare("-o"))  output_file = data;
+  //   else if(argument.compare("-algorithm"))  algorithm = data;
+  //   else if(argument.compare("-edge_selection")) edge_selection = std::stoi(data);
+  //   else if(argument.compare("-initialization")) initialization = data;
+    
+  // }
 
-// PointVector input_points;
-// String line;
-// while(input_file)
-// {
-//   getline(input_file, line);
 
-//   if( line.at(0) == '#') continue;
+  // // Argument content check.
+  // if(input_file == "-1") {
+  //   std::cout << "1Usage: ./to_polygon -i <point set input file> -o <output file> -algorithm <incremental or convex_hull> -edge_selection <1 or 2 or 3> -initialization <1a or 1b or 2a or 2b | μόνο στον αυξητικό αλγόριθμο> " << std::endl;
+  //   return EXIT_FAILURE;
+  // }
+  // if(output_file == "-1") {
+  //   std::cout << "2Usage: ./to_polygon -i <point set input file> -o <output file> -algorithm <incremental or convex_hull> -edge_selection <1 or 2 or 3> -initialization <1a or 1b or 2a or 2b | μόνο στον αυξητικό αλγόριθμο> " << std::endl;
+  //   return EXIT_FAILURE;
+  // }
+  // if(algorithm == "-1") {
+  //   std::cout << "3Usage: ./to_polygon -i <point set input file> -o <output file> -algorithm <incremental or convex_hull> -edge_selection <1 or 2 or 3> -initialization <1a or 1b or 2a or 2b | μόνο στον αυξητικό αλγόριθμο> " << std::endl;
+  //   return EXIT_FAILURE;
+  // }
+  // if(initialization == "-1") {
+  //   std::cout << "Usage: ./to_polygon -i <point set input file> -o <output file> -algorithm <incremental or convex_hull> -edge_selection <1 or 2 or 3> -initialization <1a or 1b or 2a or 2b | μόνο στον αυξητικό αλγόριθμο> " << std::endl;
+  //   return EXIT_FAILURE;
 
-//   for(String::iterator it = line.begin(); it != line.end(); ++it)
-//   {
-//     if(it == line.begin()) continue;
-//     else if(it == line.end())
-//   }
+  // }
+  // if((edge_selection < 1) || (edge_selection > 3)) {
+  //   std::cout << "Usage: ./to_polygon -i <point set input file> -o <output file> -algorithm <incremental or convex_hull> -edge_selection <1 or 2 or 3> -initialization <1a or 1b or 2a or 2b | μόνο στον αυξητικό αλγόριθμο> " << std::endl;
+  //   return EXIT_FAILURE;
 
-// }
+  // }
 
-// input_file.close();
-
-PointVector input_points = {
-                        Point(10,0),
-                        Point(0,10),
-                        Point(1,1),
-                        Point(8,11),
-                        Point(3,4),
-                        Point(0,0),
-                        Point(6,6),
-                        Point(18,4),
-                        Point(16,16),
-                        Point(10,10),
-                        Point(2,6) 
-  };
+  PointVector points = parse_file(argv[1]);
+  print_point_vector(points);
 
   // Sorting
-  std::sort(input_points.begin(), input_points.end());
+  std::sort(points.begin(), points.end());
 
   // Poligonization
-  Polygon polygon = incremental_algorithm(input_points);
+  Polygon polygon = incremental_algorithm(points, 3);
 
   // Print polygon
   print_polygon(polygon);
-  std::cout << CGAL::abs(polygon.area()) << std::endl;
-
+  unsigned int area = CGAL::abs(polygon.area());
+  std::cout << area << std::endl;
+  
   // If the polygon is not simple then failure...
   if(!polygon.is_simple()) return EXIT_FAILURE;
   
