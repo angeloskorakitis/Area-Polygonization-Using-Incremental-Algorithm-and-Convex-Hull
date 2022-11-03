@@ -71,34 +71,101 @@ int main(int argc, char *argv[])
 
   // }
 
-  PointVector points = {
-                        Point(10,0),
-                        Point(0,10),
-                        Point(1,1),
-                        Point(8,11),
-                        Point(3,4),
-                        Point(0,0),
-                        Point(6,6),
-                        Point(18,4),
-                        Point(16,16),
-                        Point(10,10),
-                        Point(2,6) 
-  };
+  // PointVector points = {
+  //                       Point(10,0),
+  //                       Point(0,10),
+  //                       Point(1,1),
+  //                       Point(8,11),
+  //                       Point(3,4),
+  //                       Point(0,0),
+  //                       Point(6,6),
+  //                       Point(18,4),
+  //                       Point(16,16),
+  //                       Point(10,10),
+  //                       Point(2,6) 
+  // };
 
-  // PointVector points = parse_file(argv[1]);
+  std::string input_file = "-1";
+  std::string output_file = "-1";
+  std::string algorithm = "-1";
+  std::string initialization = "-1";
+  int edge_selection = 0;
+
+  // Arguments count check.
+  if((argc != 9) && (argc != 11)) {
+    return EXIT_FAILURE;
+  }
+
+  // Argument pass.
+  for(int i = 1; i < argc; i+=2) {
+    if(strcmp(argv[i], "-i") == 0) {
+      input_file = argv[i+1];
+    }
+    else if(strcmp(argv[i], "-o") == 0) {
+      output_file = argv[i+1];
+    }
+    else if(strcmp(argv[i], "-algorithm") == 0) {
+      algorithm = argv[i+1];
+    }
+    else if(strcmp(argv[i], "-edge_selection") == 0) {
+      edge_selection = atoi(argv[i+1]);
+    }
+    else if(strcmp(argv[i], "-initialization") == 0) {
+      initialization = argv[i+1];
+    }
+  }
+
+
+  // Argument content check.
+  if(input_file == "-1") {
+    std::cout << "Usage: ./to_polygon -i <point set input file> -o <output file> -algorithm <incremental or convex_hull> -edge_selection <1 or 2 or 3> -initialization <1a or 1b or 2a or 2b | μόνο στον αυξητικό αλγόριθμο> " << std::endl;
+    return EXIT_FAILURE;
+  }
+  if(output_file == "-1") {
+    std::cout << "Usage: ./to_polygon -i <point set input file> -o <output file> -algorithm <incremental or convex_hull> -edge_selection <1 or 2 or 3> -initialization <1a or 1b or 2a or 2b | μόνο στον αυξητικό αλγόριθμο> " << std::endl;
+    return EXIT_FAILURE;
+  }
+  if(algorithm == "-1") {
+    std::cout << "Usage: ./to_polygon -i <point set input file> -o <output file> -algorithm <incremental or convex_hull> -edge_selection <1 or 2 or 3> -initialization <1a or 1b or 2a or 2b | μόνο στον αυξητικό αλγόριθμο> " << std::endl;
+    return EXIT_FAILURE;
+  }
+  if(initialization == "-1") {
+    if(algorithm == "incremental") {
+      std::cout << "Usage: ./to_polygon -i <point set input file> -o <output file> -algorithm <incremental or convex_hull> -edge_selection <1 or 2 or 3> -initialization <1a or 1b or 2a or 2b | μόνο στον αυξητικό αλγόριθμο> " << std::endl;
+      return EXIT_FAILURE;
+    }
+  }
+  if((edge_selection < 1) || (edge_selection > 3)) {
+    std::cout << "Usage: ./to_polygon -i <point set input file> -o <output file> -algorithm <incremental or convex_hull> -edge_selection <1 or 2 or 3> -initialization <1a or 1b or 2a or 2b | μόνο στον αυξητικό αλγόριθμο> " << std::endl;
+    return EXIT_FAILURE;
+  }
+
+
+
+  PointVector points = parse_file(input_file);
+
   // print_point_vector(points);
 
   // Sorting
   std::sort(points.begin(), points.end());
 
+// Starting timer.
+  auto start = std::chrono::high_resolution_clock::now();
+
   // Poligonization
   Polygon polygon = incremental_algorithm(points, 3);
 
   // Print polygon
-  print_polygon(polygon);
-  unsigned int area = CGAL::abs(polygon.area());
-  std::cout << area << std::endl;
+  // print_polygon(polygon);
+  // unsigned int area = CGAL::abs(polygon.area());
+  // std::cout << area << std::endl;
   
+  auto stop = std::chrono::high_resolution_clock::now();
+
+  auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(stop - start);
+
+  print_output(polygon, points, output_file, algorithm, edge_selection, initialization, duration);
+
   // If the polygon is not simple then failure...
   if(!polygon.is_simple()) return EXIT_FAILURE;
   

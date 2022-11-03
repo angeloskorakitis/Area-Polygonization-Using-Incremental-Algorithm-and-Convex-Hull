@@ -37,10 +37,7 @@ bool is_edge_visible(Point point, Segment segment, Polygon convex_hull)
     {
       if(intersection_point == segment_target) continue;
       if(intersection_point == segment_source) continue;
-      // !!! Δεν είμαι σίγουρος γι αυτό...να το σκεφτώ περισσότερο !!!
-      // else if(intersection_point != target) return false;
-      // else if(intersection_point != source) return false;
-
+      return false;
     }
     else
     {
@@ -123,7 +120,9 @@ SegmentVector find_visible_edges(Point point, SegmentVector red_edges, Polygon p
         // Αν η κορυφή του πολυγώνου είναι η κορυφή της κόκκινης ακμής...
         if(edge_itr->source() == p_red_edges_begin->source() || flag == true)
         {
+          // We found the first red edge
           flag = true;
+
           // if the edge is visible from the point...
           if(is_edge_visible(point, *edge_itr, polygon))
             visible_edges.push_back(*edge_itr);
@@ -144,8 +143,9 @@ Polygon incremental_algorithm(PointVector input_points, int edge_selection)
   // Start with the first 3 points
   Polygon polygon(p_input_points, p_input_points + 3);
 
+  // We need CCW orientation for the polygon points
   if(polygon.is_clockwise_oriented())
-    polygon.orientation();
+    polygon.reverse_orientation();
 
   // SPECIAL CASE: Check if the first 3 points are collinear...add a 4th
   // Not ready yeeet!
@@ -162,13 +162,9 @@ Polygon incremental_algorithm(PointVector input_points, int edge_selection)
   {
     // Find the red edges of the CH, i.e the visible from the CH
     SegmentVector red_edges = find_red_edges(*p_input_points, polygon);
-    std::cout << "red: \n";
-    print_segment_vector(red_edges);
 
     // Find the visible edges of the Polygon
     SegmentVector visible_edges = find_visible_edges(*p_input_points, red_edges, polygon);
-     std::cout << "vis: \n";
-    print_segment_vector(visible_edges);
 
     // For every visible edge, insert a vertex in the polygon according to the edge selection strategy (random, min/ max area)
     add_visible_edge(*p_input_points, visible_edges, edge_selection, &polygon);
@@ -293,3 +289,43 @@ PointVector points;
 
 return points;
 }
+
+
+// Output
+void print_output(Polygon polygon, PointVector points, std::string filename, std::string algorithm, int edge_selection, std::string initialization, auto duration) {
+  std::ofstream outfile(filename);
+
+  if(outfile.is_open()) {
+    outfile << "Polygonization" << std::endl;
+
+    for(Point point : points) {
+      outfile << point << std::endl;
+    }
+
+    for(EdgeIterator edge = polygon.edges_begin(); edge != polygon.edges_end(); edge++) {
+      outfile << *edge << std::endl;
+    }
+
+
+    if(algorithm == "incremental") {
+      outfile << "Algorithm:" << algorithm << "_edge_selection" << edge_selection << "_initialization" << initialization << std::endl;
+    }
+    else {
+      outfile << "Algorithm:" << algorithm << "_edge_selection" << edge_selection << std::endl;
+    }
+
+    double polygon_area = CGAL::abs(polygon.area());
+    
+    Polygon convex_hull;
+    CGAL::convex_hull_2(polygon.begin(), polygon.end(), std::back_inserter(convex_hull));
+
+    double convex_hull_area = CGAL::abs(convex_hull.area());
+
+    double ratio = polygon_area / convex_hull_area;
+
+    outfile << "area: " << polygon_area << std::endl;
+    outfile << "ratio: " <<  ratio << std::endl;
+    outfile << "construction time: " << duration.count() << std::endl;
+
+
+  }

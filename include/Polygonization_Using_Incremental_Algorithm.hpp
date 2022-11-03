@@ -15,6 +15,7 @@
 #include <vector>
 #include <numeric>
 #include <string>
+#include <chrono>
 
 
 // Some typedefs in order to make the code more readable
@@ -94,3 +95,6 @@ void print_segment_vector(SegmentVector segments);
 // Parses the file and returns a Vector with the input points
 
 PointVector parse_file(std::string filename);
+
+
+void print_output(Polygon polygon, PointVector points, std::string filename, std::string algorithm, int edge_selection, std::string initialization, auto duration);
