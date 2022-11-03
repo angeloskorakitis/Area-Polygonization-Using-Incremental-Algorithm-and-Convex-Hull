@@ -12,7 +12,6 @@
 #include <CGAL/convex_hull_2.h>
 #include <CGAL/Polygon_2.h>
 #include <CGAL/intersections.h>
-
 #include <vector>
 #include <numeric>
 #include <string>
@@ -47,7 +46,7 @@ SegmentVector find_red_edges(Point, Polygon );
 
 // Returns a vector of Segments with the visible edges of the Polygon
 
-SegmentVector find_visible_edges(SegmentVector, Polygon);
+SegmentVector find_visible_edges(Point, SegmentVector, Polygon);
 
 
 // Implementation of the incremental algorithm

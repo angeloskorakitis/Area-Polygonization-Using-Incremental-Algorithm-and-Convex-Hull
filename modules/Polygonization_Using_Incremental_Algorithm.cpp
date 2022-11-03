@@ -101,14 +101,20 @@ SegmentVector find_red_edges(Point point, Polygon polygon)
 }
 
 
-SegmentVector find_visible_edges(SegmentVector red_edges, Polygon polygon)
+SegmentVector find_visible_edges(Point point, SegmentVector red_edges, Polygon polygon)
 {
   SegmentVector visible_edges;
   // Αν υπάρχουν κόκκινες ακμές στο ΚΠ δηλ. ορατές από το σημείο...
   if(red_edges.size() != 0)
   {      
-    // Για κάθε μία κόκκινη ακμή βρίσκω τις ορατές ακμές στο πολύγωνο...
-    for(pSegmentVector p_red_edges = red_edges.begin(); p_red_edges != red_edges.end(); ++p_red_edges)
+    pSegmentVector p_red_edges_begin = red_edges.begin();
+    pSegmentVector p_red_edges_end = red_edges.end();
+
+    // Special case: already in the edge
+    if(CGAL::do_intersect(p_red_edges_begin, point)){
+      return red_edges;
+    }
+    
     {
       // Για κάθε κόκκινη πρέπει να βρώ ποιες ακμές είναι ορατές...
       // Κάθε κόκκινη θα έχει τις κορυφές της στην πολυγωνική γραμμή...
@@ -116,17 +122,17 @@ SegmentVector find_visible_edges(SegmentVector red_edges, Polygon polygon)
       for(EdgeIterator edge_itr = polygon.edges_begin(); edge_itr != polygon.edges_end(); ++edge_itr)
       {
         // Αν η κορυφή του πολυγώνου είναι η κορυφή της κόκκινης ακμής...
-        if((*edge_itr).source() == (*p_red_edges).source()){
+        if(edge_itr->source() == p_red_edges_begin->source() || flag == true)
+        {
           flag = true;
-          visible_edges.push_back(*edge_itr);
+
+          // if the edge is visible from the point...
+          if(is_edge_visible(point, *edge_itr, polygon))
+            visible_edges.push_back(*edge_itr);
         }
-        if(flag == true){
-          visible_edges.push_back(*edge_itr);
-        }
-        if((*edge_itr).target() == (*p_red_edges).target()){
-          visible_edges.push_back(*edge_itr);
+        if(edge_itr->target() == p_red_edges_end->target() && flag == true)
           break;
-        }
+        
       }
     }
   }
@@ -158,7 +164,7 @@ Polygon incremental_algorithm(PointVector input_points, int edge_selection)
     SegmentVector red_edges = find_red_edges(*p_input_points, polygon);
 
     // Find the visible edges of the Polygon
-    SegmentVector visible_edges = find_visible_edges(red_edges, polygon);
+    SegmentVector visible_edges = find_visible_edges(*p_input_points, red_edges, polygon);
     
     // For every visible edge, insert a vertex in the polygon according to the edge selection strategy (random, min/ max area)
     add_visible_edge(*p_input_points, visible_edges, edge_selection, &polygon);
