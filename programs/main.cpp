@@ -14,6 +14,7 @@
 #include <time.h>
 #include <sstream>
 #include <fstream>
+#include <chrono>
 
 
 typedef CGAL::Exact_predicates_inexact_constructions_kernel   K;
@@ -40,6 +41,7 @@ bool point_is_on_polygon(Point point, Polygon polygon);
 Point point_closest_to_edge(Segment edge, PointVector points, Polygon polygon);
 Segment edge_closest_to_point(Point point, Polygon polygon);
 PointVector parse_file(std::string filename);
+void print_output(Polygon polygon, PointVector points, std::string output_file, std::string algorithm, int edge_selection, std::string initialization, auto duration);
 
 void add_point_to_polygon(Point point, Polygon* polygon);
 void add_point_to_polygon_in_specific_edge(Point point, Segment edge, Polygon* polygon);
@@ -161,13 +163,38 @@ int main(int argc, char* argv[]) {
 
 
 
+  Polygon polygon;
 
-  Polygon polygon = convex_hull_algorithm(points);
+  // Starting timer.
+  auto start = std::chrono::high_resolution_clock::now();
+
+  if(algorithm == "incremental") {
+    // Εδώ θα βάλεις τη δική σου συνάρτηση μπροκολοκολίνο.
+  }
+  else if(algorithm == "convex_hull") {
+    polygon = convex_hull_algorithm(points);
+  }
+  else if(algorithm == "onion") {
+    std::cout << "Not implemented." << std::endl;
+    return EXIT_FAILURE;
+  }
+  else {
+    std::cout << "Use a valid algorithm name!" << std::endl;
+    std::cout << "Usage: ./to_polygon -i <point set input file> -o <output file> -algorithm <incremental or convex_hull> -edge_selection <1 or 2 or 3> -initialization <1a or 1b or 2a or 2b | μόνο στον αυξητικό αλγόριθμο> " << std::endl;
+    return EXIT_FAILURE;
+  }
+  
+  
+  
+  
+  // Stopping timer.
+  auto stop = std::chrono::high_resolution_clock::now();
+
+  auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(stop - start);
 
   print_polygon_alt(polygon);
 
-
-
+  print_output(polygon, points, output_file, algorithm, edge_selection, initialization, duration);
 
 
   return EXIT_SUCCESS;
@@ -635,7 +662,7 @@ PointVector parse_file(std::string filename) {
   std::getline(infile, line);
   std::cout << line;
 
-PointVector points;
+  PointVector points;
 
   while (std::getline(infile, line))
   {
@@ -649,5 +676,47 @@ PointVector points;
   }
 
 return points;
+
+}
+
+
+void print_output(Polygon polygon, PointVector points, std::string filename, std::string algorithm, int edge_selection, std::string initialization, auto duration) {
+  std::ofstream outfile(filename);
+
+  if(outfile.is_open()) {
+    outfile << "Polygonization" << std::endl;
+
+    for(Point point : points) {
+      outfile << point << std::endl;
+    }
+
+    for(EdgeIterator edge = polygon.edges_begin(); edge != polygon.edges_end(); edge++) {
+      outfile << *edge << std::endl;
+    }
+
+
+    if(algorithm == "incremental") {
+      outfile << "Algorithm:" << algorithm << "_edge_selection" << edge_selection << "_initialization" << initialization << std::endl;
+    }
+    else {
+      outfile << "Algorithm:" << algorithm << "_edge_selection" << edge_selection << std::endl;
+    }
+
+    double polygon_area = CGAL::abs(polygon.area());
+    
+    Polygon convex_hull;
+    CGAL::convex_hull_2(polygon.begin(), polygon.end(), std::back_inserter(convex_hull));
+
+    double convex_hull_area = CGAL::abs(convex_hull.area());
+
+    double ratio = polygon_area / convex_hull_area;
+
+    outfile << "area: " << polygon_area << std::endl;
+    outfile << "ratio: " <<  ratio << std::endl;
+    outfile << "construction time: " << duration.count() << std::endl;
+
+
+  }
+
 
 }
