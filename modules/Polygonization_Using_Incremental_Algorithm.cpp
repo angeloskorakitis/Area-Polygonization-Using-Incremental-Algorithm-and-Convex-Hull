@@ -111,11 +111,10 @@ SegmentVector find_visible_edges(Point point, SegmentVector red_edges, Polygon p
     pSegmentVector p_red_edges_end = red_edges.end();
 
     // Special case: already in the edge
-    if(CGAL::do_intersect(p_red_edges_begin, point)){
+    if(CGAL::do_intersect(*p_red_edges_begin, point)){
       return red_edges;
     }
     
-    {
       // Για κάθε κόκκινη πρέπει να βρώ ποιες ακμές είναι ορατές...
       // Κάθε κόκκινη θα έχει τις κορυφές της στην πολυγωνική γραμμή...
       bool flag = false;
@@ -125,7 +124,6 @@ SegmentVector find_visible_edges(Point point, SegmentVector red_edges, Polygon p
         if(edge_itr->source() == p_red_edges_begin->source() || flag == true)
         {
           flag = true;
-
           // if the edge is visible from the point...
           if(is_edge_visible(point, *edge_itr, polygon))
             visible_edges.push_back(*edge_itr);
@@ -135,7 +133,6 @@ SegmentVector find_visible_edges(Point point, SegmentVector red_edges, Polygon p
         
       }
     }
-  }
   return visible_edges;
 }
 
@@ -146,6 +143,9 @@ Polygon incremental_algorithm(PointVector input_points, int edge_selection)
 
   // Start with the first 3 points
   Polygon polygon(p_input_points, p_input_points + 3);
+
+  if(polygon.is_clockwise_oriented())
+    polygon.orientation();
 
   // SPECIAL CASE: Check if the first 3 points are collinear...add a 4th
   // Not ready yeeet!
@@ -162,10 +162,14 @@ Polygon incremental_algorithm(PointVector input_points, int edge_selection)
   {
     // Find the red edges of the CH, i.e the visible from the CH
     SegmentVector red_edges = find_red_edges(*p_input_points, polygon);
+    std::cout << "red: \n";
+    print_segment_vector(red_edges);
 
     // Find the visible edges of the Polygon
     SegmentVector visible_edges = find_visible_edges(*p_input_points, red_edges, polygon);
-    
+     std::cout << "vis: \n";
+    print_segment_vector(visible_edges);
+
     // For every visible edge, insert a vertex in the polygon according to the edge selection strategy (random, min/ max area)
     add_visible_edge(*p_input_points, visible_edges, edge_selection, &polygon);
     
@@ -259,6 +263,12 @@ void print_polygon(Polygon polygon) {
 void print_point_vector(PointVector points) {
   for(Point point : points) {
     print_point(point);
+  }
+}
+
+void print_segment_vector(SegmentVector segments) {
+  for(Segment segment : segments) {
+    print_segment(segment);
   }
 }
 

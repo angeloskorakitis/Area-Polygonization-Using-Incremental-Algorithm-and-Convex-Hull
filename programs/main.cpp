@@ -71,8 +71,22 @@ int main(int argc, char *argv[])
 
   // }
 
-  PointVector points = parse_file(argv[1]);
-  print_point_vector(points);
+  PointVector points = {
+                        Point(10,0),
+                        Point(0,10),
+                        Point(1,1),
+                        Point(8,11),
+                        Point(3,4),
+                        Point(0,0),
+                        Point(6,6),
+                        Point(18,4),
+                        Point(16,16),
+                        Point(10,10),
+                        Point(2,6) 
+  };
+
+  // PointVector points = parse_file(argv[1]);
+  // print_point_vector(points);
 
   // Sorting
   std::sort(points.begin(), points.end());

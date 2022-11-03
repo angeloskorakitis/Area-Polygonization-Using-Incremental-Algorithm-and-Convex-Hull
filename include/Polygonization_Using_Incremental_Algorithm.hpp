@@ -89,6 +89,8 @@ void print_polygon(Polygon);
 
 void print_point_vector(PointVector points);
 
+void print_segment_vector(SegmentVector segments);
+
 // Parses the file and returns a Vector with the input points
 
 PointVector parse_file(std::string filename);
