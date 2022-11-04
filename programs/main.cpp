@@ -33,6 +33,15 @@ typedef PointVector::iterator                                 pPointVector;
 typedef SegmentVector::iterator                               pSegmentVector;
 typedef std::string                                           String;
 
+struct tuple {
+  Segment segment;
+  Point point;
+  int position;
+};
+
+typedef struct tuple* Tuple;
+
+
 Polygon convex_hull_create(PointVector points);
 bool segment_intersects_convex_hull(Segment seg, SegmentVector convex_hull, Segment excl);
 bool edge_is_visible(Point p, Segment seg, Polygon polygon);
@@ -46,10 +55,14 @@ void print_output(Polygon polygon, PointVector points, std::string output_file, 
 
 void add_point_to_polygon(Point point, Polygon* polygon);
 void add_point_to_polygon_in_specific_edge(Point point, Segment edge, Polygon* polygon);
+void add_point_to_polygon_in_specific_edge(Polygon* polygon, Tuple tuple);
 Segment pick_visible_edge(Point point, Polygon polygon);
 Segment pick_random_edge(Polygon polygon);
 Segment pick_max_area_edge(Polygon polygon, PointVector points);
 Segment pick_min_area_edge(Polygon polygon, PointVector points);
+Tuple pick_random_edge2(Polygon polygon);
+Tuple pick_max_area_edge2(Polygon polygon, PointVector points);
+Tuple pick_min_area_edge2(Polygon polygon, PointVector points);
 bool remove_point_from_vector(PointVector* points, Point point);
 
 void print_point(Point point);
@@ -125,7 +138,7 @@ int main(int argc, char* argv[]) {
 
   PointVector points = parse_file(input_file);
 
-  print_point_vector(points);
+  // print_point_vector(points);
 
 
   srand(time(0));
@@ -187,7 +200,6 @@ int main(int argc, char* argv[]) {
   
   
   
-  
   // Stopping timer.
   auto stop = std::chrono::high_resolution_clock::now();
 
@@ -197,6 +209,20 @@ int main(int argc, char* argv[]) {
 
   print_output(polygon, points, output_file, algorithm, edge_selection, initialization, duration);
 
+  
+  // If the polygon is not simple then failure...
+  if(!polygon.is_simple()) {
+    std::cout << "THIS POLYGON IS NOT SIMPLE!" << std::endl;
+    return EXIT_FAILURE;
+  }
+  else {
+    std::cout << "Simple..." << std::endl;
+  }
+  
+  if(polygon.size() != points.size()) {
+    std::cout << "Ώπααα, έχουμε πρόβλημα." << std::endl;
+    return EXIT_FAILURE;
+  }
 
   return EXIT_SUCCESS;
 }
@@ -442,7 +468,7 @@ void add_point_to_polygon(Point point, Polygon* polygon) {
       counter++;
     }
 
-    std::cout << "ΚΡΙΣΙΜΟ ΣΗΜΕΙΟ. " << counter << " ~~~ " << edge << std::endl;
+    // std::cout << "ΚΡΙΣΙΜΟ ΣΗΜΕΙΟ. " << counter << " ~~~ " << edge << std::endl;
     (*polygon).insert((*polygon).begin() + counter, point);
   }
 
@@ -505,7 +531,7 @@ Segment pick_max_area_edge(Polygon polygon, PointVector points) {
     // area() function may return negative number.
     current_area = CGAL::abs(triangle.area());
 
-    std::cout << "Για πάμε να δούμε... edge = " << *edge << "  point = " << point << "  area = " << current_area << std::endl;
+    // std::cout << "Για πάμε να δούμε... edge = " << *edge << "  point = " << point << "  area = " << current_area << std::endl;
 
 
     if(current_area > max_area) {
@@ -550,7 +576,7 @@ Segment pick_min_area_edge(Polygon polygon, PointVector points) {
     // area() function may return negative number.
     current_area = CGAL::abs(triangle.area());
 
-    std::cout << "Για πάμε να δούμε... edge = " << *edge << "  point = " << point << "  area = " << current_area << std::endl;
+    // std::cout << "Για πάμε να δούμε... edge = " << *edge << "  point = " << point << "  area = " << current_area << std::endl;
  
     // If this is the first visible edge found till now.
     if(min_segment == dull_segment) {
@@ -641,6 +667,74 @@ bool remove_point_from_vector(PointVector* points, Point point) {
   return false;
 }
 
+// // Should return Polygon. 
+// Polygon convex_hull_algorithm(PointVector input_points, int edge_selection) {
+
+//   // Polygon initally is the convex hull.
+//   Polygon polygon = convex_hull_create(input_points);
+
+//   // Creating inner_points vector. A vector with all inner points. 
+//   PointVector inner_points;
+//   for(Point point : input_points) {
+//     if(!point_is_on_polygon(point, polygon)) {
+//       inner_points.push_back(point);
+//     }
+//   }
+
+
+//   // Juuuust checkin.
+//   // std::cout << "Inner points are: " << std::endl;
+//   // print_point_vector(inner_points);
+
+
+//   Point wrong_point(-1, -1);
+
+//   // While there are inner points.
+//   while(inner_points.size() > 0) {
+
+//     Segment edge;
+//     Point point;
+    
+// // int lolio = 0;
+
+//     // Pick a random edge and find the closest point to it.
+//     do {
+//       if(edge_selection == RANDOM) {
+//         // std::cout << "\tPicking at random." << std::endl;
+//         edge = pick_random_edge(polygon);
+//       }
+//       else if(edge_selection == MIN_AREA) {
+//         // std::cout << "\tPicking min area." << std::endl;
+//         edge = pick_max_area_edge(polygon, inner_points);
+//       }
+//       else if(edge_selection == MAX_AREA) {
+//         // std::cout << "\tPicking max area." << std::endl;
+//         edge = pick_min_area_edge(polygon, inner_points);
+//       }
+
+//       point = point_closest_to_edge(edge, inner_points, polygon);
+
+//       // Να φύγει από 'δω.
+//       // if(++lolio > 15) {
+//       //   std::cout << "Ασταναπάνε..." << std::endl;
+//       //   exit(1);
+//       // }
+
+//     } while(point == wrong_point); 
+
+//     add_point_to_polygon_in_specific_edge(point, edge, &polygon);
+//     remove_point_from_vector(&inner_points, point);
+         
+//     // std::cout << std::endl << "\tΑς βγάλουμε τα μάτια μας... " << std::endl << "Πολύγωνο: " << std::endl;
+//     // print_polygon_alt(polygon);
+//     // std::cout << std::endl << "Εσωτερικά Σημεία: " << std::endl;
+//     // print_point_vector(inner_points);
+
+//   }
+
+//   return polygon;
+// }
+
 // Should return Polygon. 
 Polygon convex_hull_algorithm(PointVector input_points, int edge_selection) {
 
@@ -655,11 +749,10 @@ Polygon convex_hull_algorithm(PointVector input_points, int edge_selection) {
     }
   }
 
-  std::cout << "Edge selection = " << edge_selection << std::endl;
 
   // Juuuust checkin.
-  std::cout << "Inner points are: " << std::endl;
-  print_point_vector(inner_points);
+  // std::cout << "Inner points are: " << std::endl;
+  // print_point_vector(inner_points);
 
 
   Point wrong_point(-1, -1);
@@ -667,6 +760,7 @@ Polygon convex_hull_algorithm(PointVector input_points, int edge_selection) {
   // While there are inner points.
   while(inner_points.size() > 0) {
 
+    Tuple tuple;
     Segment edge;
     Point point;
     
@@ -677,19 +771,21 @@ int lolio = 0;
       if(edge_selection == RANDOM) {
         std::cout << "\tPicking at random." << std::endl;
         edge = pick_random_edge(polygon);
+        point = point_closest_to_edge(edge, inner_points, polygon);
       }
       else if(edge_selection == MIN_AREA) {
         std::cout << "\tPicking min area." << std::endl;
-        edge = pick_max_area_edge(polygon, inner_points);
+        tuple = pick_max_area_edge2(polygon, inner_points);
+        point = tuple->point;
       }
       else if(edge_selection == MAX_AREA) {
         std::cout << "\tPicking max area." << std::endl;
-        edge = pick_min_area_edge(polygon, inner_points);
+        tuple = pick_min_area_edge2(polygon, inner_points);
+        point = tuple->point;
       }
 
-      point = point_closest_to_edge(edge, inner_points, polygon);
 
-
+      // Να φύγει από 'δω.
       if(++lolio > 15) {
         std::cout << "Ασταναπάνε..." << std::endl;
         exit(1);
@@ -697,13 +793,21 @@ int lolio = 0;
 
     } while(point == wrong_point); 
 
-    add_point_to_polygon_in_specific_edge(point, edge, &polygon);
-    remove_point_from_vector(&inner_points, point);
+    if(edge_selection == RANDOM) {
+      add_point_to_polygon_in_specific_edge(point, edge, &polygon);
+      remove_point_from_vector(&inner_points, point);
+    }
+    else {
+      add_point_to_polygon_in_specific_edge(&polygon, tuple);
+      remove_point_from_vector(&inner_points, tuple->point);
+
+      delete tuple;
+    }
          
-    std::cout << std::endl << "\tΑς βγάλουμε τα μάτια μας... " << std::endl << "Πολύγωνο: " << std::endl;
-    print_polygon_alt(polygon);
-    std::cout << std::endl << "Εσωτερικά Σημεία: " << std::endl;
-    print_point_vector(inner_points);
+    // std::cout << std::endl << "\tΑς βγάλουμε τα μάτια μας... " << std::endl << "Πολύγωνο: " << std::endl;
+    // print_polygon_alt(polygon);
+    // std::cout << std::endl << "Εσωτερικά Σημεία: " << std::endl;
+    // print_point_vector(inner_points);
 
   }
 
@@ -716,9 +820,7 @@ PointVector parse_file(std::string filename) {
 
   std::string line;
   std::getline(infile, line);
-  std::cout << line;
   std::getline(infile, line);
-  std::cout << line;
 
   PointVector points;
 
@@ -728,7 +830,6 @@ PointVector parse_file(std::string filename) {
     int count, x, y;
     if (!(iss >> count >> x >> y)) { break; } // error
 
-        std::cout << "Count = " << count << " x = " << x << " y = " << y << std::endl;
         Point point(x, y);
         points.push_back(point);
   }
@@ -774,6 +875,151 @@ void print_output(Polygon polygon, PointVector points, std::string filename, std
     outfile << "construction time: " << duration.count() << std::endl;
 
 
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Returns the edge of the polygon, that creates the largest (area-wise) triangle with the closest visible point to it.
+Tuple pick_max_area_edge2(Polygon polygon, PointVector points) {
+  
+  Segment max_segment;
+  Point current_point;
+  Point point;
+  int current_position = 0;
+  int position = 0;
+  double max_area = -1;
+  double current_area;
+
+  for(EdgeIterator edge = polygon.edges_begin(); edge != polygon.edges_end(); edge++) {
+    current_position++;
+    // This point is definately visible.
+    current_point = point_closest_to_edge(*edge, points, polygon);
+
+    Point not_visible(-1, -1);
+    if(current_point == not_visible) {
+      continue;
+    }
+
+  //   // If the edge is not visible, skip the edge. 
+  //  if(!edge_is_visible(point, *edge, polygon)) continue;
+
+
+    Triangle triangle((*edge).source(), (*edge).target(), current_point);
+    // area() function may return negative number.
+    current_area = CGAL::abs(triangle.area());
+
+    // std::cout << "Για πάμε να δούμε... edge = " << *edge << "  point = " << current_point << " current position = " << current_position << "  area = " << current_area << std::endl;
+
+
+    if(current_area > max_area) {
+      max_segment = *edge;
+      max_area = current_area;
+      point = current_point;
+      position = current_position;
+    }
+
+
+  }
+
+  Tuple tuple = new struct tuple;
+  tuple->point = point;
+  tuple->position = position;
+  tuple->segment = max_segment;
+
+  return tuple;
+}
+
+
+// Returns the edge of the polygon, that creates the smallest (area-wise) triangle with the closest visible point to it.
+Tuple pick_min_area_edge2(Polygon polygon, PointVector points) {
+
+  // Initiating dull segment to check the first visible edge.
+  Point dull1(-1, -1);
+  Point dull2(-2, -2);
+  Segment dull_segment(dull1, dull2);
+
+
+  Segment min_segment(dull1, dull2);
+  Point current_point;
+  Point point;
+  int current_position = 0;
+  int position = 0;
+  double min_area;
+  double current_area;
+
+  for(EdgeIterator edge = polygon.edges_begin(); edge != polygon.edges_end(); edge++) {
+
+    current_position++;
+    // This point is definately visible.
+    current_point = point_closest_to_edge(*edge, points, polygon);
+    
+    Point not_visible(-1, -1);
+    if(current_point == not_visible) {
+      continue;
+    }
+
+    // // If the edge is not visible, skip the edge. 
+    // if(!edge_is_visible(point, *edge, polygon)) continue;
+
+    Triangle triangle((*edge).source(), (*edge).target(), current_point);
+    // area() function may return negative number.
+    current_area = CGAL::abs(triangle.area());
+
+    // std::cout << "Για πάμε να δούμε... edge = " << *edge << "  point = " << current_point << " current position = " << current_position << "  area = " << current_area << std::endl;
+ 
+    // If this is the first visible edge found till now.
+    if(min_segment == dull_segment) {
+      min_segment = *edge;
+      min_area = current_area;
+      position = current_position;
+      point = current_point;
+    }
+
+    if(current_area < min_area) {
+      min_segment = *edge;
+      min_area = current_area;
+      position = current_position;
+      point = current_point;
+    }
+
+  }
+
+  Tuple tuple = new struct tuple;
+  tuple->point = point;
+  tuple->position = position;
+  tuple->segment = min_segment;
+
+  return tuple;
+
+}
+
+
+// Point gets added to polygon. The edge of polygon gets erased and
+// two new edges previous_edge.source() to point and previous_edge.target() to point are added.
+void add_point_to_polygon_in_specific_edge(Polygon* polygon, Tuple tuple) {
+
+  // If point was added to the polygon on a previous iteration "by accident",
+  // just continue to next inner point.
+  if(!point_is_on_polygon(tuple->point, *polygon)) {
+
+    std::cout << "ABOUT TO ADD POINT = " << tuple->point << " ON EDGE = " << tuple->segment << " THIS IS POSITION = " << tuple->position << std::endl;
+    (*polygon).insert((*polygon).begin() + tuple->position, tuple->point);
   }
 
 
