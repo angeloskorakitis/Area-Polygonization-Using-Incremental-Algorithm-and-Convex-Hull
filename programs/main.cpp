@@ -6,7 +6,6 @@
 #include <CGAL/Polygon_2_algorithms.h>
 #include <CGAL/Convex_hull_traits_adapter_2.h>
 #include <CGAL/property_map.h>
-// #include <CGAL/draw_polygon_2.h>
 #include <CGAL/intersections.h>
 #include <vector>
 #include <numeric>
@@ -37,7 +36,6 @@ typedef std::string                                           String;
 
 // Struct to improve time performance.
 struct tuple {
-  // Segment segment;
   Point point;
   int position;
 };
@@ -136,7 +134,7 @@ int main(int argc, char* argv[]) {
   }
 
 
-  // Turn imput file into points vector.
+  // Turn input file into points vector.
   PointVector points = parse_file(input_file);
 
   srand(time(0));
@@ -282,7 +280,6 @@ void print_polygon_alt(Polygon polygon) {
 ////////////////////////////// Helpful Functions //////////////////////////////
 
 
-// This is a bit stupid, I'm sure there's a better way.
 // Returns true if a point is on the perimeter of a polygon.
 bool point_is_on_polygon(Point point, Polygon polygon) {
 
@@ -600,7 +597,6 @@ Tuple pick_max_area_edge(Polygon polygon, PointVector points) {
     // area() function may return negative number.
     current_area = CGAL::abs(triangle.area());
 
-    // std::cout << "Για πάμε να δούμε... edge = " << *edge << "  point = " << current_point << " current position = " << current_position << "  area = " << current_area << std::endl;
 
     // Searching for max.
     if(current_area > max_area) {
@@ -617,7 +613,6 @@ Tuple pick_max_area_edge(Polygon polygon, PointVector points) {
   Tuple tuple = new struct tuple;
   tuple->point = point;
   tuple->position = position;
-  // tuple->segment = max_segment;
 
   return tuple;
 }
@@ -662,8 +657,6 @@ Tuple pick_min_area_edge(Polygon polygon, PointVector points) {
     // area() function may return negative number.
     current_area = CGAL::abs(triangle.area());
 
-    // std::cout << "Για πάμε να δούμε... edge = " << *edge << "  point = " << current_point << " current position = " << current_position << "  area = " << current_area << std::endl;
-
 
     // If this is the first visible edge found till now.
     if(min_segment == dull_segment) {
@@ -690,7 +683,6 @@ Tuple pick_min_area_edge(Polygon polygon, PointVector points) {
   Tuple tuple = new struct tuple;
   tuple->point = point;
   tuple->position = position;
-  // tuple->segment = min_segment;
 
   return tuple;
 
