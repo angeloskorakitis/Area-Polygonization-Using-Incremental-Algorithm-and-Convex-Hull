@@ -1,9 +1,10 @@
 #include "Polygonization_Using_Incremental_Algorithm.hpp"
-#include <time.h>
 #include <fstream>
 #include <sstream>
 #include <iostream>
 #include <cstring>
+
+#pragma one;
 
 //
 // Περιγραφή του κώδικα
@@ -15,76 +16,9 @@
 
 int main(int argc, char *argv[])
 {
-  // Επεξεργασία Παραμέτρων Εισόδου
 
-
-  // String input_file = "-1";
-  // String output_file = "-1";
-  // String algorithm = "-1";
-  // String initialization = "-1";
-  // int edge_selection = -1;
-
-  // // Arguments count check.
-  // if((argc != 9) && (argc != 11)) {
-  //   return EXIT_FAILURE;
-  // }
-  
-
-  // String argument;
-  // String data;
-  // // Argument pass.
-  // for(int i = 1; i < argc; i+=2) {
-  //   argument = argv[i];
-  //   data = argv[i+1];
-  //   std::cout << argument << "\n";
-  //   std::cout << data << "\n";
-  //   if(argument == "-i")  input_file = data;
-  //   else if(argument.compare("-o"))  output_file = data;
-  //   else if(argument.compare("-algorithm"))  algorithm = data;
-  //   else if(argument.compare("-edge_selection")) edge_selection = std::stoi(data);
-  //   else if(argument.compare("-initialization")) initialization = data;
-    
-  // }
-
-
-  // // Argument content check.
-  // if(input_file == "-1") {
-  //   std::cout << "1Usage: ./to_polygon -i <point set input file> -o <output file> -algorithm <incremental or convex_hull> -edge_selection <1 or 2 or 3> -initialization <1a or 1b or 2a or 2b | μόνο στον αυξητικό αλγόριθμο> " << std::endl;
-  //   return EXIT_FAILURE;
-  // }
-  // if(output_file == "-1") {
-  //   std::cout << "2Usage: ./to_polygon -i <point set input file> -o <output file> -algorithm <incremental or convex_hull> -edge_selection <1 or 2 or 3> -initialization <1a or 1b or 2a or 2b | μόνο στον αυξητικό αλγόριθμο> " << std::endl;
-  //   return EXIT_FAILURE;
-  // }
-  // if(algorithm == "-1") {
-  //   std::cout << "3Usage: ./to_polygon -i <point set input file> -o <output file> -algorithm <incremental or convex_hull> -edge_selection <1 or 2 or 3> -initialization <1a or 1b or 2a or 2b | μόνο στον αυξητικό αλγόριθμο> " << std::endl;
-  //   return EXIT_FAILURE;
-  // }
-  // if(initialization == "-1") {
-  //   std::cout << "Usage: ./to_polygon -i <point set input file> -o <output file> -algorithm <incremental or convex_hull> -edge_selection <1 or 2 or 3> -initialization <1a or 1b or 2a or 2b | μόνο στον αυξητικό αλγόριθμο> " << std::endl;
-  //   return EXIT_FAILURE;
-
-  // }
-  // if((edge_selection < 1) || (edge_selection > 3)) {
-  //   std::cout << "Usage: ./to_polygon -i <point set input file> -o <output file> -algorithm <incremental or convex_hull> -edge_selection <1 or 2 or 3> -initialization <1a or 1b or 2a or 2b | μόνο στον αυξητικό αλγόριθμο> " << std::endl;
-  //   return EXIT_FAILURE;
-
-  // }
-
-  // PointVector points = {
-  //                       Point(10,0),
-  //                       Point(0,10),
-  //                       Point(1,1),
-  //                       Point(8,11),
-  //                       Point(3,4),
-  //                       Point(0,0),
-  //                       Point(6,6),
-  //                       Point(18,4),
-  //                       Point(16,16),
-  //                       Point(10,10),
-  //                       Point(2,6) 
-  // };
-
+  // Input parameters.
+  String error_msg = "Unable to run the program.\nUsage: ./to_polygon -i <point set input file> -o <output file> -algorithm <incremental or convex_hull> -edge_selection <1 or 2 or 3> -initialization <1a or 1b or 2a or 2b | μόνο στον αυξητικό αλγόριθμο> \n";
   std::string input_file = "-1";
   std::string output_file = "-1";
   std::string algorithm = "-1";
@@ -92,7 +26,9 @@ int main(int argc, char *argv[])
   int edge_selection = 0;
 
   // Arguments count check.
-  if((argc != 9) && (argc != 11)) {
+  if((argc != 9) && (argc != 11)) 
+  {
+    std::cout << error_msg;
     return EXIT_FAILURE;
   }
 
@@ -117,56 +53,55 @@ int main(int argc, char *argv[])
 
 
   // Argument content check.
-  if(input_file == "-1") {
-    std::cout << "Usage: ./to_polygon -i <point set input file> -o <output file> -algorithm <incremental or convex_hull> -edge_selection <1 or 2 or 3> -initialization <1a or 1b or 2a or 2b | μόνο στον αυξητικό αλγόριθμο> " << std::endl;
-    return EXIT_FAILURE;
+  try
+  {
+    if(input_file == "-1")  throw error_msg;
+    if(output_file == "-1") throw error_msg;
+    if(algorithm == "-1")   throw error_msg;
+    // Incremental algorithm needs initialization according to documentation
+    if(initialization == "-1") if(algorithm == "incremental") throw error_msg;
+    if((edge_selection < 1) || (edge_selection > 3)) throw error_msg;
   }
-  if(output_file == "-1") {
-    std::cout << "Usage: ./to_polygon -i <point set input file> -o <output file> -algorithm <incremental or convex_hull> -edge_selection <1 or 2 or 3> -initialization <1a or 1b or 2a or 2b | μόνο στον αυξητικό αλγόριθμο> " << std::endl;
-    return EXIT_FAILURE;
-  }
-  if(algorithm == "-1") {
-    std::cout << "Usage: ./to_polygon -i <point set input file> -o <output file> -algorithm <incremental or convex_hull> -edge_selection <1 or 2 or 3> -initialization <1a or 1b or 2a or 2b | μόνο στον αυξητικό αλγόριθμο> " << std::endl;
-    return EXIT_FAILURE;
-  }
-  if(initialization == "-1") {
-    if(algorithm == "incremental") {
-      std::cout << "Usage: ./to_polygon -i <point set input file> -o <output file> -algorithm <incremental or convex_hull> -edge_selection <1 or 2 or 3> -initialization <1a or 1b or 2a or 2b | μόνο στον αυξητικό αλγόριθμο> " << std::endl;
+  catch(String error_msg)
+  {
+      std::cerr << error_msg;
       return EXIT_FAILURE;
-    }
-  }
-  if((edge_selection < 1) || (edge_selection > 3)) {
-    std::cout << "Usage: ./to_polygon -i <point set input file> -o <output file> -algorithm <incremental or convex_hull> -edge_selection <1 or 2 or 3> -initialization <1a or 1b or 2a or 2b | μόνο στον αυξητικό αλγόριθμο> " << std::endl;
-    return EXIT_FAILURE;
   }
 
-
+// PointVector points = {
+//                         Point(10,0),
+//                         Point(0,10),
+//                         Point(1,1),
+//                         Point(8,11),
+//                         Point(3,4),
+//                         Point(0,0),
+//                         Point(6,6),
+//                         Point(18,4),
+//                         Point(16,16),
+//                         Point(10,10),
+//                         Point(2,6) 
+//   };
 
   PointVector points = parse_file(input_file);
 
-  // print_point_vector(points);
-
-  // Sorting
-  std::sort(points.begin(), points.end());
-
-// Starting timer.
+  // Starting timer
   auto start = std::chrono::high_resolution_clock::now();
 
   // Poligonization
-  Polygon polygon = incremental_algorithm(points, 3);
-
-  // Print polygon
-  // print_polygon(polygon);
-  // unsigned int area = CGAL::abs(polygon.area());
-  // std::cout << area << std::endl;
+  Polygon polygon = incremental_algorithm(points, edge_selection, initialization);
   
+  // Stoping timer
   auto stop = std::chrono::high_resolution_clock::now();
 
+  // Running time
   auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(stop - start);
 
+  // Print output
   print_output(polygon, points, output_file, algorithm, edge_selection, initialization, duration);
 
-  // If the polygon is not simple then failure...
+
+  std::cout << polygon.is_simple() << "\n";
+  // If the polygon is not simple then failure
   if(!polygon.is_simple()) return EXIT_FAILURE;
   
   return EXIT_SUCCESS;
