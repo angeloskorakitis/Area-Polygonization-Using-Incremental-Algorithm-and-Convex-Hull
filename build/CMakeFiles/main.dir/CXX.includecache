@@ -17,6 +17,8 @@ CGAL/convex_hull_2.h
 -
 CGAL/Polygon_2.h
 -
+CGAL/Polygon_2_algorithms.h
+-
 CGAL/Convex_hull_traits_adapter_2.h
 -
 CGAL/property_map.h
