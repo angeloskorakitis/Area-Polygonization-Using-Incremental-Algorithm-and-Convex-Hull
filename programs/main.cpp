@@ -72,7 +72,7 @@ int main(int argc, char *argv[])
   // Starting timer
   auto start = std::chrono::high_resolution_clock::now();
 
-  srand(time(0));
+  srand(time(NULL));
 
   Polygon polygon;
   

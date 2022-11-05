@@ -58,7 +58,7 @@ PointVector points;
   while (std::getline(infile, line))
   {
     std::istringstream iss(line);
-    int count, x, y;
+    unsigned int count, x, y;
     if (!(iss >> count >> x >> y)) { break; } // error
 
         Point point(x, y);
@@ -85,10 +85,10 @@ void print_output(Polygon polygon, PointVector points, std::string filename, std
 
 
       if(algorithm == "incremental") {
-        outfile << "Algorithm:" << algorithm << "_edge_selection" << edge_selection << "_initialization" << initialization << std::endl;
+        outfile << "Algorithm: " << algorithm << "_edge_selection" << edge_selection << "_initialization" << initialization << std::endl;
       }
       else {
-        outfile << "Algorithm:" << algorithm << "_edge_selection" << edge_selection << std::endl;
+        outfile << "Algorithm: " << algorithm << "_edge_selection" << edge_selection << std::endl;
       }
 
       unsigned int polygon_area = CGAL::abs(polygon.area());
@@ -102,7 +102,7 @@ void print_output(Polygon polygon, PointVector points, std::string filename, std
 
       outfile << "area: " << polygon_area << std::endl;
       outfile << "ratio: " <<  ratio << std::endl;
-      outfile << "construction time: " << duration.count() << std::endl;
+      outfile << "construction time: " << duration.count();
 
       outfile.close();
 

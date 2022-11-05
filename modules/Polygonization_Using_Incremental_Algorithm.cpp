@@ -112,8 +112,8 @@ Segment pick_min_area_edge(Point point ,SegmentVector visible_polygon_edges) {
 
 
 Segment pick_random_edge(SegmentVector visible_polygon_edges) {
-  int r = rand() % visible_polygon_edges.size();
-  return visible_polygon_edges.at(r);
+  size_t r = rand() % visible_polygon_edges.size();
+  return *(visible_polygon_edges.begin()+r);
 }
 
 
@@ -212,6 +212,7 @@ SegmentVector find_visible_edges(Point point, SegmentVector red_edges, Polygon p
       EdgeCirculator edge_circ = polygon.edges_circulator();
       // Iterate the polygon edges until the first point of the circulator is the same as the first point of the red edge
       while(edge_circ->source()!=p_red_edges->source()) ++edge_circ;
+  std::cout << "blah";
 
       do{
       // If the edge is visible from the point add it to the structure
@@ -254,11 +255,6 @@ Polygon incremental_algorithm(PointVector input_points, int edge_selection, Stri
   // Start with the first 3 points
   Polygon polygon(p_input_points, p_input_points + 3);
 
-  // We need CCW orientation for the polygon points
-  if(polygon.is_clockwise_oriented())
-    polygon.reverse_orientation();
-    
-
   // Special case: Check if the first 3 points are collinear...add a 4th
   if(CGAL::collinear(input_points.at(0), input_points.at(1), input_points.at(2)))
   {
@@ -266,6 +262,10 @@ Polygon incremental_algorithm(PointVector input_points, int edge_selection, Stri
     polygon.insert(itr, input_points.at(3));
     advance(p_input_points, 1);
   } 
+
+  // We need CCW orientation for the polygon points
+  if(polygon.is_clockwise_oriented())
+    polygon.reverse_orientation();
 
   advance(p_input_points, 3);
 

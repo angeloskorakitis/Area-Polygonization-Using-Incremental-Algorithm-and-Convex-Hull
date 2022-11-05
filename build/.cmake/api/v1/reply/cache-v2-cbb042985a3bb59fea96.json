@@ -119,7 +119,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "main;main;main;to_polygon;to_polygon;to_polygon;to_polygon;to_polygon;to_polygon;to_polygon;to_polygon;to_polygon;to_polygon;to_polygon;to_polygon;to_polygon;to_polygon;to_polygon;to_polygon"
+			"value" : "main;main;main;to_polygon;to_polygon;to_polygon;to_polygon;to_polygon;to_polygon;to_polygon;to_polygon;to_polygon;to_polygon;to_polygon;to_polygon;to_polygon;to_polygon;to_polygon;to_polygon;to_polygon"
 		},
 		{
 			"name" : "CGAL_TEST_DRAW_FUNCTIONS",
@@ -207,7 +207,7 @@
 			[
 				{
 					"name" : "HELPSTRING",
-					"value" : "No help, variable specified on the command line."
+					"value" : "Choose the type of build, options are: None Debug Release RelWithDebInfo MinSizeRel ..."
 				}
 			],
 			"type" : "STRING",
