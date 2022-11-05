@@ -35,7 +35,9 @@ include_directories(BEFORE ../include)
 
 # Creating entries for target: 
 # ############################
-add_executable( ${PROJECT_NAME} main.cpp ../modules/Polygonization_Using_Incremental_Algorithm.cpp)
+list(APPEND DEPENDS ../modules/Utilities.cpp ../modules/Polygonization_Using_Incremental_Algorithm.cpp ../modules/Polygonization_Using_Convex_Hull_Algorithm.cpp)
+
+add_executable( ${PROJECT_NAME} main.cpp ${DEPENDS})
 
 add_to_cached_list( CGAL_EXECUTABLE_TARGETS ${PROJECT_NAME} )
 

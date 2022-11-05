@@ -6,60 +6,30 @@
 //
 /////////////////////////////////////////////////////////////////////////////////
 
-// CHECK: Not sure about 2 include files
 
-#include <CGAL/Exact_predicates_inexact_constructions_kernel.h>
-#include <CGAL/convex_hull_2.h>
-#include <CGAL/Polygon_2.h>
-#include <CGAL/intersections.h>
-#include <algorithm>
-#include <vector>
-#include <numeric>
-#include <string>
-#include <chrono>
-#include <ctime>
+#include "Utilities.hpp"
 
 
-// Some typedefs in order to make the code more readable
+//______________________Compare functions for input points <initialization>_____________________________
 
-typedef CGAL::Epick                                           K;
-typedef K::Point_2                                            Point;
-typedef CGAL::Segment_2<K>                                    Segment;
-typedef CGAL::Object                                          Object;   
-typedef CGAL::Polygon_2<K>                                    Polygon;
-typedef CGAL::Triangle_2<K>                                   Triangle;
-typedef Polygon::Vertex_iterator                              VertexIterator;
-typedef Polygon::Edge_const_circulator                        EdgeCirculator;
-typedef Polygon::Edge_const_iterator                          EdgeIterator;
-typedef std::vector<Point>                                    PointVector;
-typedef std::vector<Segment>                                  SegmentVector;
-typedef PointVector::iterator                                 pPointVector;
-typedef SegmentVector::iterator                               pSegmentVector;
-typedef std::string                                           String;
+bool compare_x_increasing(const Point a, const Point b);
+
+bool compare_x_decreasing(const Point a, const Point b);
+
+bool compare_y_increasing(const Point a, const Point b);
+
+bool compare_y_decreasing(const Point a, const Point b);
+
+// Takes a point vector and returns it sorted according to <initialization>.
+
+void sort_input_points(PointVector* input_points, String initialization);
 
 
-bool is_edge_visible(Point ,Segment ,Polygon );
+//_____________________<edge_selection> functions according to the input strategy________________________
 
+// Returns a visible edge according to <edge selection> strategy (random, min area, max area).
 
-void add_visible_edge(Point , SegmentVector,int , Polygon* );
-
-
-// Returns a vector of Segments with the red edges of the CH
-
-SegmentVector find_red_edges(Point, Polygon, String  );
-
-// Returns a vector of Segments with the visible edges of the Polygon
-
-SegmentVector find_visible_edges(Point, SegmentVector, Polygon);
-
-// Implementation of the incremental algorithm
-
-Polygon incremental_algorithm(PointVector ,int, String );
-
-
-//_____________Edge selection functions according to the input <strategy>_________
-
-Segment pick_edge(Point  ,SegmentVector , int );
+Segment pick_edge(Point point ,SegmentVector visible_polygon_edges, int edge_selection);
 
 // Returns the -visible from point- edge of the polygon, that creates the largest (area-wise) triangle with the given point.
 
@@ -69,45 +39,29 @@ Segment pick_max_area_edge(Point point ,SegmentVector visible_polygon_edges);
 
 Segment pick_min_area_edge(Point point ,SegmentVector visible_polygon_edges);
 
-// Returns random edge of polygon.
+// Returns a random visible edge of polygon.
 
 Segment pick_random_edge(SegmentVector visible_polygon_edges);
 
 
-//___________________________Printing functions_________________________________
+//_______________________________________Polygonization__________________________________________________
 
-// Prints a Point
+// Returns a boolean true if the segment-edge of the polygon is visible from the point, else false.
 
-void print_point(Point);
+bool is_edge_visible(Point point,Segment segment,Polygon polygon);
 
-// Prints a Segment
+// Returns a vector of segments with the red edges of the CH.
 
-void print_segment(Segment);
+SegmentVector find_red_edges(Point point, Polygon polygon);
 
-// Prints a Polygon
+// Returns a vector of segments with the visible edges from the point to the polygon.
 
-void print_polygon(Polygon);
+SegmentVector find_visible_edges(Point point, SegmentVector visible_edges, Polygon polygon);
 
-// Prints a PointVector
+// Adds the point to the polygon according to the visible edges and the edge selection strategy
 
-void print_point_vector(PointVector points);
+void add_point_to_polygon(Point point, SegmentVector visible_polygon_edges ,int edge_selection, Polygon* polygon);
 
-void print_segment_vector(SegmentVector segments);
+// Implementation of the incremental algorithm
 
-// _______________________________
-bool x_increasing(const Point a, const Point b);
-
-bool x_decreasing(const Point a, const Point b);
-
-bool y_increasing(const Point a, const Point b);
-
-bool y_decreasing(const Point a, const Point b);
-
-void sort_input_points(PointVector* , String );
-
-// Parses the file and returns a Vector with the input points
-
-PointVector parse_file(std::string filename);
-
-
-void print_output(Polygon polygon, PointVector points, std::string filename, std::string algorithm, int edge_selection, std::string initialization, std::chrono::duration<double> duration);
+Polygon incremental_algorithm(PointVector input_points ,int edge_selection, String initialization);

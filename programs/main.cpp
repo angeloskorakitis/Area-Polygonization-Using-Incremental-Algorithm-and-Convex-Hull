@@ -1,8 +1,7 @@
 #include "Polygonization_Using_Incremental_Algorithm.hpp"
-#include <fstream>
-#include <sstream>
+#include "Polygonization_Using_Convex_Hull_Algorithm.hpp"
 #include <iostream>
-#include <cstring>
+#include <ctime>
 
 #pragma one;
 
@@ -51,7 +50,6 @@ int main(int argc, char *argv[])
     }
   }
 
-
   // Argument content check.
   try
   {
@@ -68,27 +66,28 @@ int main(int argc, char *argv[])
       return EXIT_FAILURE;
   }
 
-// PointVector points = {
-//                         Point(10,0),
-//                         Point(0,10),
-//                         Point(1,1),
-//                         Point(8,11),
-//                         Point(3,4),
-//                         Point(0,0),
-//                         Point(6,6),
-//                         Point(18,4),
-//                         Point(16,16),
-//                         Point(10,10),
-//                         Point(2,6) 
-//   };
-
+  // Turn input file into points vector
   PointVector points = parse_file(input_file);
 
   // Starting timer
   auto start = std::chrono::high_resolution_clock::now();
 
-  // Poligonization
-  Polygon polygon = incremental_algorithm(points, edge_selection, initialization);
+  srand(time(0));
+
+  Polygon polygon;
+  
+  // Calling the algorihm function.
+  if(algorithm == "incremental") {
+    polygon = incremental_algorithm(points, edge_selection, initialization);
+  }
+  else if(algorithm == "convex_hull") {
+    polygon = convex_hull_algorithm(points, edge_selection);
+  }
+  else {
+    std::cout << "Use a valid algorithm name!" << std::endl;
+    std::cerr << error_msg;
+    return EXIT_FAILURE;
+  }
   
   // Stoping timer
   auto stop = std::chrono::high_resolution_clock::now();
@@ -99,8 +98,6 @@ int main(int argc, char *argv[])
   // Print output
   print_output(polygon, points, output_file, algorithm, edge_selection, initialization, duration);
 
-
-  std::cout << polygon.is_simple() << "\n";
   // If the polygon is not simple then failure
   if(!polygon.is_simple()) return EXIT_FAILURE;
   
