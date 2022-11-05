@@ -212,7 +212,6 @@ SegmentVector find_visible_edges(Point point, SegmentVector red_edges, Polygon p
       EdgeCirculator edge_circ = polygon.edges_circulator();
       // Iterate the polygon edges until the first point of the circulator is the same as the first point of the red edge
       while(edge_circ->source()!=p_red_edges->source()) ++edge_circ;
-  std::cout << "blah";
 
       do{
       // If the edge is visible from the point add it to the structure
