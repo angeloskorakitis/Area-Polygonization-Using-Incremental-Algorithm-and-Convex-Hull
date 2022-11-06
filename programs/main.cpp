@@ -91,7 +91,7 @@ int main(int argc, char *argv[])
   
   // Stoping timer
   auto stop = std::chrono::high_resolution_clock::now();
-
+  
   // Running time
   auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(stop - start);
 

@@ -91,14 +91,14 @@ void print_output(Polygon polygon, PointVector points, std::string filename, std
         outfile << "Algorithm: " << algorithm << "_edge_selection" << edge_selection << std::endl;
       }
 
-      unsigned int polygon_area = CGAL::abs(polygon.area());
+      long int polygon_area = CGAL::abs(polygon.area());
       
       Polygon convex_hull;
       CGAL::convex_hull_2(polygon.begin(), polygon.end(), std::back_inserter(convex_hull));
 
-      unsigned int convex_hull_area = CGAL::abs(convex_hull.area());
+      long double convex_hull_area = CGAL::abs(convex_hull.area());
 
-      double ratio = (double)polygon_area / (double)convex_hull_area;
+      long double ratio =(long double)polygon_area / convex_hull_area;
 
       outfile << "area: " << polygon_area << std::endl;
       outfile << "ratio: " <<  ratio << std::endl;

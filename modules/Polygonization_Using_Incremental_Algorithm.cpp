@@ -14,22 +14,22 @@
 
 
 bool compare_x_increasing(const Point a, const Point b){
-    return a.x() <= b.x(); 
+    return a.x() < b.x(); 
 }
 
 
 bool compare_x_decreasing(const Point a, const Point b){
-    return a.x() >= b.x(); 
+    return a.x() > b.x(); 
 }
 
 
 bool compare_y_increasing(const Point a, const Point b){
-    return a.y() <= b.y(); 
+    return a.y() < b.y(); 
 }
 
 
 bool compare_y_decreasing(const Point a, const Point b){
-    return a.y() >= b.y(); 
+    return a.y() > b.y(); 
 }
 
 
@@ -61,8 +61,8 @@ Segment pick_edge(Point point ,SegmentVector visible_polygon_edges,int edge_sele
 
 Segment pick_max_area_edge(Point point ,SegmentVector visible_polygon_edges) {
   Segment max_segment;
-  unsigned int max_area = -1;
-  unsigned int current_area;
+  long int max_area = -1;
+  long int current_area;
 
   for(pSegmentVector edge_itr = visible_polygon_edges.begin(); edge_itr != visible_polygon_edges.end(); ++edge_itr) {
 
@@ -87,8 +87,8 @@ Segment pick_max_area_edge(Point point ,SegmentVector visible_polygon_edges) {
 
 Segment pick_min_area_edge(Point point ,SegmentVector visible_polygon_edges) {
   Segment min_segment;
-  unsigned int min_area = -1;
-  unsigned int current_area;
+  long int min_area = -1;
+  long int current_area;
 
   for(pSegmentVector edge_itr = visible_polygon_edges.begin(); edge_itr != visible_polygon_edges.end(); ++edge_itr) {
 
@@ -125,6 +125,10 @@ bool is_edge_visible(Point point, Segment segment, Polygon polygon)
   Point segment_source = segment.source();
   Point segment_target = segment.target();
 
+  // If point and segment intersect then the on visible segment from the point is the segment
+  if(CGAL::do_intersect(point, segment))
+    return true;
+
   // Special case: If the 3 points are collinear then the segment is not visible
   if(CGAL::collinear(point, segment_source, segment_target))
     return false;
@@ -160,7 +164,7 @@ bool is_edge_visible(Point point, Segment segment, Polygon polygon)
         if(intersection_segment == segment || intersection_segment == segment.opposite()) continue;
         
         // If not, the point in not visible
-        else if(intersection_segment != segment || intersection_segment != segment.opposite()) return false;
+        return false;
       }
       // If no intersection at all the continue...
       else 
@@ -199,13 +203,6 @@ SegmentVector find_visible_edges(Point point, SegmentVector red_edges, Polygon p
   
   if(red_edges.size() != 0)
   {      
-    pSegmentVector p_red_edges_begin = red_edges.begin();
-
-    // Special case: Point intersects a red edge so the only edge visible is that red edge
-    if(CGAL::do_intersect(*p_red_edges_begin, point)){
-      return red_edges;
-    }
-    
     // Iterate all red edges...
     for(pSegmentVector p_red_edges = red_edges.begin(); p_red_edges!=red_edges.end(); ++p_red_edges)
     {
@@ -269,7 +266,7 @@ Polygon incremental_algorithm(PointVector input_points, int edge_selection, Stri
   advance(p_input_points, 3);
 
   // While the number of the input points is different of the size of the polygon, repeat...
-  while(input_points.size() != polygon.size())
+  while(p_input_points != input_points.end())
   {
 
     // Find the red edges of the CH, i.e the visible from the CH

@@ -57,10 +57,10 @@ RM = /opt/homebrew/Cellar/cmake/3.24.2/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/programs
+CMAKE_SOURCE_DIR = /Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/programs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/build
+CMAKE_BINARY_DIR = /Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/build/CMakeFiles /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/build/CMakeFiles /Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -129,77 +129,77 @@ to_polygon/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/build
 .PHONY : to_polygon/fast
 
-Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Convex_Hull_Algorithm.o: Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.o
-.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Convex_Hull_Algorithm.o
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Convex_Hull_Algorithm.o: Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.o
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Convex_Hull_Algorithm.o
 
 # target to build an object file
-Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.o
-.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.o
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.o
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.o
 
-Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Convex_Hull_Algorithm.i: Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.i
-.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Convex_Hull_Algorithm.i
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Convex_Hull_Algorithm.i: Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.i
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Convex_Hull_Algorithm.i
 
 # target to preprocess a source file
-Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.i
-.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.i
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.i
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.i
 
-Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Convex_Hull_Algorithm.s: Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.s
-.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Convex_Hull_Algorithm.s
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Convex_Hull_Algorithm.s: Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.s
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Convex_Hull_Algorithm.s
 
 # target to generate assembly for a file
-Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.s
-.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.s
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.s
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.s
 
-Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.o: Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.o
-.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.o
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.o: Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.o
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.o
 
 # target to build an object file
-Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.o
-.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.o
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.o
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.o
 
-Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.i: Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.i
-.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.i
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.i: Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.i
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.i
 
 # target to preprocess a source file
-Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.i
-.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.i
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.i
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.i
 
-Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.s: Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.s
-.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.s
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.s: Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.s
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.s
 
 # target to generate assembly for a file
-Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.s
-.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.s
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.s
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.s
 
-Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Utilities.o: Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Utilities.cpp.o
-.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Utilities.o
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Utilities.o: Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Utilities.cpp.o
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Utilities.o
 
 # target to build an object file
-Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Utilities.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Utilities.cpp.o
-.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Utilities.cpp.o
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Utilities.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Utilities.cpp.o
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Utilities.cpp.o
 
-Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Utilities.i: Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Utilities.cpp.i
-.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Utilities.i
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Utilities.i: Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Utilities.cpp.i
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Utilities.i
 
 # target to preprocess a source file
-Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Utilities.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Utilities.cpp.i
-.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Utilities.cpp.i
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Utilities.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Utilities.cpp.i
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Utilities.cpp.i
 
-Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Utilities.s: Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Utilities.cpp.s
-.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Utilities.s
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Utilities.s: Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Utilities.cpp.s
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Utilities.s
 
 # target to generate assembly for a file
-Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Utilities.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Utilities.cpp.s
-.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Utilities.cpp.s
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Utilities.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Utilities.cpp.s
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Utilities.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -234,15 +234,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... to_polygon"
-	@echo "... Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Convex_Hull_Algorithm.o"
-	@echo "... Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Convex_Hull_Algorithm.i"
-	@echo "... Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Convex_Hull_Algorithm.s"
-	@echo "... Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.o"
-	@echo "... Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.i"
-	@echo "... Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.s"
-	@echo "... Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Utilities.o"
-	@echo "... Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Utilities.i"
-	@echo "... Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/modules/Utilities.s"
+	@echo "... Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Convex_Hull_Algorithm.o"
+	@echo "... Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Convex_Hull_Algorithm.i"
+	@echo "... Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Convex_Hull_Algorithm.s"
+	@echo "... Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.o"
+	@echo "... Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.i"
+	@echo "... Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.s"
+	@echo "... Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Utilities.o"
+	@echo "... Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Utilities.i"
+	@echo "... Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Utilities.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -80,7 +80,7 @@
     (a) διατάσσουμε τα σημεία σύμφωνα με την αρχικοποίηση που μας δίνεται σαν παράμετρο κατά την εκτέλεση του προγράμματος. Επιλέγουμε
     τα πρώτα τρία με τη διατεταγμένη σειρά που βρίσκονται στον πίνακα και δημιουργούμε ένα πολύγωνο με αυτά. Αν αυτά είναι συνευθειακά τότε προσθέτουμε ένα ακόμα σημείο
     πριν από το πρώτο. Αν το πολύγωνο δεν είναι counter-clock-wise oriented τότε το κάνουμε. 
-    (b)Στη συνέχεια, κάνουμε μια επανάληψη μέχρι το σύνολο των σημείων της εισόδου να γίνουν κορυφές του πολυγώνου. 
+    (b)Στη συνέχεια, κάνουμε μια επανάληψη για όλα τα σημεία. 
     Πιο συγκεκριμένα, (b1) για κάθε σημείο βρίσκουμε τις κόκκινες ακμές, δηλαδή αυτές που είναι ορατές από το σημείο που θέλουμε να προσθέσουμε, στο ΚΠ του πολυγώνου. Aυτό γίνεται με τη
     χρήση της συνάρτησης is_edge_visible(), η οποία χρησιμοποιεί την CGAL::intersection() όπου για κάθε ακμή του πολυγώνου και για το τρίγωνο που δημιουργείται απο το σημείο που θέλουμε να προσθέουμε και τα άκρα της ακμής που χρειάζεται να δούμε αν είναι ορατή, βλέπουμε αν υπάρχει τομή με την τρέχουσα πολυγωνική γραμμή.
     (b2) Έπειτα, βρίσκουμε τις ορατές ακμές του πολυγώνου. Αυτές θα βρίσκονται πίσω από τις κόκκινες για αυτόν τον λόγο, για κάθε μια κόκκινη ακμή, ελέγχουμε τις ακμές του πολυγώνου που βρίσκονται ανάμεσα στα δύο άκρα της κόκκινης ακμής, αν αυτές είναι ορατές από το σημείο. Όπως και στο προηγούμενο βήμα γίνεται χρήση της is_edge_visible().
@@ -185,28 +185,53 @@ construction time: 19.913
 
 ./to_polygon -i ../instances/data/images/euro-night-0000200.instance -o ../programs/blah.txt -algorithm incremental -edge_selection 1 -initialization 2a
 
-Algorithm:incremental_edge_selection1_initialization2a
-area: 39906498
-ratio: 0.516086
-construction time: 0.962
+Algorithm: incremental_edge_selection1_initialization2a
+area: 41036990
+ratio: 0.530706
+construction time: 0.065
 
 ./to_polygon -i ../instances/data/images/euro-night-0000200.instance -o ../programs/blah.txt -algorithm incremental -edge_selection 2 -initialization 2b
 
-Algorithm:incremental_edge_selection2_initialization2b
-area: 17511264
-ratio: 0.226462
-construction time: 3.011
+Algorithm: incremental_edge_selection2_initialization2b
+area: 19258862
+ratio: 0.249063
+construction time: 0.068
 
 ./to_polygon -i ../instances/data/images/us-night-0000500.instance -o ../programs/blah.txt -algorithm incremental -edge_selection 3 -initialization 2b
 
-Algorithm:incremental_edge_selection3_initialization2b
-area: 67368060
-ratio: 0.484958
-construction time: 29.007
+Algorithm: incremental_edge_selection3_initialization2b
+area: 93704260
+ratio: 0.752762
+construction time: 0.354
 
-Algorithm:incremental_edge_selection3_initialization2b
-area: 4294967295
-ratio: 1
-construction time: 145.792
+./to_polygon -i ../instances/data/images/us-night-0000500.instance -o ../programs/blah.txt -algorithm incremental -edge_selection 3 -initialization 2b
+
+Algorithm: incremental_edge_selection3_initialization2b
+area: 93704260
+ratio: 0.752762
+construction time: 0.355
+
+./to_polygon -i ../instances/data/images/paris-0001000.instance -o ../programs/blah.txt -algorithm incremental -edge_selection 3 -initialization 1b
+
+Algorithm: incremental_edge_selection3_initialization1b
+area: 211032546
+ratio: 0.703285
+construction time: 1.083
+
+./to_polygon -i ../instances/data/images/skylake-0004000.instance -o ../programs/blah.txt -algorithm incremental -edge_selection 3 -initialization 1b
+
+Algorithm: incremental_edge_selection3_initialization1b
+area: 193064582
+ratio: 0.689354
+construction time: 19.398
+
+./to_polygon -i ../instances/data/images/protein-0020000.instance -o ../programs/blah.txt -algorithm incremental -edge_selection 2 -initialization 1b
+
+Algorithm: incremental_edge_selection2_initialization1b
+area: 28763919898
+ratio: 0.259819
+construction time: 357.633
+
+Όπως παρατηρούμε οι χρόνοι του αυξητικού αλγορίθμου είναι σημαντικά καλύτεροι σε σχέση με του αλγόριθμου με βάση το ΚΠ. Είναι κάτι το οποίο περιμέναμε καθώς ο δεύτερος έχει περισσότερους υπολογισμούς για την πολυγωνοποίηση. Οι παρατηρήσεις για το edge_selection ισχύουν και εδώ, ενώ το initialization δεν επηρεάζει τους χρόνους.
 
 Καλή Διόρθωση! :D

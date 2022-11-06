@@ -1,9 +1,11 @@
-CMakeFiles/main.dir/main.cpp.o: \
-  /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/programs/main.cpp \
-  /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/programs/../include/Polygonization_Using_Incremental_Algorithm.hpp \
-  /opt/homebrew/include/CGAL/convex_hull_2.h \
-  /opt/homebrew/include/CGAL/license/Convex_hull_2.h \
-  /opt/homebrew/include/CGAL/config.h \
+CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp.o: \
+  /Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/modules/Polygonization_Using_Incremental_Algorithm.cpp \
+  /Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/programs/../include/Polygonization_Using_Incremental_Algorithm.hpp \
+  /Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/programs/../include/Utilities.hpp \
+  /opt/homebrew/include/CGAL/Exact_predicates_inexact_constructions_kernel.h \
+  /opt/homebrew/include/CGAL/Simple_cartesian.h \
+  /opt/homebrew/include/CGAL/Cartesian/Cartesian_base.h \
+  /opt/homebrew/include/CGAL/basic.h /opt/homebrew/include/CGAL/config.h \
   /opt/homebrew/include/boost/config.hpp \
   /opt/homebrew/include/boost/config/user.hpp \
   /opt/homebrew/include/boost/config/detail/select_compiler_config.hpp \
@@ -610,7 +612,6 @@ CMakeFiles/main.dir/main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__split_buffer \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/iomanip \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/iostream \
-  /opt/homebrew/include/CGAL/basic.h \
   /opt/homebrew/include/CGAL/assertions.h \
   /opt/homebrew/include/CGAL/Uncertain.h \
   /opt/homebrew/include/CGAL/enum.h \
@@ -1324,8 +1325,7 @@ CMakeFiles/main.dir/main.cpp.o: \
   /opt/homebrew/include/boost/any/fwd.hpp \
   /opt/homebrew/include/CGAL/Kernel_traits.h \
   /opt/homebrew/include/CGAL/Kernel_traits_fwd.h \
-  /opt/homebrew/include/CGAL/convex_hull_traits_2.h \
-  /opt/homebrew/include/CGAL/Point_2.h \
+  /opt/homebrew/include/CGAL/basic_classes.h \
   /opt/homebrew/include/CGAL/Bbox_2.h \
   /opt/homebrew/include/CGAL/Dimension.h \
   /opt/homebrew/include/boost/math/special_functions/next.hpp \
@@ -1347,14 +1347,63 @@ CMakeFiles/main.dir/main.cpp.o: \
   /opt/homebrew/include/boost/math/special_functions/sign.hpp \
   /opt/homebrew/include/boost/math/special_functions/trunc.hpp \
   /opt/homebrew/include/boost/math/tools/traits.hpp \
-  /opt/homebrew/include/CGAL/Kernel/Return_base_tag.h \
+  /opt/homebrew/include/CGAL/Bbox_3.h \
   /opt/homebrew/include/CGAL/representation_tags.h \
-  /opt/homebrew/include/CGAL/predicates_on_points_2.h \
-  /opt/homebrew/include/CGAL/distance_predicates_2.h \
-  /opt/homebrew/include/CGAL/ch_akl_toussaint.h \
-  /opt/homebrew/include/CGAL/Convex_hull_2/ch_akl_toussaint_impl.h \
-  /opt/homebrew/include/CGAL/convexity_check_2.h \
-  /opt/homebrew/include/CGAL/Convex_hull_2/convexity_check_2_impl.h \
+  /opt/homebrew/include/CGAL/Kernel/global_functions.h \
+  /opt/homebrew/include/CGAL/Kernel/global_functions_2.h \
+  /opt/homebrew/include/CGAL/user_classes.h \
+  /opt/homebrew/include/CGAL/Point_2.h \
+  /opt/homebrew/include/CGAL/Kernel/Return_base_tag.h \
+  /opt/homebrew/include/CGAL/Weighted_point_2.h \
+  /opt/homebrew/include/CGAL/Vector_2.h \
+  /opt/homebrew/include/CGAL/Direction_2.h \
+  /opt/homebrew/include/CGAL/Line_2.h /opt/homebrew/include/CGAL/Ray_2.h \
+  /opt/homebrew/include/CGAL/Segment_2.h \
+  /opt/homebrew/include/CGAL/Triangle_2.h \
+  /opt/homebrew/include/CGAL/Iso_rectangle_2.h \
+  /opt/homebrew/include/CGAL/Circle_2.h \
+  /opt/homebrew/include/CGAL/Conic_2.h \
+  /opt/homebrew/include/CGAL/Kernel/Conic_misc.h \
+  /opt/homebrew/include/boost/math/special_functions/cbrt.hpp \
+  /opt/homebrew/include/boost/math/tools/rational.hpp \
+  /opt/homebrew/include/boost/math/tools/detail/polynomial_horner3_20.hpp \
+  /opt/homebrew/include/boost/math/tools/detail/rational_horner3_20.hpp \
+  /opt/homebrew/include/CGAL/Aff_transformation_2.h \
+  /opt/homebrew/include/CGAL/Point_3.h \
+  /opt/homebrew/include/CGAL/Weighted_point_3.h \
+  /opt/homebrew/include/CGAL/Plane_3.h \
+  /opt/homebrew/include/CGAL/Vector_3.h \
+  /opt/homebrew/include/CGAL/Direction_3.h \
+  /opt/homebrew/include/CGAL/Line_3.h /opt/homebrew/include/CGAL/Ray_3.h \
+  /opt/homebrew/include/CGAL/Segment_3.h \
+  /opt/homebrew/include/CGAL/Triangle_3.h \
+  /opt/homebrew/include/CGAL/Tetrahedron_3.h \
+  /opt/homebrew/include/CGAL/Iso_cuboid_3.h \
+  /opt/homebrew/include/CGAL/Sphere_3.h \
+  /opt/homebrew/include/CGAL/Circle_3.h \
+  /opt/homebrew/include/CGAL/Aff_transformation_3.h \
+  /opt/homebrew/include/CGAL/Kernel/global_functions_internal_2.h \
+  /opt/homebrew/include/CGAL/Kernel/global_functions_3.h \
+  /opt/homebrew/include/CGAL/Kernel/global_functions_internal_3.h \
+  /opt/homebrew/include/CGAL/Kernel/hash_functions.h \
+  /opt/homebrew/include/boost/functional/hash.hpp \
+  /opt/homebrew/include/CGAL/Cartesian/Point_2.h \
+  /opt/homebrew/include/CGAL/Cartesian/Weighted_point_2.h \
+  /opt/homebrew/include/CGAL/Handle_for.h \
+  /opt/homebrew/include/CGAL/memory.h \
+  /opt/homebrew/include/boost/tuple/tuple.hpp \
+  /opt/homebrew/include/boost/ref.hpp \
+  /opt/homebrew/include/boost/core/ref.hpp \
+  /opt/homebrew/include/boost/tuple/detail/tuple_basic.hpp \
+  /opt/homebrew/include/boost/type_traits/cv_traits.hpp \
+  /opt/homebrew/include/boost/type_traits/add_cv.hpp \
+  /opt/homebrew/include/boost/type_traits/remove_volatile.hpp \
+  /opt/homebrew/include/boost/utility/swap.hpp \
+  /opt/homebrew/include/CGAL/Cartesian/Vector_2.h \
+  /opt/homebrew/include/CGAL/constant.h \
+  /opt/homebrew/include/CGAL/Cartesian/Direction_2.h \
+  /opt/homebrew/include/CGAL/Cartesian/Line_2.h \
+  /opt/homebrew/include/CGAL/predicates/kernel_ftC2.h \
   /opt/homebrew/include/CGAL/algorithm.h \
   /opt/homebrew/include/boost/random/random_number_generator.hpp \
   /opt/homebrew/include/boost/random/uniform_int_distribution.hpp \
@@ -1432,74 +1481,6 @@ CMakeFiles/main.dir/main.cpp.o: \
   /opt/homebrew/include/boost/random/uniform_on_sphere.hpp \
   /opt/homebrew/include/boost/random/uniform_smallint.hpp \
   /opt/homebrew/include/boost/random/weibull_distribution.hpp \
-  /opt/homebrew/include/CGAL/Convex_hull_2/ch_assertions.h \
-  /opt/homebrew/include/CGAL/ch_selected_extreme_points_2.h \
-  /opt/homebrew/include/CGAL/Convex_hull_2/ch_selected_extreme_points_2_impl.h \
-  /opt/homebrew/include/CGAL/ch_graham_andrew.h \
-  /opt/homebrew/include/CGAL/Convex_hull_2/ch_graham_andrew_impl.h \
-  /opt/homebrew/include/CGAL/IO/Tee_for_output_iterator.h \
-  /opt/homebrew/include/CGAL/Handle.h \
-  /opt/homebrew/include/CGAL/Handle_for.h \
-  /opt/homebrew/include/CGAL/memory.h /opt/homebrew/include/CGAL/tuple.h \
-  /opt/homebrew/include/CGAL/utility.h \
-  /opt/homebrew/include/boost/functional/hash.hpp \
-  /opt/homebrew/include/CGAL/ch_bykat.h \
-  /opt/homebrew/include/CGAL/Convex_hull_2/ch_bykat_impl.h \
-  /opt/homebrew/include/CGAL/Exact_predicates_inexact_constructions_kernel.h \
-  /opt/homebrew/include/CGAL/Simple_cartesian.h \
-  /opt/homebrew/include/CGAL/Cartesian/Cartesian_base.h \
-  /opt/homebrew/include/CGAL/basic_classes.h \
-  /opt/homebrew/include/CGAL/Bbox_3.h \
-  /opt/homebrew/include/CGAL/Kernel/global_functions.h \
-  /opt/homebrew/include/CGAL/Kernel/global_functions_2.h \
-  /opt/homebrew/include/CGAL/user_classes.h \
-  /opt/homebrew/include/CGAL/Weighted_point_2.h \
-  /opt/homebrew/include/CGAL/Vector_2.h \
-  /opt/homebrew/include/CGAL/Direction_2.h \
-  /opt/homebrew/include/CGAL/Line_2.h /opt/homebrew/include/CGAL/Ray_2.h \
-  /opt/homebrew/include/CGAL/Segment_2.h \
-  /opt/homebrew/include/CGAL/Triangle_2.h \
-  /opt/homebrew/include/CGAL/Iso_rectangle_2.h \
-  /opt/homebrew/include/CGAL/Circle_2.h \
-  /opt/homebrew/include/CGAL/Conic_2.h \
-  /opt/homebrew/include/CGAL/Kernel/Conic_misc.h \
-  /opt/homebrew/include/boost/math/special_functions/cbrt.hpp \
-  /opt/homebrew/include/boost/math/tools/rational.hpp \
-  /opt/homebrew/include/boost/math/tools/detail/polynomial_horner3_20.hpp \
-  /opt/homebrew/include/boost/math/tools/detail/rational_horner3_20.hpp \
-  /opt/homebrew/include/CGAL/Aff_transformation_2.h \
-  /opt/homebrew/include/CGAL/Point_3.h \
-  /opt/homebrew/include/CGAL/Weighted_point_3.h \
-  /opt/homebrew/include/CGAL/Plane_3.h \
-  /opt/homebrew/include/CGAL/Vector_3.h \
-  /opt/homebrew/include/CGAL/Direction_3.h \
-  /opt/homebrew/include/CGAL/Line_3.h /opt/homebrew/include/CGAL/Ray_3.h \
-  /opt/homebrew/include/CGAL/Segment_3.h \
-  /opt/homebrew/include/CGAL/Triangle_3.h \
-  /opt/homebrew/include/CGAL/Tetrahedron_3.h \
-  /opt/homebrew/include/CGAL/Iso_cuboid_3.h \
-  /opt/homebrew/include/CGAL/Sphere_3.h \
-  /opt/homebrew/include/CGAL/Circle_3.h \
-  /opt/homebrew/include/CGAL/Aff_transformation_3.h \
-  /opt/homebrew/include/CGAL/Kernel/global_functions_internal_2.h \
-  /opt/homebrew/include/CGAL/Kernel/global_functions_3.h \
-  /opt/homebrew/include/CGAL/Kernel/global_functions_internal_3.h \
-  /opt/homebrew/include/CGAL/Kernel/hash_functions.h \
-  /opt/homebrew/include/CGAL/Cartesian/Point_2.h \
-  /opt/homebrew/include/CGAL/Cartesian/Weighted_point_2.h \
-  /opt/homebrew/include/boost/tuple/tuple.hpp \
-  /opt/homebrew/include/boost/ref.hpp \
-  /opt/homebrew/include/boost/core/ref.hpp \
-  /opt/homebrew/include/boost/tuple/detail/tuple_basic.hpp \
-  /opt/homebrew/include/boost/type_traits/cv_traits.hpp \
-  /opt/homebrew/include/boost/type_traits/add_cv.hpp \
-  /opt/homebrew/include/boost/type_traits/remove_volatile.hpp \
-  /opt/homebrew/include/boost/utility/swap.hpp \
-  /opt/homebrew/include/CGAL/Cartesian/Vector_2.h \
-  /opt/homebrew/include/CGAL/constant.h \
-  /opt/homebrew/include/CGAL/Cartesian/Direction_2.h \
-  /opt/homebrew/include/CGAL/Cartesian/Line_2.h \
-  /opt/homebrew/include/CGAL/predicates/kernel_ftC2.h \
   /opt/homebrew/include/CGAL/predicates/sign_of_determinant.h \
   /opt/homebrew/include/CGAL/determinant.h \
   /opt/homebrew/include/CGAL/constructions/kernel_ftC2.h \
@@ -1616,6 +1597,7 @@ CMakeFiles/main.dir/main.cpp.o: \
   /opt/homebrew/include/CGAL/Intersections_2/Iso_rectangle_2_Segment_2.h \
   /opt/homebrew/include/CGAL/Intersections_2/Iso_rectangle_2_Triangle_2.h \
   /opt/homebrew/include/CGAL/Intersections_2/Segment_2_Segment_2.h \
+  /opt/homebrew/include/CGAL/predicates_on_points_2.h \
   /opt/homebrew/include/CGAL/Intersections_2/Line_2_Line_2.h \
   /opt/homebrew/include/CGAL/Intersections_2/Line_2_Point_2.h \
   /opt/homebrew/include/CGAL/Intersections_2/Line_2_Ray_2.h \
@@ -1649,6 +1631,7 @@ CMakeFiles/main.dir/main.cpp.o: \
   /opt/homebrew/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Plane_3_do_intersect.h \
   /opt/homebrew/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Plane_3_intersection.h \
   /opt/homebrew/include/CGAL/intersections.h \
+  /opt/homebrew/include/CGAL/utility.h \
   /opt/homebrew/include/CGAL/Intersections_3/Bbox_3_Point_3.h \
   /opt/homebrew/include/CGAL/Intersections_3/Iso_cuboid_3_Point_3.h \
   /opt/homebrew/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Point_3_do_intersect.h \
@@ -1892,7 +1875,7 @@ CMakeFiles/main.dir/main.cpp.o: \
   /opt/homebrew/include/CGAL/MP_Float_impl.h \
   /opt/homebrew/include/CGAL/MP_Float_arithmetic_kernel.h \
   /opt/homebrew/include/CGAL/Lazy_exact_nt.h \
-  /opt/homebrew/include/CGAL/Lazy.h \
+  /opt/homebrew/include/CGAL/Handle.h /opt/homebrew/include/CGAL/Lazy.h \
   /opt/homebrew/include/CGAL/min_max_n.h \
   /opt/homebrew/include/CGAL/Default.h \
   /opt/homebrew/include/CGAL/is_iterator.h \
@@ -2111,7 +2094,23 @@ CMakeFiles/main.dir/main.cpp.o: \
   /opt/homebrew/include/boost/type_traits/integral_promotion.hpp \
   /opt/homebrew/include/boost/type_traits/promote.hpp \
   /opt/homebrew/include/CGAL/Triangulation_structural_filtering_traits.h \
-  /opt/homebrew/include/CGAL/Simple_Cartesian.h \
+  /opt/homebrew/include/CGAL/convex_hull_2.h \
+  /opt/homebrew/include/CGAL/license/Convex_hull_2.h \
+  /opt/homebrew/include/CGAL/convex_hull_traits_2.h \
+  /opt/homebrew/include/CGAL/distance_predicates_2.h \
+  /opt/homebrew/include/CGAL/ch_akl_toussaint.h \
+  /opt/homebrew/include/CGAL/Convex_hull_2/ch_akl_toussaint_impl.h \
+  /opt/homebrew/include/CGAL/convexity_check_2.h \
+  /opt/homebrew/include/CGAL/Convex_hull_2/convexity_check_2_impl.h \
+  /opt/homebrew/include/CGAL/Convex_hull_2/ch_assertions.h \
+  /opt/homebrew/include/CGAL/ch_selected_extreme_points_2.h \
+  /opt/homebrew/include/CGAL/Convex_hull_2/ch_selected_extreme_points_2_impl.h \
+  /opt/homebrew/include/CGAL/ch_graham_andrew.h \
+  /opt/homebrew/include/CGAL/Convex_hull_2/ch_graham_andrew_impl.h \
+  /opt/homebrew/include/CGAL/IO/Tee_for_output_iterator.h \
+  /opt/homebrew/include/CGAL/tuple.h \
+  /opt/homebrew/include/CGAL/ch_bykat.h \
+  /opt/homebrew/include/CGAL/Convex_hull_2/ch_bykat_impl.h \
   /opt/homebrew/include/CGAL/Polygon_2.h \
   /opt/homebrew/include/CGAL/circulator.h \
   /opt/homebrew/include/CGAL/circulator_bases.h \

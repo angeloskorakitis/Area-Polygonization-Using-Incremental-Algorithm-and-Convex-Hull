@@ -1,7 +1,7 @@
 CMakeFiles/to_polygon.dir/main.cpp.o: \
-  /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/programs/main.cpp \
-  /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/programs/../include/Polygonization_Using_Incremental_Algorithm.hpp \
-  /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/programs/../include/Utilities.hpp \
+  /Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/programs/main.cpp \
+  /Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/programs/../include/Polygonization_Using_Incremental_Algorithm.hpp \
+  /Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/programs/../include/Utilities.hpp \
   /opt/homebrew/include/CGAL/Exact_predicates_inexact_constructions_kernel.h \
   /opt/homebrew/include/CGAL/Simple_cartesian.h \
   /opt/homebrew/include/CGAL/Cartesian/Cartesian_base.h \
@@ -2125,4 +2125,4 @@ CMakeFiles/to_polygon.dir/main.cpp.o: \
   /opt/homebrew/include/CGAL/Polygon_2/Polygon_2_edge_iterator.h \
   /opt/homebrew/include/CGAL/Polygon_2/Polygon_2_edge_circulator.h \
   /opt/homebrew/include/CGAL/Polygon_2/Polygon_2_impl.h \
-  /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-1/programs/../include/Polygonization_Using_Convex_Hull_Algorithm.hpp
+  /Users/angeloskorakitis/Documents/University/NKUA/7/Project/paradoteo1/2023-emiris-k23-assignment-1/programs/../include/Polygonization_Using_Convex_Hull_Algorithm.hpp
