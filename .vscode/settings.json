@@ -78,5 +78,6 @@
         "variant": "cpp",
         "algorithm": "cpp",
         "filesystem": "cpp"
-    }
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
 }
