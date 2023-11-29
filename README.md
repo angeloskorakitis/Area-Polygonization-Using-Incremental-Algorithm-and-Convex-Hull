@@ -62,11 +62,14 @@
 -   Οδηγίες μεταγλώττισης και χρήσης του προγράμματος:
 
     Στον κατάλογο /programs εκτελούμε:
-    cmake -DCMAKE_BUILD_TYPE=Release -S . -B ../build
+
+        cmake -DCMAKE_BUILD_TYPE=Release -S . -B ../build
 
     Για να κάνω compile και run εκτελούμε στον κατάλογο /build:
-    make
-    ./to_polygon -i <point set input file> -o <output file> -algorithm <incremental or convex_hull> -edge_selection <1 or 2 or 3> -initialization <1a or 1b or 2a or 2b | μόνο στον αυξητικό αλγόριθμο>
+    
+        make
+
+        ./to_polygon -i <point set input file> -o <output file> -algorithm <incremental or convex_hull> -edge_selection <1 or 2 or 3> -initialization <1a or 1b or 2a or 2b | μόνο στον αυξητικό αλγόριθμο>
 
     (ΠΡΟΣΟΧΗ! Αν ακολουθηθούν τις παραπάνω οδηγίες, για να γίνει η μεταγλώττιση πρέπει να βρίσκεστε στον κατάλογο /build καθώς εκεί περιέχεται το MakeFile και δημιουργείται το εκτελέσιμο to_polygon. Χρειάζεται να λαμβάνετε υποψιν σας και στον προσδιορισμό του input και output file.)
 
