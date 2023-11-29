@@ -20,22 +20,22 @@
 -   Παραδείγματα εκτέλεσης και σχολιασμός τους.
 
 -   Κατάλογος αρχείων:
-.
-├── build
-│   └── CMakeFiles
-│      
-├── include
-│    ├── Polygonization_Using_Convex_Hull_Algorithm.hpp
-│    ├── Polygonization_Using_Incremental_Algorithm.hpp
-│    └── Utilities.hpp
-│       
-├── modules
-│    ├── Polygonization_Using_Convex_Hull_Algorithm.cpp
-│    ├── Polygonization_Using_Incremental_Algorithm.cpp
-│    └── Utilities.cpp
-└── programs
-     ├── CMakeLists.txt
-     └── main.cpp
+          .
+          ├── build
+          │   └── CMakeFiles
+          │      
+          ├── include
+          │    ├── Polygonization_Using_Convex_Hull_Algorithm.hpp
+          │    ├── Polygonization_Using_Incremental_Algorithm.hpp
+          │    └── Utilities.hpp
+          │       
+          ├── modules
+          │    ├── Polygonization_Using_Convex_Hull_Algorithm.cpp
+          │    ├── Polygonization_Using_Incremental_Algorithm.cpp
+          │    └── Utilities.cpp
+          └── programs
+               ├── CMakeLists.txt
+               └── main.cpp
 
 
 -   Περιγραφή αρχείων:
